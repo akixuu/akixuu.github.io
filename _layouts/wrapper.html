@@ -1,0 +1,67 @@
+<!doctype html>
+<html data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <!-- mouse follower -->
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+    
+    <!-- g-analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NEMW918MTH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NEMW918MTH');
+    </script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/51e1f7ac6b.js" crossorigin="anonymous"></script>
+  
+
+    <!-- custom styles -->
+    <link rel="favicon" type="image/x-icon" href="{{ site.url }}/resources/media/favicon.png">
+  </head>
+  
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <style>
+      @media only screen and (min-width: 992px) {
+        .container {
+          max-width: 65%;
+        }
+      }
+    </style>
+    
+    {{ content }}    
+    
+    <!-- mouse follower -->    
+    <script>
+      const cursor = new MouseFollower({
+        container: 'body',
+        speed: 0.3
+      });  
+    </script>
+    <style>
+        .mf-cursor-text {
+            color:#212529;
+            font-weight: 900;
+        }
+
+        .mf-cursor {
+            background-color: rgb(7, 148, 56);
+        }
+    </style>
+  </body>
+</html>
