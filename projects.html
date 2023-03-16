@@ -1,0 +1,31 @@
+---
+layout: page
+---
+<br>
+<a href="index.html" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Home</a>
+
+<br>
+
+<h1 class="display-1 fw-bold">Project Gallery</h1>
+<br>
+
+
+<!-- gallery -->
+<div class="col">
+    <div class="row row-cols-2 row-cols-md-3 g-4">
+
+        {% for project in site.projects %}
+        <div class="col">
+            <a href="{{project.url}}" class="text-decoration-none link-light">
+                <div class="card border-0 ">
+                    <img src="./assets/imgs/project_thumbnails/{{ project.thumbnail }}" class="card-img-top"
+                        alt="thumbnail">
+                    <div class="card-body p-0">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

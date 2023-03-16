@@ -1,0 +1,69 @@
+---
+
+title: Websites
+thumbnail: websites.png
+complete: false
+
+layout: page
+
+websites:
+    - thumbnail: 4.png
+      title: Title
+      date: Jul 2020
+      live_url: https://example.com
+      code_url: https://example.com
+      description:
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam nisi, ultricies vel pellentesque eu.
+
+    - thumbnail: 3.png
+      title: Title
+      date: Jul 2020
+      live_url: https://example.com
+      description:
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam nisi, ultricies vel pellentesque eu.
+
+    - thumbnail: 2.png
+      title: Title
+      date: Jul 2020
+      live_url: https://example.com
+      description:
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam nisi, ultricies vel pellentesque eu.
+
+    - thumbnail: 1.png
+      title: Title
+      date: Jul 2020
+      live_url: https://example.com
+      description:
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam nisi, ultricies vel pellentesque eu.
+
+---
+
+<br>
+
+<h1 class="display-1 fw-bold">Websites</h1>
+<br>
+
+
+<div class="col"> 
+    <div class="row row-cols-2 row-cols-md-3 g-4">
+        {% for website in page.websites %}
+        <div class="col">
+            <div class="card border-0 ">
+                <h6 class="card-title">{{ website.title }} - {{ website.date }}</h6>
+                <img src="../../assets/imgs/website_thumbnails/{{website.thumbnail}}" class="card-img-top"
+                    alt="thumbnail">
+                <div class="card-body p-0">
+                    <p class="card-text">{{ website.description }}</p>
+                    {% if website.live_url %}
+                        <a class="btn rounded-pill btn-outline-secondary" href="{{ page.live_url }}">View Live</a>
+                    {% endif %}
+
+                    {% if website.code_url %}
+                        <a class="btn rounded-pill btn-outline-secondary" href="{{ page.code_url }}">Code</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -4,13 +4,12 @@ title: Sorting & Pathfinding Algo Visualizer
 thumbnail: algo.png
 complete: false
 
+description:
+    The visualizer will use a graphical user interface (GUI) that allows users to select an algorithm, input a set of data, and visualize the algorithm's process in real-time. The GUI will also display relevant metrics, such as the number of comparisons, swaps, or pathfinding iterations, as the algorithm runs.
+
+supplemental_links:
+    - text: "Demo"
+      link: "https://example.com/"
+      primary: true
+
 ---
-
-![fractals](./thumbnails/fractal.png)
-
-<div>
-    <a name="" id="" class="btn btn-primary" href="#" role="button">Button</a>
-    <a name="" id="" class="btn btn-primary" href="#" role="button">Button</a>
-</div>
-
-The fractal simulator project aims to develop a software application that generates and visualizes fractals in real-time.

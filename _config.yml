@@ -11,6 +11,9 @@ username_linkedin: akixuu
 username_youtube: akixuu
 url_blog: https://garden.akixuu.ca/
 
+plugins:
+  - jekyll-loading-lazy
+
 collections_dir: content
 
 collections:

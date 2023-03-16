@@ -1,16 +1,18 @@
 ---
 
-title: Physics Particle Simuluator
+title: Physics Particle Simulator
 thumbnail: particles.png
 complete: false
 
+description:
+    A software program that simulates the motion and behavior of particles in a virtual environment using the laws of physics. The goal of the project is to create a program that allows users to create and manipulate particles with different properties, such as mass, velocity, and charge, and observe their interactions and behavior in real-time.
+
+supplemental_links:
+    - text: "Install"
+      link: "https://example.com/"
+      primary: true
+
+    - text: "Code"
+      link: "https://example.com/"
+      
 ---
-
-![fractals](./thumbnails/fractal.png)
-
-<div>
-    <a name="" id="" class="btn btn-primary" href="#" role="button">Button</a>
-    <a name="" id="" class="btn btn-primary" href="#" role="button">Button</a>
-</div>
-
-The fractal simulator project aims to develop a software application that generates and visualizes fractals in real-time.

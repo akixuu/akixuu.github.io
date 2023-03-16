@@ -1,1 +1,103 @@
-{{ content }}
+---
+layout: wrapper
+---
+<div class="m-3">
+    <a href="../index.html" class="text-decoration-none h3 link-secondary"><i class="fa-solid fa-home"></i></a>
+</div>
+
+<h1 class="text-center col-12 col-md-6 my-5 mx-auto display-2 fw-bold">{{ page.title }}</h1>
+<div class="d-grid gap-5 col-11 col-sm-10 col-md-5 mx-auto">
+
+    <!-- thumbnail -->
+    <div>
+        <img src="../assets/imgs/project_thumbnails/{{page.thumbnail}}" alt="" width="100%">
+    </div>
+
+    <!-- description -->
+    {% if page.description %}
+    <div class="col-12 col-sm-9 mx-auto">
+        <p class="fs-5 text-start text-sm-center m-0">
+        {{ page.description }}
+        </p>
+    </div>
+    {% endif %}
+
+    <!-- supplemental links -->
+    {% if page.supplemental_links %}
+    <div class="col-12 col-sm-9 mx-auto m-0 text-start text-sm-center" style="margin-top: -2rem !important;">
+        {% for button in page.supplemental_links %}
+        <a class="btn rounded-pill {% if button.primary %}btn-outline-primary {% else %} btn-outline-secondary{% endif %}"
+            href="{{button.link}}">{{button.text}}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    <!-- gallery -->
+    {% if page.gallery %}
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="..." class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Label</h5>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<br>
+    {% endif %}
+    
+    <!-- video -->
+    {% if page.video %}
+    <div class="embed-responsive embed-responsive-16by9 mx-auto">
+        <iframe class="embed-responsive-item" src="{{ page.video }}"
+            allowfullscreen></iframe>
+    </div>
+    {% endif %}
+
+    <!-- build logs -->
+    {% if page.build_logs %}
+    <div class="col-12 col-sm-10 col-lg-7 mx-auto">
+        <h5 class="text-left text-sm-center">Build Logs</h5>
+        <div class="row">
+            {% for build_log in page.build_logs %}
+            <a href="#" class="text-decoration-none  fs-5 link-secondary">
+                <div class="row justify-content-between">
+                    <div class="col-auto">
+                        <p class="m-0">Log #0</p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="m-0">00/00/0000</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <br>
+    {% endif %}
+
+    <!-- other content -->
+    {{ content }}
+
+    <br>
+</div>
+{% include footer.html %}
