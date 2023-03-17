@@ -5,7 +5,7 @@ thumbnail: particles.png
 complete: false
 
 description:
-    A software program that simulates the motion and behavior of particles in a virtual environment using the laws of physics. The goal of the project is to create a program that allows users to create and manipulate particles with different properties, such as mass, velocity, and charge, and observe their interactions and behavior in real-time.
+    A software program that simulates the motion and behavior of particles in a virtual environment using the laws of physics.
 
 supplemental_links:
     - text: "Install"
@@ -14,5 +14,7 @@ supplemental_links:
 
     - text: "Code"
       link: "https://example.com/"
-      
+
+video: https://www.youtube.com/embed/p4YirERTVF0
+
 ---

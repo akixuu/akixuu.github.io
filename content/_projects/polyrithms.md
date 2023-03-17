@@ -7,10 +7,11 @@ complete: false
 description:
     A software program that helps musicians and music enthusiasts understand complex rhythmic patterns by visualizing them in a clear and intuitive way.
 
-build_logs:
-    - test
-    - test
-    - test
+build_logs:  
+  - loglink1
+  - loglink2
+  - loglink3
+
 
 supplemental_links:
     - text: "Install"
@@ -19,4 +20,7 @@ supplemental_links:
 
     - text: "Code"
       link: "https://example.com/"
+
+video: https://www.youtube.com/embed/UJXj05hLBiw 
+
 ---

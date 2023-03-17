@@ -55,11 +55,11 @@ websites:
                 <div class="card-body p-0">
                     <p class="card-text">{{ website.description }}</p>
                     {% if website.live_url %}
-                        <a class="btn rounded-pill btn-outline-secondary" href="{{ page.live_url }}">View Live</a>
+                        <a data-cursor-stick class="btn rounded-pill btn-outline-secondary" href="{{ page.live_url }}">View Live</a>
                     {% endif %}
 
                     {% if website.code_url %}
-                        <a class="btn rounded-pill btn-outline-secondary" href="{{ page.code_url }}">Code</a>
+                        <a data-cursor-stick class="btn rounded-pill btn-outline-secondary" href="{{ page.code_url }}">Code</a>
                     {% endif %}
                 </div>
             </div>

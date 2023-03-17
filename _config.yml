@@ -5,12 +5,6 @@ description: >-
 baseurl: "" # no subpath
 url: "https://www.akixuu.ca"
 
-username_github: akixuu
-username_instagram: akixuu
-username_linkedin: akixuu
-username_youtube: akixuu
-url_blog: https://garden.akixuu.ca/
-
 plugins:
   - jekyll-loading-lazy
 
