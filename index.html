@@ -62,18 +62,6 @@ layout: page
 
     </div>
 
-
-    <div>
-        <h3>Gallery</h3>
-        <div class="row row-cols-2 row-cols-md-4 g-4 pt-1">
-            {% for image in site.data.gallery limit:4 %}
-            
-            <img src="https://picsum.photos/200" alt="">
-
-            {% endfor %}
-        </div>
-    </div>
-
     <!-- writing -->
     <div class="col-12">
         <div class="row justify-content-between align-items-center">
@@ -82,7 +70,8 @@ layout: page
                 <h3>Articles</h3S>
             </div>
             <div class="col-auto">
-                <a href="https://garden.akixuu.ca" class="text-decoration-none">More <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://garden.akixuu.ca" class="text-decoration-none">More <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
         <div class="pt-2 row row-cols-1 row-cols-md-3 g-4">
@@ -99,5 +88,20 @@ layout: page
             </a>
             {% endfor %}
         </div>
+    </div>
+</div>
+
+<br><br><br>
+<div>
+    <h3>Gallery</h3>
+    <div class="row row-cols-2 row-cols-md-4 g-4 pt-1">
+        {% for image in site.data.gallery limit:4 %}
+        <figure class="figure">
+            <img src="./assets/imgs/gallery/{{image.filename}}" class="figure-img img-fluid rounded"
+                alt="{{image.caption}}" width="100%">
+            <figcaption class="figure-caption">{{image.caption}}</figcaption>
+        </figure>
+
+        {% endfor %}
     </div>
 </div>
