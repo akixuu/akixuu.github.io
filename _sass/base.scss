@@ -1,0 +1,110 @@
+* {
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn,
+.button {
+  color: white;
+  font-weight: 500 !important;
+}
+
+.vertical-line {
+  position: relative;
+  border-left: 1px solid black;
+  padding-left: 30px !important;
+}
+
+.vertical-line::before {
+  content: "";
+  position: absolute;
+  top: 20;
+  left: 0;
+  height: 30%;
+  border-left: 2px solid black;
+  width: 10px;
+}
+
+.vertical-line-light {
+  border-left-color: white !important;
+  ::before {
+    border-left-color: white;
+  }
+}
+
+.separator {
+  position: relative;
+  height: 2px;
+  background-color: #ccc;
+  margin: 10px 0;
+  .animated-line {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 100%;
+    width: 30%;
+    background-color: #000;
+    animation: animateSeparator 1s linear forwards;
+  }
+  @keyframes animateSeparator {
+    0% {
+      left: 20%;
+    }
+    100% {
+      left: 50%;
+    }
+  }
+}
+
+.overflow-hidden {
+    overflow:hidden;
+    object-fit: cover;
+}
+
+$hero-image-url: 'https://images.squarespace-cdn.com/content/v1/58791556f5e231c32ff2a65f/1485906236558-6P8O7JA125RVWCQ9F45J/Minoru-Park---06.jpg';
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  .hero-image {
+    background-image: url($hero-image-url); // "../assets/images/minorupark.jpg"
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+  }
+}
+
+
+
+@import "variables";
+@import "animations";
+@import "bootstrap/bootstrap";

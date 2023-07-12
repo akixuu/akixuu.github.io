@@ -1,33 +1,36 @@
-title: Aki's Epikkk Website
+title: Aki Xu | Portfolio
 email: hello@akixuu.ca
 description: >-
   I know right? Very epic. Super Duper Uper epik.
-baseurl: "" # no subpath
-url: "https://www.akixuu.ca"
+baseurl: 
+url: https://www.akixuu.ca
 
 plugins:
   - jekyll-loading-lazy
+  - jekyll-sass-converter
 
-sass:
-    load_paths: 
-        - _sass
-
-collections_dir: collections
+theme: null
 
 collections:
   projects:
     output: true
-    layout: project
 
 defaults:
   - scope:
-      path: "assets/imgs/"
+      path: assets/imgs
     values:
       image: true
       project_thumbnail: true 
 
   - scope:
       path: ""
-      type: "projects"
+      type: projects
     values:
-      layout: "project"
+      layout: project
+      permalink: :collection/:name/
+
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

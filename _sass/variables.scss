@@ -1,0 +1,28 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// $headings-font-family: 'Playfair Display', serif;
+$font-family-sans-serif:  'Montserrat', sans-serif, system-ui, -apple-system;
+
+$display-font-weight: 900;
+$font-weight-bold: 900;
+
+$spacer: 2rem;
+$font-size-base: 1.0rem;
+$line-height-base: 1.8;
+
+// colors
+$primary: #ffaef7;
+$secondary: #fff;
+$body-bg: #1b1b1b;
+$body-color: #ffffff;
+$dark: $body-bg;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px, // 960px 
+  xl: 970px, // 1140px
+  xxl: 980px // 1320px
+);
