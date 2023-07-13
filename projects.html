@@ -2,31 +2,23 @@
 title: Projects
 ---
 
-<br>
-<a href="index.html" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Home</a>
-
-<br>
-
+<a href="/" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Home</a>
 <h1 class="display-1 fw-bold">Project Gallery</h1>
-<br>
-
+<hr>
 
 <!-- gallery -->
-<div class="col">
-    <div class="row row-cols-2 row-cols-md-3 g-4">
-
+<section>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
         {% for project in site.projects %}
         <div class="col">
-            <a href="{{project.url}}" class="text-decoration-none link-light">
-                <div class="card border-0 border-light bg-dark">
-                    <img src="./assets/imgs/project_thumbnails/{{ project.thumbnail }}" class="card-img-top"
-                        alt="thumbnail">
-                    <div class="card-body p-0 pt-2">
-                        <h5 class="card-title">{{ project.title }}</h5>
-                    </div>
+            <a href="{{project.url}}" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_thumbnails/{{ project.thumbnail }}"
+                        class="object-fit-cover h-100 w-100" alt="thumbnail">
                 </div>
+                <h6 class="pt-2">{{ project.title }}</h6>
             </a>
         </div>
         {% endfor %}
     </div>
-</div>
+</section>
