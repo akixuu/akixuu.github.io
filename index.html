@@ -5,101 +5,94 @@ title: Home
 <!-- main page -->
 
 <!-- head -->
-<div class="my-5">
-    <br><br><br>
-    <style></style>
-    <h1 class="display-1 inline-block fw-bold" data-cursor-text=" " data-cursor="-inverse">Aki Xu</h1>
+<section>
+    <span class="display-1 inline-block fw-bold" data-cursor-text="" data-cursor="-inverse">Aki Xu</span>
     <h1 class="display-6">Welcome to my website!</h1>
     {% for account in site.data.socials %}
     <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="{{account.link}}">{{account.for}}</a>
     {% endfor %}
-</div>
+</section>
 
 <!-- projects -->
-<div class="row gy-5">
-    <div class="col">
-        <div class="row justify-content-between align-items-center">
-            <div class="col">
-                <!-- section header -->
-                <h3>Projects</h3S>
-            </div>
-            <div class="col-auto">
-                <a href="projects.html" class="text-decoration-none">More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+<div class="my-4">
+    <!-- section header -->
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <h3 class="">Projects</h3S>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-
-            <!-- explainer/featured vid -->
-            <div class="col">
-                <div class="border-0">
-                    <p class="pt-2">I create projects mainly related to __, ___, and ___. I</p>
-                    <img src="./assets/imgs/projects.png" class="card-img-top" alt="projects thumbnail">
-                </div>
-            </div>
-
-            <!-- project gallery -->
-            <div class="col-12">
-                <div class="row row-cols-2 g-4">
-
-                    {% for project in site.projects limit:4 %}
-                    <div class="col">
-                        <a href="{{project.url}}" class="text-decoration-none">
-                            <div class="card bg-dark">
-                                <img src="./assets/imgs/project_thumbnails/{{ project.thumbnail }}" class="card-img-top"
-                                    alt="thumbnail" width="100%">
-                                <div class="card-body p-0 pt-2">
-                                    <h6 class="card-title">{{ project.title }}</h6>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-
-            </div>
+        <div class="col-auto">
+            <a href="/projects" class="text-decoration-none">More <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-
-
     </div>
 
-    <!-- writing -->
-    <div class="col-12">
-        <div class="row justify-content-between align-items-center">
-            <div class="col">
-                <!-- section header -->
-                <h3>Articles</h3S>
+    <!-- projects -->
+    <div class="row row-cols-md-2 row-cols-1">
+        <!-- featured -->
+        <div class="col">
+            <div class="ratio ratio-16x9">
+                <img src="./assets/imgs/projects.png" class="object-fit-cover h-100 w-100" alt="project thumbnail">
             </div>
-            <div class="col-auto">
-                <a href="https://garden.akixuu.ca" class="text-decoration-none">More <i
-                        class="fa-solid fa-arrow-right"></i></a>
+            <p class="lead">Check out some of my projects!</p>
+        </div>
+
+        <!-- projects -->
+        <div class="col">
+            <div class="row row-cols-2 g-1">
+                {% for project in site.projects limit:4 %}
+                <div class="col">
+                    <a href="/{{project.permalink}}" class="text-decoration-none">
+                        <div class="ratio ratio-16x9">
+                            <img src="/assets/imgs/project_thumbnails/{{ project.thumbnail }}"
+                                class="object-fit-cover h-100 w-100" alt="thumbnail">
+                        </div>
+                        <h6 class="pt-2">{{ project.title }}</h6>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        <div class="pt-2 row row-cols-1 row-cols-md-3 g-4">
-            {% for article in site.data.writings limit:3 %}
-            <a class="text-decoration-none" href="{{article.link}}">
-                <div class="col">
-                    <div class="card bg-dark border-light">
-                        <div class="card-body">
-                            <h6 class="card-title">{{article.title}}</h6>
-                            <p class="card-text text-light">{{article.excerpt | truncate: 125}}</p>
-                        </div>
+    </div>
+</div>
+
+<!-- writing -->
+<div class="my-4">
+    <!-- section header -->
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <h3 class="">Writing</h3S>
+        </div>
+        <div class="col-auto">
+            <a href="https://garden.akixuu.ca" class="text-decoration-none">More <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1">
+        {% for article in site.data.writings limit:3 %}
+
+        <div class="col">
+            <a class="text-decoration-none" href="/{{article.url}}">
+                <div class="card bg-dark h-100">
+                    <div class="card-body link-light">
+                        <p class="fw-bolder">{{article.title}}</p>
+                        <p class="">{{article.excerpt | truncate: 125}}</p>
                     </div>
                 </div>
             </a>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 
-<br><br><br>
-<div>
+<!-- gallery (currently hidden) -->
+<div class="my-4 d-none">
     <h3>Gallery</h3>
-    <div class="row row-cols-2 row-cols-md-4 g-4 pt-1">
+    <div class="row row-cols-2 row-cols-md-4 g-2 pt-1">
         {% for image in site.data.gallery limit:4 %}
         <figure class="figure">
-            <img src="./assets/imgs/gallery/{{image.filename}}" class="figure-img img-fluid rounded"
-                alt="{{image.caption}}" width="100%">
-            <figcaption class="figure-caption">{{image.caption}}</figcaption>
+            <div class="ratio ratio-1x1">
+                <img src="{{}}" class="figure-img img-fluid rounded w-100 h-100 placeholder object-fit-cover" alt="{{image.caption}}">
+            </div>
+            <figcaption class="figure-caption text-center">{{image.caption}}</figcaption>
         </figure>
 
         {% endfor %}

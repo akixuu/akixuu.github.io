@@ -1,9 +1,9 @@
-title: Aki Xu | Portfolio
-email: hello@akixuu.ca
+title: "Aki Xu"
+email: "hello@akixuu.ca"
 description: >-
   I know right? Very epic. Super Duper Uper epik.
-baseurl: 
-url: https://www.akixuu.ca
+baseurl: ""
+url: "https://www.akixuu.ca"
 
 plugins:
   - jekyll-loading-lazy
@@ -14,6 +14,8 @@ theme: null
 collections:
   projects:
     output: true
+    url: :collection/:name/
+
 
 defaults:
   - scope:
@@ -27,7 +29,6 @@ defaults:
       type: projects
     values:
       layout: project
-      permalink: :collection/:name/
 
   - scope:
       path: ""
