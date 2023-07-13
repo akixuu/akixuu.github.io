@@ -1,0 +1,48 @@
+- thumbnail: app-1.png
+  title: Demo Card 1
+  date: Jul 2020
+  live_url: https://example.com
+  code_url: https://example.com
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam nisi, ultricies vel pellentesque eu.
+
+- thumbnail: app-2.png
+  title: Demo Card 2
+  date: Jul 2020
+  live_url: https://example.com
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- thumbnail: tedx.png
+  title: TEDxYouth Minoru Park
+  date: Jul 2020
+  live_url: https://tedxminorupark.github.io 
+  description: Official website for TEDxYouth Minoru Park.
+
+- thumbnail: ar.png
+  title: Active Releaf
+  date: Jul 2020
+  live_url: https://activereleaf.com
+  description: Woocommerce store site
+
+- thumbnail: programming-12.png
+  title: Programming 12
+  date: Jul 2020
+  live_url: https://example.com
+  description: School programming 12 course project gallery.
+
+- thumbnail: cluborate.png
+  title: Cluborate Community
+  date: Jul 2020
+  live_url: https://cluborate-community.github.io/
+  description: Official CLUBORATE front page.
+
+- thumbnail: bijin.png
+  title: Bijin Spa Beauty Salon
+  date: Jul 2020
+  live_url: https://www.bijinspa.com/
+  description: Spa buisness front page.
+
+- thumbnail: coffee-fcc.png
+  title: Coffee FCC
+  date: Jul 2020
+  live_url: https://example.com
+  description: Coffee demo Freecodecamp front page.
