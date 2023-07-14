@@ -7,6 +7,10 @@ domain: akixuu.github.io
 url: https://akixuu.github.io
 baseurl: 
 
+sass:
+  sass_dir: _sass
+  <option_name2>: <option_value2>
+
 # content
 collections:
   projects:
@@ -36,5 +40,6 @@ defaults:
 plugins:
   - jekyll-loading-lazy
   - jekyll-sass-converter
+  - github-pages
 
 theme: null

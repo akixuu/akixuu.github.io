@@ -1,3 +1,6 @@
+@import "variables";
+@import "animations";
+
 * {
   transition: 50ms;
 }
@@ -22,9 +25,7 @@ html {
   color: white;
 }
 
-
 // general
-
 .overflow-hidden {
     overflow:hidden;
     object-fit: cover;
@@ -38,6 +39,4 @@ html {
   letter-spacing: 5px;
 }
 
-@import "variables";
-@import "animations";
 @import "bootstrap/bootstrap";
