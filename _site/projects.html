@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Aki Xu</title>
+
+  <!-- mouse follower -->
+  <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+  <!-- g-analytics -->
+
+  <!-- includes bootstrap and custom styling -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- favicon-->
+  <link rel="icon" type="image/x-icon" href="/">
+</head>
+
+<body>
+
+  <!-- idk i don't really need a header -->
+
+<main class="my-5">
+    <section class="container">
+        <a href="/" class="text-decoration-none"><i class="fa-solid fa-arrow-left"></i> Home</a>
+<h1 class="display-1 fw-bold">Project Gallery</h1>
+<hr>
+
+<!-- gallery -->
+<section>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+        
+        <div class="col">
+            <a href="/projects/fractals.html" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_thumbnails/fractal.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">Fractal Visualizer</h6>
+            </a>
+        </div>
+        
+        <div class="col">
+            <a href="/projects/particle-sim.html" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_thumbnails/particles.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">Physics Particle Simulator</h6>
+            </a>
+        </div>
+        
+        <div class="col">
+            <a href="/projects/polyrithms.html" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_thumbnails/polyrithm.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">An Investigation on Polyrithms</h6>
+            </a>
+        </div>
+        
+        <div class="col">
+            <a href="/projects/sorting-pathfinding-visualizer.html" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_thumbnails/algo.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">Sorting &amp; Pathfinding Algo Visualizer</h6>
+            </a>
+        </div>
+        
+        <div class="col">
+            <a href="/projects/websites.html" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_thumbnails/websites.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">Websites</h6>
+            </a>
+        </div>
+        
+    </div>
+</section>
+    </section>
+</main>
+
+<footer class="py-3 border-1 border-top ">
+    <div class="container">
+        <small>Copyright 2023 © Aki Xu, All rights reserved.</small>
+    </div>
+</footer>
+
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <!-- fa -->
+  <script src="https://kit.fontawesome.com/51e1f7ac6b.js" crossorigin="anonymous"></script>
+
+  <!-- mouse follower -->
+  <script>
+    const cursor = new MouseFollower({
+      container: 'body',
+      speed: 0.3
+    });  
+  </script>
+</body>
+
+</html>
