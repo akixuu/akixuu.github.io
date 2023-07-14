@@ -36,9 +36,5 @@ defaults:
 plugins:
   - jekyll-loading-lazy
   - jekyll-sass-converter
-  - jekyll-gist
-  - jekyll-email-protect
-  - jekyll-seo-tag
-  - jekyll_github_chart
 
 theme: null
