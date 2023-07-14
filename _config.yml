@@ -1,21 +1,17 @@
-title: "Aki Xu"
-email: "hello@akixuu.ca"
+# meta
+title: Aki Xu
 description: >-
   I know right? Very epic. Super Duper Uper epik.
-baseurl: ""
-url: "https://www.akixuu.ca"
 
-plugins:
-  - jekyll-loading-lazy
-  - jekyll-sass-converter
+domain: akixuu.github.io
+url: https://akixuu.github.io
+baseurl: 
 
-theme: null
-
+# content
 collections:
   projects:
     output: true
     url: :collection/:name/
-
 
 defaults:
   - scope:
@@ -35,3 +31,14 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+
+# configs
+plugins:
+  - jekyll-loading-lazy
+  - jekyll-sass-converter
+  - jekyll-gist
+  - jekyll-email-protect
+  - jekyll-seo-tag
+  - jekyll_github_chart
+
+theme: null
