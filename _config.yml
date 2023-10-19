@@ -1,27 +1,25 @@
-# meta
 title: Aki Xu
 description: >-
-  I know right? Very epic. Super Duper Uper epik.
+  Hello. I'm Aki and welcome to my super cool website.
 
 domain: akixuu.github.io
 url: https://akixuu.github.io
-baseurl: /portfolio-site/
+baseurl:
 
 sass:
   sass_dir: _sass
 
-# content
 collections:
   projects:
     output: true
-    url: :collection/:name/
+    permalink: :collection/:name/
 
 defaults:
   - scope:
       path: assets/imgs
     values:
       image: true
-      project_thumbnail: true 
+      project_thumbnail: true
 
   - scope:
       path: ""
@@ -35,7 +33,6 @@ defaults:
     values:
       layout: "page"
 
-# configs
 plugins:
   - jekyll-loading-lazy
   - jekyll-sass-converter

@@ -6,7 +6,7 @@ title: Home
 
 <!-- head -->
 <section>
-    <span class="display-1 inline-block fw-bold" data-cursor-text="" data-cursor="-inverse">Aki Xu</span>
+    <span class="display-1 fw-bold" data-cursor-text="" data-cursor="-inverse">Aki Xu</span>
     <h1 class="display-6">Welcome to my website!</h1>
     {% for account in site.data.socials %}
     <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="{{account.link}}">{{account.for}}</a>
@@ -14,7 +14,7 @@ title: Home
 </section>
 
 <!-- projects -->
-<div class="my-4">
+<section class="my-4">
     <!-- section header -->
     <div class="row justify-content-between align-items-center">
         <div class="col">
@@ -30,7 +30,7 @@ title: Home
         <!-- featured -->
         <div class="col">
             <div class="ratio ratio-16x9">
-                <img src="./assets/imgs/projects.png" class="object-fit-cover h-100 w-100" alt="project thumbnail">
+                <img src="/assets/imgs/projects.png" class="object-fit-cover h-100 w-100" alt="project thumbnail">
             </div>
             <p class="lead">Check out some of my projects!</p>
         </div>
@@ -40,9 +40,9 @@ title: Home
             <div class="row row-cols-2 g-1">
                 {% for project in site.projects limit:4 %}
                 <div class="col">
-                    <a href="/{{project.permalink}}" class="text-decoration-none">
+                    <a href="/" class="text-decoration-none">
                         <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_thumbnails/{{ project.thumbnail }}"
+                            <img src="/assets/imgs/project_thumbnails/{{project.thumbnail}}"
                                 class="object-fit-cover h-100 w-100" alt="thumbnail">
                         </div>
                         <h6 class="pt-2">{{ project.title }}</h6>
@@ -52,10 +52,10 @@ title: Home
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <!-- writing -->
-<div class="my-4">
+<section class="my-4">
     <!-- section header -->
     <div class="row justify-content-between align-items-center">
         <div class="col">
@@ -81,20 +81,20 @@ title: Home
         </div>
         {% endfor %}
     </div>
-</div>
+</section>
 
 <!-- gallery (currently hidden) -->
-<div class="my-4 d-none">
+<section class="my-4 d-none">
     <h3>Gallery</h3>
     <div class="row row-cols-2 row-cols-md-4 g-2 pt-1">
         {% for image in site.data.gallery limit:4 %}
         <figure class="figure">
             <div class="ratio ratio-1x1">
-                <img src="" class="figure-img img-fluid rounded w-100 h-100 placeholder object-fit-cover" alt="{{image.caption}}">
+                <img src="" class="figure-img img-fluid rounded w-100 h-100 placeholder object-fit-cover"
+                    alt="{{image.caption}}">
             </div>
             <figcaption class="figure-caption text-center">{{image.caption}}</figcaption>
         </figure>
-
         {% endfor %}
     </div>
-</div>
+</section>

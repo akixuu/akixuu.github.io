@@ -5,7 +5,9 @@ thumbnail: fractal.png
 draft: true
 
 description: >
-  The fractal simulator project aims to develop a software application that generates and visualizes fractals in real-time.
+  The fractal simulator that generates and visualizes fractals in real-time.
+
+stack: test test test
 
 build_logs:
   - loglink1
@@ -20,10 +22,10 @@ supplemental_links:
   - text: "Code"
     link: "https://example.com/"
 
-video: https://www.youtube.com/embed/JKe0gryiCCw
+video: JKe0gryiCCw
 
 gallery_dir: fractals
-gallery: # under assets/imgs/project_galleries/gallery_dir
+gallery:
   - filename: 1.gif
     caption: Some other caption.
 

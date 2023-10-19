@@ -1,7 +1,6 @@
 ---
 title: The title of the project
 
-# under ./assets/imgs/project_thumbnails/
 thumbnail: thumbnail.png
 video_thumbnail: thumbnail.mp4
 draft: true
@@ -22,7 +21,7 @@ supplemental_links:
   - text: "Other"
     link: "https://example.com/"
 
-video: https://www.youtube.com/FOOBAR
+video: FOOBAR
 
 gallery: # under assets/imgs/galleries/
   - filename: image.png

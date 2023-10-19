@@ -19,5 +19,5 @@ supplemental_links:
   - text: "Code"
     link: "https://example.com/"
 
-video: https://www.youtube.com/embed/UJXj05hLBiw
+video: UJXj05hLBiw
 ---

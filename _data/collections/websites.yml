@@ -1,38 +1,25 @@
-- thumbnail: app-1.png
-  title: Demo Card 1
-  date: Jul 2020
-  live_url: https://example.com
-  code_url: https://example.com
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam nisi, ultricies vel pellentesque eu.
-
-- thumbnail: app-2.png
-  title: Demo Card 2
-  date: Jul 2020
-  live_url: https://example.com
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
 - thumbnail: tedx.png
   title: TEDxYouth Minoru Park
   date: Jul 2020
-  live_url: https://tedxminorupark.github.io 
+  live_url: https://akixuu.github.io/tedxminorupark-site/
   description: Official website for TEDxYouth Minoru Park.
 
 - thumbnail: ar.png
-  title: Active Releaf
+  title: Alleviate
   date: Jul 2020
-  live_url: https://activereleaf.com
-  description: Woocommerce store site
+  live_url: https://alleviateme.com/
+  description: A Woocommerce store.
 
 - thumbnail: programming-12.png
   title: Programming 12
   date: Jul 2020
-  live_url: https://example.com
-  description: School programming 12 course project gallery.
+  live_url: https://707hoaki.wixsite.com/game-design
+  description: School programming 12 course project gallery on wix.
 
 - thumbnail: cluborate.png
   title: Cluborate Community
   date: Jul 2020
-  live_url: https://cluborate-community.github.io/
+  live_url: https://akixuu.github.io/cluborate-community-site/
   description: Official CLUBORATE front page.
 
 - thumbnail: bijin.png
