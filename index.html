@@ -6,8 +6,8 @@ title: Home
 
 <!-- head -->
 <section>
-    <span class="display-1 fw-bold" data-cursor-text="" data-cursor="-inverse">Aki Xu</span>
-    <h1 class="display-6">Welcome to my website!</h1>
+    <h1 class="display-1" data-cursor-text="" data-cursor="-inverse">Hello World!</h1>
+    <h1 class="display-5 text-muted">Thanks for stopping by. Welcome to my website!</h1>
     {% for account in site.data.socials %}
     <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="{{account.link}}">{{account.for}}</a>
     {% endfor %}
@@ -18,10 +18,10 @@ title: Home
     <!-- section header -->
     <div class="row justify-content-between align-items-center">
         <div class="col">
-            <h3 class="">Projects</h3S>
+            <h3 class="fw-bold">Projects</h3S>
         </div>
         <div class="col-auto">
-            <a href="/projects" class="text-decoration-none">More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/projects" class="text-decoration-none">More <i class="fa-solid fa-angles-right"></i></a>
         </div>
     </div>
 
@@ -32,7 +32,7 @@ title: Home
             <div class="ratio ratio-16x9">
                 <img src="/assets/imgs/projects.png" class="object-fit-cover h-100 w-100" alt="project thumbnail">
             </div>
-            <p class="lead">Check out some of my projects!</p>
+            <p class="">Check out some of my projects!</p>
         </div>
 
         <!-- projects -->
@@ -40,9 +40,9 @@ title: Home
             <div class="row row-cols-2 g-1">
                 {% for project in site.projects limit:4 %}
                 <div class="col">
-                    <a href="/" class="text-decoration-none">
+                    <a href="{{project.url}}" class="text-decoration-none">
                         <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_thumbnails/{{project.thumbnail}}"
+                            <img src="/assets/imgs/project_imgs/thumbnails/{{ project.thumbnail }}"
                                 class="object-fit-cover h-100 w-100" alt="thumbnail">
                         </div>
                         <h6 class="pt-2">{{ project.title }}</h6>
@@ -59,11 +59,11 @@ title: Home
     <!-- section header -->
     <div class="row justify-content-between align-items-center">
         <div class="col">
-            <h3 class="">Writing</h3S>
+            <h3 class="fw-bold">Writing</h3S>
         </div>
         <div class="col-auto">
             <a href="https://garden.akixuu.ca" class="text-decoration-none">More <i
-                    class="fa-solid fa-arrow-right"></i></a>
+                    class="fa-solid fa-angles-right"></i></a>
         </div>
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-1">
