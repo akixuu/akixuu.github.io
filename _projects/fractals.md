@@ -22,7 +22,7 @@ supplemental_links:
   - text: "Code"
     link: "https://example.com/"
 
-video: JKe0gryiCCw
+video: x
 
 gallery_dir: fractals
 gallery:
