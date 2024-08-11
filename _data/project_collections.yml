@@ -4,21 +4,18 @@
   items:
     - thumbnail: urelief.png
       title: uRelief
-      date: Jul 2020
-      live_url: https://alleviateme.com/
+      live_url: https://www.youtube.com/watch?v=wqwXAGMdQ_0
       description: Ultimate resource finder app for the homeless
 
     - thumbnail: resumer.png
       title: Resumer
-      date: Jul 2020
-      live_url: https://alleviateme.com/
+      live_url: https://www.youtube.com/watch?v=exuFlWFGCwI
       description: Job finding app portal for new immigrants
 
     - thumbnail: nonotes.png
-      title: Resumer
-      date: Jul 2020
-      live_url: https://alleviateme.com/
-      description: A Woocommerce store.
+      title: NoNotes
+      live_url: https://devpost.com/software/noname-pht40q
+      description: Your AI note-taking companion
     
 # Websites for Businesses
 - title: Websites for Businesses
@@ -26,61 +23,66 @@
   items:
     - thumbnail: wabeauty.png
       title: Wa Beauty Co.
-      date: Jul 2020
       live_url: https://wabeauty.ltd/
-      description: Online agency.
+      description: Online web services agency
 
-    - thumbnail: wabeauty.png
+    - thumbnail: comingsoon.png
       title: SakeGlow
-      date: Jul 2020
       live_url: https://sakeglow.com/
-      description: E-commerce business.
+      description: E-commerce business
 
     - thumbnail: alleviate.png
       title: Alleviate by ActiveReleaf
-      date: Jul 2020
       live_url: https://alleviateme.com/
-      description: E-commerce business.
+      description: E-commerce business
 
     - thumbnail: mkwt.png
       title: Magokoro Wellness
-      date: Jul 2020
       live_url: https://mkwt.ca/
-      description: Local business.
+      description: Local business, e-commerce store
 
     - thumbnail: koibyj.png
       title: Koi by J
-      date: Jul 2020
       live_url: https://koibyj.com/
-      description: Local business.
+      description: Local business
 
     - thumbnail: bijinspa.png
       title: Beauty Salon Bijin Spa
-      date: Jul 2020
       live_url: https://bijinspa.ca/
-      description: Local business.
+      description: Local business
     
 # Websites for Organizations
 - title: Websites for Organizations
   description:
   items:
+    - thumbnail: ttg.png
+      title: Tech to Go by Tonari Gumi
+      live_url: https://ttg.tonarigumi.ca
+      description: Tech support program connecting generations
+      
     - thumbnail: tedx.png
-      title: (Archived) TEDxYouth Minoru Park
-      date: Jul 2020
+      title: TEDxYouth Minoru Park
       live_url: https://akixuu.github.io/tedxminorupark-site/
-      description: Website for local TEDx event.
+      description: (Archived) Local TEDx event, run by youth
+
     - thumbnail: cluborate.png
       title: Cluborate Community
-      date: Jul 2020
       live_url: https://akixuu.github.io/cluborate-community-site/
-      description: (Archived) Cluborate organization page.
+      description: (Archived) NPO dedicated to connecting youth
 
 # Other Stuff?!!
 - title: Other Stuff?!!
   description:
   items:
-    - thumbnail: programming-12.png
+    - thumbnail: comingsoon.png
       title: Programming 12
-      date: Jul 2020
       live_url: https://707hoaki.wixsite.com/game-design
-      description: Programming 12 Course.
+      description: School game development course
+
+    - thumbnail: pocketorchestra.png
+      title: Pocket Orchestra
+      description: (Coming Soon) Interactive & fully online jamming
+      
+    - thumbnail: ringo.png
+      title: Ringo
+      description: (Coming Soon) Environmental awareness and exploration app
