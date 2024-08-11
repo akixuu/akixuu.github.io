@@ -10,8 +10,8 @@ $font-size-base: 1.2rem;
 $line-height-base: 1.8;
 
 // colors
-$primary: #ffaef7;
-$secondary: #fff;
+$primary: #d8d8d8;
+$secondary: #7a7a7a;
 $body-bg: #1b1b1b;
 $body-color: #ffffff;
 $dark: $body-bg;
@@ -23,3 +23,8 @@ $container-max-widths: (
   xl: 970px, // 1140px
   xxl: 980px // 1320px,
 );
+
+.btn-sm {
+  font-size: small !important;
+  padding: 8px 16px !important;
+}

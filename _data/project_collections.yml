@@ -4,17 +4,31 @@
   items:
     - thumbnail: urelief.png
       title: uRelief
-      live_url: https://www.youtube.com/watch?v=wqwXAGMdQ_0
+      links:
+        - text: Showcase 
+          url: https://www.youtube.com/watch?v=wqwXAGMdQ_0
+        - icon: award
+          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+        - text: Repo
+          url: https://www.youtube.com/watch?v=exuFlWFGCwI
       description: Ultimate resource finder app for the homeless
 
     - thumbnail: resumer.png
       title: Resumer
-      live_url: https://www.youtube.com/watch?v=exuFlWFGCwI
+      links:
+        - text: Showcase
+          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+        - icon: award
+          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+        - text: Repo
+          url: https://www.youtube.com/watch?v=exuFlWFGCwI
       description: Job finding app portal for new immigrants
 
     - thumbnail: nonotes.png
       title: NoNotes
-      live_url: https://devpost.com/software/noname-pht40q
+      links:
+        - text: Devpost
+          url: https://devpost.com/software/noname-pht40q
       description: Your AI note-taking companion
     
 # Websites for Businesses
@@ -23,32 +37,49 @@
   items:
     - thumbnail: wabeauty.png
       title: Wa Beauty Co.
-      live_url: https://wabeauty.ltd/
+      links:
+        - text: View Live
+          url: https://wabeauty.ltd/
       description: Online web services agency
 
     - thumbnail: comingsoon.png
       title: SakeGlow
-      live_url: https://sakeglow.com/
+      links:
+        - text: View Live
+          url: https://sakeglow.com/
       description: E-commerce business
 
     - thumbnail: alleviate.png
       title: Alleviate by ActiveReleaf
-      live_url: https://alleviateme.com/
+      links:
+        - text: View Live
+          url: https://alleviateme.com/
       description: E-commerce business
 
     - thumbnail: mkwt.png
       title: Magokoro Wellness
-      live_url: https://mkwt.ca/
+      links:
+        - text: View Live
+          url: https://mkwt.ca/
+        - text: Repo
+          url: https://mkwt.ca/
       description: Local business, e-commerce store
 
     - thumbnail: koibyj.png
       title: Koi by J
-      live_url: https://koibyj.com/
+      links:
+        - text: View Live
+          url: https://koibyj.com/
       description: Local business
 
     - thumbnail: bijinspa.png
       title: Beauty Salon Bijin Spa
-      live_url: https://bijinspa.ca/
+      links:
+        - text: View Live
+          url: https://bijinspa.ca/
+        - text: Repo 
+          url: https://bijinspa.ca/
+          disabled: true
       description: Local business
     
 # Websites for Organizations
@@ -57,17 +88,27 @@
   items:
     - thumbnail: ttg.png
       title: Tech to Go by Tonari Gumi
-      live_url: https://ttg.tonarigumi.ca
+      links:
+        - text: View Live
+          url: https://ttg.tonarigumi.ca
       description: Tech support program connecting generations
       
     - thumbnail: tedx.png
       title: TEDxYouth Minoru Park
-      live_url: https://akixuu.github.io/tedxminorupark-site/
+      links:
+        - text: View
+          url: https://akixuu.github.io/tedxminorupark-site/
+        - text: Repo
+          url: https://akixuu.github.io/tedxminorupark-site/
       description: (Archived) Local TEDx event, run by youth
 
     - thumbnail: cluborate.png
       title: Cluborate Community
-      live_url: https://akixuu.github.io/cluborate-community-site/
+      links:
+        - text: View
+          url: https://akixuu.github.io/cluborate-community-site/
+        - text: Repo
+          url: https://akixuu.github.io/cluborate-community-site/
       description: (Archived) NPO dedicated to connecting youth
 
 # Other Stuff?!!
@@ -76,7 +117,9 @@
   items:
     - thumbnail: comingsoon.png
       title: Programming 12
-      live_url: https://707hoaki.wixsite.com/game-design
+      links:
+        - text: View
+          url: https://707hoaki.wixsite.com/game-design
       description: School game development course
 
     - thumbnail: pocketorchestra.png

@@ -40,15 +40,20 @@ title: Projects
 
             <!-- Links -->
             <div class="mt-auto">
-                {% if item.live_url %}
-                <a data-cursor-stick target="_blank" class="btn rounded-pill btn-outline-secondary"
-                    href="{{ item.live_url }}">View Live</a>
-                {% endif %}
-
-                {% if item.code_url %}
-                <a data-cursor-stick target="_blank" class="btn rounded-pill btn-outline-secondary"
-                    href="{{ item.code_url }}">Code</a>
-                {% endif %}
+                {% for link in item.links %}
+                    {% if forloop.first %}
+                        <a data-cursor-stick target="_blank" class="btn rounded-pill btn-light btn-sm fw-bolder mb-1"
+                            href="{{ link.url }}">{{ link.text }}</a>
+                    {% elsif link.icon %}
+                        <a data-cursor-stick target="_blank" class="btn rounded-pill btn-light btn-sm fw-bolder mb-1"
+                            href="{{ link.url }}">
+                            <i class="fa-solid fa-{{ link.icon }}"></i>
+                        </a>
+                    {% else %}
+                        <a data-cursor-stick target="_blank" class="btn rounded-pill btn-outline-light btn-sm fw-bolder border-3 mb-1"
+                            href="{{ link.url }}">{{ link.text }}</a>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
         {% endfor %}
