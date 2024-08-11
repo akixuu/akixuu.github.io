@@ -3,7 +3,7 @@ title: Projects
 ---
 <h1 class="display-1 fw-bold text-center my-5">Projects</h1>
 
-<!-- Projects With Links -->
+<!-- Projects With Entries -->
 <!-- <section class="my-4">
     <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 gy-2 gx-1">
         {% for project in site.projects %}
@@ -24,7 +24,7 @@ title: Projects
 {% for project_collection in site.data.project_collections %}
 <section class="my-4">
     <h2 class="fw-bold my-2">{{project_collection.title}}</h2>
-    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
         
         {% for item in project_collection.items %}
         <!-- Project {{item.name}} -->
