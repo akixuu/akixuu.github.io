@@ -23,8 +23,10 @@
 
 <body>
 
-  <!-- Header -->
-<header class="bg-dark">
+  <!-- todo: shit implementation, fix -->
+
+<!-- Header -->
+<header class="bg-dark d-none d-lg-block">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
             <!-- Branding -->
@@ -39,7 +41,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link" href="/projects">Projects</a>
                             </li>
@@ -58,6 +60,46 @@
                 </nav>
             </div>
 
+            <!-- Social Icons -->
+            <div class="right">
+                <a href="https://www.github.com/akixuu" class="text-decoration-none mx-1" target="_blank">
+                    <i class="fab fa-github text-white"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/akixuu" class="text-decoration-none mx-1" target="_blank">
+                    <i class="fab fa-linkedin text-white"></i>
+                </a>
+                <a href="https://www.instagram.com/akixuu" class="text-decoration-none mx-1" target="_blank">
+                    <i class="fab fa-instagram text-white"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="bg-dark d-lg-none px-2">
+    <div class="navbar">
+        <a class="navbar-brand text-white fw-bold" href="/">AKI XU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="hobbiesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Hobbies
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="hobbiesDropdown">
+                        <a class="dropdown-item" href="https://data.typeracer.com/pit/profile?user=akixuu">Typeracer</a>
+                        <a class="dropdown-item" href="/photo">Photography</a>
+                        <a class="dropdown-item" href="https://www.goodreads.com/user/show/118945939-akixuu">Goodreads</a>
+                    </div>
+                </li>
+            </ul>
+    
             <!-- Social Icons -->
             <div class="right">
                 <a href="https://www.github.com/akixuu" class="text-decoration-none mx-1" target="_blank">
