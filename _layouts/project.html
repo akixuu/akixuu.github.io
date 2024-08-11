@@ -14,14 +14,14 @@ layout: wrapper
         {% endif %}
     </div>
 
-    <!-- description -->
+    <!-- Description -->
     {% if page.description %}
     <div class="col-12 col-sm-9 mx-auto mt-4">
         <p class="lead text-start text-sm-center">
         {{ page.description }}
         </p>
 
-        <!-- supplemental links -->
+        <!-- Supplemental Links -->
         {% if page.supplemental_links %}
         <div class="col-12 col-sm-9 mx-auto m-0 text-start text-sm-center">
             {% for button in page.supplemental_links %}
@@ -34,11 +34,12 @@ layout: wrapper
     </div>
     {% endif %}
     
-    <!-- other content -->
+    <!-- Other Content -->
     {{ content }}
 
     <br>
 </div>
 
 <br>
+
 {% include footer.html %}

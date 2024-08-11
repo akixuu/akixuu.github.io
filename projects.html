@@ -2,18 +2,15 @@
 title: Projects
 ---
 
-<a href="/" class="text-decoration-none"><i class="fa-solid fa-angles-left"></i> Home</a>
-<h1 class="display-1 fw-bold">Project Gallery</h1>
-<hr>
-
-<!-- gallery -->
-<section>
+<!-- Projects With Links -->
+<section class="my-4">
+    <h1 class="display-1 fw-bold text-center mb-4">Projects</h1>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
         {% for project in site.projects %}
         <div class="col">
             <a href="{{project.url}}" class="text-decoration-none">
                 <div class="ratio ratio-16x9">
-                    <img src="/assets/imgs/project_imgs/thumbnails/{{ project.thumbnail }}"
+                    <img src="/assets/imgs/project/thumbnails/{{ project.thumbnail }}"
                         class="object-fit-cover h-100 w-100" alt="thumbnail">
                 </div>
                 <h6 class="pt-2">{{ project.title }}</h6>
@@ -22,3 +19,40 @@ title: Projects
         {% endfor %}
     </div>
 </section>
+
+
+{% for project_collection in site.data.project_collections %}
+<section class="my-4">
+    <h2 class="fw-bold">{{project_collection.title}}</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 g-lg-3">
+        
+        {% for item in project_collection.items %}
+        <!-- Project {{item.name}} -->
+        <div class="col d-flex flex-column">
+            <!-- Thumbnail -->
+            <div class="ratio ratio-16x9">
+                <img src="/assets/imgs/project/thumbnails/{{ item.thumbnail }}"
+                    class="object-fit-cover h-100 w-100" alt="{{item.title}} thumbnail">
+            </div>
+
+            <!-- Textual Information -->
+            <p class="fs-6"><span class="fw-bold p-0">{{ item.title }}</span> - <em>{{ item.description }}</em></p>
+
+            <!-- Links -->
+            <div class="mt-auto justify-content-end">
+                {% if item.live_url %}
+                <a data-cursor-stick target="_blank" class="btn rounded-pill btn-outline-secondary"
+                    href="{{ item.live_url }}">View Live</a>
+                {% endif %}
+
+                {% if item.code_url %}
+                <a data-cursor-stick target="_blank" class="btn rounded-pill btn-outline-secondary"
+                    href="{{ item.code_url }}">Code</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% endfor %}

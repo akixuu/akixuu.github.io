@@ -1,0 +1,86 @@
+# For Competitions & Hackathons
+- title: For Competitions & Hackathons
+  description:
+  items:
+    - thumbnail: urelief.png
+      title: uRelief
+      date: Jul 2020
+      live_url: https://alleviateme.com/
+      description: Ultimate resource finder app for the homeless
+
+    - thumbnail: resumer.png
+      title: Resumer
+      date: Jul 2020
+      live_url: https://alleviateme.com/
+      description: Job finding app portal for new immigrants
+
+    - thumbnail: nonotes.png
+      title: Resumer
+      date: Jul 2020
+      live_url: https://alleviateme.com/
+      description: A Woocommerce store.
+    
+# Websites for Businesses
+- title: Websites for Businesses
+  description:
+  items:
+    - thumbnail: wabeauty.png
+      title: Wa Beauty Co.
+      date: Jul 2020
+      live_url: https://wabeauty.ltd/
+      description: Online agency.
+
+    - thumbnail: wabeauty.png
+      title: SakeGlow
+      date: Jul 2020
+      live_url: https://sakeglow.com/
+      description: E-commerce business.
+
+    - thumbnail: alleviate.png
+      title: Alleviate by ActiveReleaf
+      date: Jul 2020
+      live_url: https://alleviateme.com/
+      description: E-commerce business.
+
+    - thumbnail: mkwt.png
+      title: Magokoro Wellness
+      date: Jul 2020
+      live_url: https://mkwt.ca/
+      description: Local business.
+
+    - thumbnail: koibyj.png
+      title: Koi by J
+      date: Jul 2020
+      live_url: https://koibyj.com/
+      description: Local business.
+
+    - thumbnail: bijinspa.png
+      title: Beauty Salon Bijin Spa
+      date: Jul 2020
+      live_url: https://bijinspa.ca/
+      description: Local business.
+    
+# Websites for Organizations
+- title: Websites for Organizations
+  description:
+  items:
+    - thumbnail: tedx.png
+      title: (Archived) TEDxYouth Minoru Park
+      date: Jul 2020
+      live_url: https://akixuu.github.io/tedxminorupark-site/
+      description: Website for local TEDx event.
+    - thumbnail: cluborate.png
+      title: Cluborate Community
+      date: Jul 2020
+      live_url: https://akixuu.github.io/cluborate-community-site/
+      description: (Archived) Cluborate organization page.
+
+# Other Stuff?!!
+- title: Other Stuff?!!
+  description:
+  items:
+    - thumbnail: programming-12.png
+      title: Programming 12
+      date: Jul 2020
+      live_url: https://707hoaki.wixsite.com/game-design
+      description: Programming 12 Course.

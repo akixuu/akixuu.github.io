@@ -1,0 +1,52 @@
+<!-- Gallery -->
+{% if page.gallery %}
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+        {% assign range = page.gallery | size %}
+        {% for i in (1..range) %}
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="{{i}}" class="active"></button>
+        {% endfor %}
+    </div>
+
+    <!-- Slideshow/Carousel -->
+    <div class="carousel-inner">
+        {% if page.video %}
+        <div class="carousel-item active ratio ratio-16x9  my-0">
+            <iframe class="my-0"
+                src="{{ page.video }}?autoplay=1&loop=1&rel=0&start=0&controls=1&color=white&modestbranding=1&frameborder=0"
+                allowfullscreen></iframe>
+        </div>
+        {% else %}
+        <div class="carousel-item ratio ratio-16x9 active">
+            <div>
+                <img src="../assets/imgs/project_thumbnails/{{page.thumbnail}}" alt="thumbnail" width="100%">
+            </div>
+        </div>
+        {% endif %}
+
+        {% for image in page.gallery %}
+        <div class="carousel-item ratio ratio-16x9 ">
+            {% if image.video %}
+            <video autoplay>
+                <source src="../assets/imgs/project_galleries/{{page.gallery_dir}}/{{image.filename}}" type="video/mp4">
+                Your browser does not support videos .
+            </video>
+            {% else %}
+            <img src="../assets/imgs/project_galleries/{{page.gallery_dir}}/{{image.filename}}" alt="{{image.caption}}"
+                class="d-block w-100">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Left & Right Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" style="margin-left:-10rem;"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" style="margin-left:10rem;"></span>
+    </button>
+</div>
+{% endif %}

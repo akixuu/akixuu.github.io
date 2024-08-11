@@ -27,6 +27,11 @@ defaults:
       type: projects
     values:
       layout: project
+  - scope:
+      path: "collections/_project/private"
+      type: projects
+    values:
+      published: false
 
   - scope:
       path: ""
