@@ -2,20 +2,32 @@
 title: Home
 ---
 
-<!-- main page -->
-
-<!-- head -->
-<section>
-    <h1 class="display-1" data-cursor-text="" data-cursor="-inverse">Hello World!</h1>
-    <h1 class="display-5 text-muted">Thanks for stopping by. Welcome to my website!</h1>
-    {% for account in site.data.socials %}
-    <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="{{account.link}}">{{account.for}}</a>
-    {% endfor %}
+<!-- Main Intro -->
+<section class="container vh-100">
+    <div class="d-flex row row-cols-12 row-cols-md-2 align-items-center">
+        <!-- Intro Text -->
+        <div class="col">
+            <p class="lead"><em>Hello! My name is</em></p>
+            <h1 class="display-1">Aki Xu</h1>
+            <p>I’m a secondary student in Vancouver, BC with aspirations of world domination. Besides programming, I enjoy photography, art, and reading.</p>
+            <p>Want to chat? My email is <a class="link-primary fw-bold" href="mailto:">akixu07@gmail.com</a>.</p>
+            <br>
+            <a class="fw-bold text-decoration-none" href="projects">View my projects →</a>
+        </div>
+        <!-- Image -->
+        <div class="col">
+            <div class="ratio ratio-1x1">
+                <img src="assets/imgs/me.png" alt="image of me">
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- projects -->
+<hr class="my-3">
+
+<!-- Projects -->
 <section class="my-4">
-    <!-- section header -->
+    <!-- Section Header -->
     <div class="row justify-content-between align-items-center">
         <div class="col">
             <h3 class="fw-bold">Projects</h3S>
@@ -25,32 +37,19 @@ title: Home
         </div>
     </div>
 
-    <!-- projects -->
-    <div class="row row-cols-md-2 row-cols-1">
-        <!-- featured -->
+    <!-- List -->
+    <div class="row row-cols-2 row-cols-md-3 g-1">
+        {% for project in site.projects limit:3 %}
         <div class="col">
-            <div class="ratio ratio-16x9">
-                <img src="/assets/imgs/projects.png" class="object-fit-cover h-100 w-100" alt="project thumbnail">
-            </div>
-            <p class="">Check out some of my projects!</p>
-        </div>
-
-        <!-- projects -->
-        <div class="col">
-            <div class="row row-cols-2 g-1">
-                {% for project in site.projects limit:4 %}
-                <div class="col">
-                    <a href="{{project.url}}" class="text-decoration-none">
-                        <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_imgs/thumbnails/{{ project.thumbnail }}"
-                                class="object-fit-cover h-100 w-100" alt="thumbnail">
-                        </div>
-                        <h6 class="pt-2">{{ project.title }}</h6>
-                    </a>
+            <a href="{{project.url}}" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_imgs/thumbnails/{{ project.thumbnail }}"
+                        class="object-fit-cover h-100 w-100" alt="thumbnail">
                 </div>
-                {% endfor %}
-            </div>
+                <h6 class="pt-2">{{ project.title }}</h6>
+            </a>
         </div>
+        {% endfor %}
     </div>
 </section>
 

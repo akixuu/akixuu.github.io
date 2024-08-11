@@ -1,6 +1,6 @@
 title: Aki Xu
 description: >-
-  Hello. I'm Aki and welcome to my super cool website.
+  Hello, what brings you to my website? XD
 
 domain: akixuu.github.io
 url: https://akixuu.github.io
@@ -9,6 +9,7 @@ baseurl:
 sass:
   sass_dir: _sass
 
+collections_dir: collections
 collections:
   projects:
     output: true
@@ -19,7 +20,7 @@ defaults:
       path: assets/imgs
     values:
       image: true
-      project_thumbnail: true
+      # project_thumbnail: true
 
   - scope:
       path: ""

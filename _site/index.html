@@ -77,28 +77,32 @@
 
 <main class="my-5">
     <section class="container">
-        <!-- main page -->
-
-<!-- head -->
-<section>
-    <h1 class="display-1" data-cursor-text="" data-cursor="-inverse">Hello World!</h1>
-    <h1 class="display-5 text-muted">Thanks for stopping by. Welcome to my website!</h1>
-    
-    <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="https://github.com/akixuu/">GitHub</a>
-    
-    <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="https://www.instagram.com/akixuu/">Instagram</a>
-    
-    <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="https://www.linkedin.com/in/fengxiao-xu/">LinkedIn</a>
-    
-    <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="https://youtube.com/@akixuu">YouTube</a>
-    
-    <a data-cursor-stick class="text-decoration-none link-primary pe-2" href="https://garden.akixuu.ca/">Blog</a>
-    
+        <!-- Main Intro -->
+<section class="container vh-100">
+    <div class="d-flex row row-cols-12 row-cols-md-2 align-items-center">
+        <!-- Intro Text -->
+        <div class="col">
+            <p class="lead"><em>Hello! My name is</em></p>
+            <h1 class="display-1">Aki Xu</h1>
+            <p>I’m a secondary student in Vancouver, BC with aspirations of world domination. Besides programming, I enjoy photography, art, and reading.</p>
+            <p>Want to chat? My email is <a class="link-primary fw-bold" href="mailto:">akixu07@gmail.com</a>.</p>
+            <br>
+            <a class="fw-bold text-decoration-none" href="projects">View my projects →</a>
+        </div>
+        <!-- Image -->
+        <div class="col">
+            <div class="ratio ratio-1x1">
+                <img src="assets/imgs/me.png" alt="image of me" loading="lazy">
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- projects -->
+<hr class="my-3">
+
+<!-- Projects -->
 <section class="my-4">
-    <!-- section header -->
+    <!-- Section Header -->
     <div class="row justify-content-between align-items-center">
         <div class="col">
             <h3 class="fw-bold">Projects
@@ -109,58 +113,36 @@
         </div>
     </div>
 
-    <!-- projects -->
-    <div class="row row-cols-md-2 row-cols-1">
-        <!-- featured -->
+    <!-- List -->
+    <div class="row row-cols-2 row-cols-md-3 g-1">
+        
         <div class="col">
-            <div class="ratio ratio-16x9">
-                <img src="/assets/imgs/projects.png" class="object-fit-cover h-100 w-100" alt="project thumbnail" loading="lazy">
-            </div>
-            <p class="">Check out some of my projects!</p>
+            <a href="/projects/fractals/" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_imgs/thumbnails/fractal.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">Fractal Visualizer</h6>
+            </a>
         </div>
-
-        <!-- projects -->
+        
         <div class="col">
-            <div class="row row-cols-2 g-1">
-                
-                <div class="col">
-                    <a href="/projects/fractals/" class="text-decoration-none">
-                        <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_imgs/thumbnails/fractal.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
-                        </div>
-                        <h6 class="pt-2">Fractal Visualizer</h6>
-                    </a>
+            <a href="/projects/particle-sim/" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_imgs/thumbnails/particles.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
                 </div>
-                
-                <div class="col">
-                    <a href="/projects/particle-sim/" class="text-decoration-none">
-                        <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_imgs/thumbnails/particles.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
-                        </div>
-                        <h6 class="pt-2">Physics Particle Simulator</h6>
-                    </a>
-                </div>
-                
-                <div class="col">
-                    <a href="/projects/polyrithms/" class="text-decoration-none">
-                        <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_imgs/thumbnails/polyrithm.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
-                        </div>
-                        <h6 class="pt-2">An Investigation on Polyrithms</h6>
-                    </a>
-                </div>
-                
-                <div class="col">
-                    <a href="/projects/sorting-pathfinding-visualizer/" class="text-decoration-none">
-                        <div class="ratio ratio-16x9">
-                            <img src="/assets/imgs/project_imgs/thumbnails/algo.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
-                        </div>
-                        <h6 class="pt-2">Sorting &amp; Pathfinding Algo Visualizer</h6>
-                    </a>
-                </div>
-                
-            </div>
+                <h6 class="pt-2">Physics Particle Simulator</h6>
+            </a>
         </div>
+        
+        <div class="col">
+            <a href="/projects/polyrithms/" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/project_imgs/thumbnails/polyrithm.png" class="object-fit-cover h-100 w-100" alt="thumbnail" loading="lazy">
+                </div>
+                <h6 class="pt-2">An Investigation on Polyrithms</h6>
+            </a>
+        </div>
+        
     </div>
 </section>
 
