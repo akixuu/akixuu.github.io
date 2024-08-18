@@ -9,8 +9,8 @@
           url: https://www.youtube.com/watch?v=wqwXAGMdQ_0
         - icon: award
           url: https://www.youtube.com/watch?v=exuFlWFGCwI
-        - text: Repo
-          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+        - icon: code
+          url: https://github.com/akixuu/goa_s06
       description: Ultimate resource finder app for the homeless
 
     - thumbnail: resumer.png
@@ -19,8 +19,6 @@
         - text: Showcase
           url: https://www.youtube.com/watch?v=exuFlWFGCwI
         - icon: award
-          url: https://www.youtube.com/watch?v=exuFlWFGCwI
-        - text: Repo
           url: https://www.youtube.com/watch?v=exuFlWFGCwI
       description: Job finding app portal for new immigrants
 
@@ -61,7 +59,7 @@
       links:
         - text: View Live
           url: https://mkwt.ca/
-        - text: Repo
+        - icon: code
           url: https://mkwt.ca/
       description: Local business, e-commerce store
 
@@ -77,7 +75,7 @@
       links:
         - text: View Live
           url: https://bijinspa.ca/
-        - text: Repo 
+        - icon: code 
           url: https://bijinspa.ca/
           disabled: true
       description: Local business
@@ -98,7 +96,7 @@
       links:
         - text: View
           url: https://akixuu.github.io/tedxminorupark-site/
-        - text: Repo
+        - icon: code
           url: https://akixuu.github.io/tedxminorupark-site/
       description: (Archived) Local TEDx event, run by youth
 
@@ -107,7 +105,7 @@
       links:
         - text: View
           url: https://akixuu.github.io/cluborate-community-site/
-        - text: Repo
+        - icon: code
           url: https://akixuu.github.io/cluborate-community-site/
       description: (Archived) NPO dedicated to connecting youth
 
@@ -120,6 +118,8 @@
       links:
         - text: View
           url: https://707hoaki.wixsite.com/game-design
+        - text: Gameplay
+          url: https://www.youtube.com/playlist?list=PLKkLmqe_JXuhrLwOOBd7VJKrQQXUU9QuV
       description: School game development course
 
     - thumbnail: pocketorchestra.png
