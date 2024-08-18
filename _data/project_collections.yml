@@ -38,21 +38,18 @@
       links:
         - text: View Live
           url: https://wabeauty.ltd/
-      description: Online web services agency
 
     - thumbnail: comingsoon.png
       title: SakeGlow
       links:
         - text: View Live
           url: https://sakeglow.com/
-      description: E-commerce business
 
     - thumbnail: alleviate.png
       title: Alleviate by ActiveReleaf
       links:
         - text: View Live
           url: https://alleviateme.com/
-      description: E-commerce business
 
     - thumbnail: mkwt.png
       title: Magokoro Wellness
@@ -61,14 +58,12 @@
           url: https://mkwt.ca/
         - icon: code
           url: https://mkwt.ca/
-      description: Local business, e-commerce store
 
     - thumbnail: koibyj.png
       title: Koi by J
       links:
         - text: View Live
           url: https://koibyj.com/
-      description: Local business
 
     - thumbnail: bijinspa.png
       title: Beauty Salon Bijin Spa
@@ -78,7 +73,6 @@
         - icon: code 
           url: https://bijinspa.ca/
           disabled: true
-      description: Local business
     
 # Websites for Organizations
 - title: Websites for Organizations
@@ -98,7 +92,7 @@
           url: https://akixuu.github.io/tedxminorupark-site/
         - icon: code
           url: https://akixuu.github.io/tedxminorupark-site/
-      description: (Archived) Local TEDx event, run by youth
+      description: (Archived)
 
     - thumbnail: cluborate.png
       title: Cluborate Community
@@ -107,7 +101,7 @@
           url: https://akixuu.github.io/cluborate-community-site/
         - icon: code
           url: https://akixuu.github.io/cluborate-community-site/
-      description: (Archived) NPO dedicated to connecting youth
+      description: (Archived)
 
 # Other Stuff?!!
 - title: Other Stuff?!!
