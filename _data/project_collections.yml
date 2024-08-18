@@ -9,7 +9,7 @@
           url: https://www.youtube.com/watch?v=wqwXAGMdQ_0
         - icon: award
           url: https://www.youtube.com/watch?v=exuFlWFGCwI
-        - icon: code
+        - text: Repo
           url: https://github.com/akixuu/goa_s06
       description: Ultimate resource finder app for the homeless
 
@@ -56,7 +56,7 @@
       links:
         - text: View Live
           url: https://mkwt.ca/
-        - icon: code
+        - text: Repo
           url: https://mkwt.ca/
 
     - thumbnail: koibyj.png
@@ -70,7 +70,7 @@
       links:
         - text: View Live
           url: https://bijinspa.ca/
-        - icon: code 
+        - text: Repo 
           url: https://bijinspa.ca/
           disabled: true
     
@@ -90,7 +90,7 @@
       links:
         - text: View
           url: https://akixuu.github.io/tedxminorupark-site/
-        - icon: code
+        - text: Repo
           url: https://akixuu.github.io/tedxminorupark-site/
       description: (Archived)
 
@@ -99,7 +99,7 @@
       links:
         - text: View
           url: https://akixuu.github.io/cluborate-community-site/
-        - icon: code
+        - text: Repo
           url: https://akixuu.github.io/cluborate-community-site/
       description: (Archived)
 
