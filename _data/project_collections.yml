@@ -6,9 +6,9 @@
       title: uRelief
       links:
         - text: Showcase 
-          url: https://www.youtube.com/watch?v=wqwXAGMdQ_0
+          url: https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS
         - icon: award
-          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+          url: https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_
         - text: Repo
           url: https://github.com/akixuu/goa_s06
       description: Ultimate resource finder app for the homeless
@@ -17,9 +17,9 @@
       title: Resumer
       links:
         - text: Showcase
-          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+          url: https://www.youtube.com/live/exuFlWFGCwI?t=2627s
         - icon: award
-          url: https://www.youtube.com/watch?v=exuFlWFGCwI
+          url: https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619
       description: Job finding app portal for new immigrants
 
     - thumbnail: nonotes.png
@@ -42,8 +42,8 @@
     - thumbnail: comingsoon.png
       title: SakeGlow
       links:
-        - text: View Live
-          url: https://sakeglow.com/
+        # - text: View Live
+        #   url: https://sakeglow.com/
 
     - thumbnail: alleviate.png
       title: Alleviate by ActiveReleaf
