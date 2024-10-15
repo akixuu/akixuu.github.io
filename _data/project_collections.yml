@@ -68,11 +68,12 @@
     - thumbnail: bijinspa.png
       title: Beauty Salon Bijin Spa
       links:
-        - text: View Live
-          url: https://bijinspa.ca/
-        - text: Repo 
-          url: https://bijinspa.ca/
-          disabled: true
+        # - text: View Live
+        #   url: https://www.bijinspa.com/
+        # - text: Repo 
+        #   url: https://bijinspa.ca/
+        #   disabled: true
+      description: Links temp hidden
     
 # Websites for Organizations
 - title: Websites for Organizations
@@ -83,7 +84,7 @@
       links:
         - text: View Live
           url: https://ttg.tonarigumi.ca
-      description: Tech support program connecting generations
+      description: Tech support for seniors across Metro Vancouver
       
     - thumbnail: tedx.png
       title: TEDxYouth Minoru Park
@@ -107,8 +108,8 @@
 - title: Other Stuff?!!
   description:
   items:
-    - thumbnail: comingsoon.png
-      title: Programming 12
+    - thumbnail: programming12.png
+      title: Programming 12 Course
       links:
         - text: View
           url: https://707hoaki.wixsite.com/game-design
