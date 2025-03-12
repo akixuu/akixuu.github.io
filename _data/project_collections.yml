@@ -36,8 +36,6 @@
     - thumbnail: wabeauty.png
       title: Wa Beauty Co.
       links:
-        - text: View Live
-          url: https://wabeauty.ltd/
 
     - thumbnail: comingsoon.png
       title: SakeGlow
@@ -54,8 +52,6 @@
     - thumbnail: mkwt.png
       title: Magokoro Wellness
       links:
-        - text: View Live
-          url: https://mkwt.ca/
         - text: Repo
           url: https://mkwt.ca/
 
