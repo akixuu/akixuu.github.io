@@ -1,119 +1,104 @@
-# For Competitions & Hackathons
-- title: For Competitions & Hackathons
-  description:
+- title: "Featured"
+  description: "Highlighting my primary technical interests and current explorations."
   items:
-    - thumbnail: urelief.png
-      title: uRelief
+    - title: "Text-to-3D Generator"
+      thumbnail: "comingsoon.png"
+      description: "Scalable generation of 3D models from natural language."
       links:
-        - text: Showcase 
-          url: https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS
-        - icon: award
-          url: https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_
-        - text: Repo
-          url: https://github.com/akixuu/goa_s06
-      description: Ultimate resource finder app for the homeless
+        - text: "Writeup"
+          url: "#"
+        - text: "Repo"
+          url: "#"
 
-    - thumbnail: resumer.png
-      title: Resumer
+    - title: "Mathematical Art Gallery"
+      thumbnail: "comingsoon.png"
+      description: "Mesmerizing graphs, uncovered patterns, fractals, and perfectly looping animations."
       links:
-        - text: Showcase
-          url: https://www.youtube.com/live/exuFlWFGCwI?t=2627s
-        - icon: award
-          url: https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619
-      description: Job finding app portal for new immigrants
+        - text: "Gallery"
+          url: "#"
+        - text: "Repo"
+          url: "#"
 
-    - thumbnail: nonotes.png
-      title: NoNotes
+    - title: "Exploring Emergent Behaviour"
+      thumbnail: "comingsoon.png"
+      description: "A series on cellular automata, particles, and simulations of nature."
       links:
-        - text: Devpost
-          url: https://devpost.com/software/noname-pht40q
-      description: Your AI note-taking companion
+        - text: "Gallery"
+          url: "#"
+        - text: "Repo"
+          url: "#"
+
+- title: "Meaningful Experiences"
+  description: "Collaborative work focused on social impact and scientific research."
+  items:
+    - title: "Tech To Go by Tonari Gumi"
+      thumbnail: "comingsoon.png"
+      description: "Workshops and services across Metro Vancouver to support technology fluency."
+      links:
+        - text: "Final Report"
+          url: "#"
+        - text: "Archive"
+          url: "#"
+
+    - title: "Spectral Analysis of Memory-N-Back Test"
+      thumbnail: "comingsoon.png"
+      description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 Computational Neuroscience Program."
+      links:
+        - text: "Slides"
+          url: "#"
+        - text: "Writeup"
+          url: "#"
+
+- title: "Competitions & Hackathons"
+  description: "Fast-paced builds and award-winning solutions from various events, most notably from <a href='https://gameofapps.com'>Game of Apps</a>."
+  items:
+    - title: "uRelief"
+      thumbnail: "urelief.png"
+      description: "Ultimate resource finder app for the homeless."
+      links:
+        - text: "Showcase"
+          url: "https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS"
+        - icon: "award"
+          url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
+        - text: "Repo"
+          url: "https://github.com/akixuu/goa_s06"
+
+    - title: "LitReading"
+      thumbnail: "comingsoon.png"
+      description: "Improving literacy through ranked reading for schools."
+      links:
+        - text: "Showcase"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
+        - icon: "award"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
+
+    - title: "Resumer"
+      thumbnail: "comingsoon.png"
+      description: "Job finding app portal for new immigrants."
+      links:
+        - text: "Showcase"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
+        - icon: "award"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
+
+    - title: "NoNotes"
+      thumbnail: "nonotes.png"
+      description: "Your AI note-taking companion."
+      links:
+        - text: "Devpost"
+          url: "https://devpost.com/software/noname-pht40q"
+
+- title: "Other Stuff!"
+  description: "A little bit too old to show on my main—a collection of archives and experiments."
+  items:
+    - title: "Pocket Orchestra"
+      thumbnail: "pocketorchestra.png"
+      description: "Interactive, online jamming."
     
-# Websites for Businesses
-- title: Websites for Businesses
-  description:
-  items:
-    - thumbnail: wabeauty.png
-      title: Wa Beauty Co.
-      links:
+    - title: "Archived Projects"
+      thumbnail: "comingsoon.png"
+      description: "Some old things I worked on."
 
-    - thumbnail: comingsoon.png
-      title: SakeGlow
-      links:
-        # - text: View Live
-        #   url: https://sakeglow.com/
-
-    - thumbnail: alleviate.png
-      title: Alleviate by ActiveReleaf
-      links:
-        - text: View Live
-          url: https://alleviateme.com/
-
-    - thumbnail: mkwt.png
-      title: Magokoro Wellness
-
-    - thumbnail: koibyj.png
-      title: Koi by J
-      links:
-        - text: View Live
-          url: https://koibyj.com/
-
-    - thumbnail: bijinspa.png
-      title: Beauty Salon Bijin Spa
-      links:
-        # - text: View Live
-        #   url: https://www.bijinspa.com/
-        # - text: Repo 
-        #   url: https://bijinspa.ca/
-        #   disabled: true
-      description: Links temp hidden
-    
-# Websites for Organizations
-- title: Websites for Organizations
-  description:
-  items:
-    - thumbnail: ttg.png
-      title: Tech to Go by Tonari Gumi
-      links:
-        - text: View Live
-          url: https://ttg.tonarigumi.ca
-      description: Tech support for seniors across Metro Vancouver
-      
-    - thumbnail: tedx.png
-      title: TEDxYouth Minoru Park
-      links:
-        - text: View
-          url: https://akixuu.github.io/tedxminorupark-site/
-        - text: Repo
-          url: https://akixuu.github.io/tedxminorupark-site/
-      description: (Archived)
-
-    - thumbnail: cluborate.png
-      title: Cluborate Community
-      links:
-        - text: View
-          url: https://akixuu.github.io/cluborate-community-site/
-        - text: Repo
-          url: https://akixuu.github.io/cluborate-community-site/
-      description: (Archived)
-
-# Other Stuff
-- title: Other Stuff!
-  description:
-  items:
-    - thumbnail: programming12.png
-      title: HS Programming Course
-      links:
-        - text: View
-          url: https://707hoaki.wixsite.com/game-design
-        - text: Gameplay
-          url: https://www.youtube.com/playlist?list=PLKkLmqe_JXuhrLwOOBd7VJKrQQXUU9QuV
-      description: School game development course
-
-    - thumbnail: pocketorchestra.png
-      title: Pocket Orchestra
-      description: Interactive, online jamming
-      
-    - thumbnail: ringo.png
-      title: Ringo
-      description: (Coming Soon) Environmental awareness and exploration app
+    - title: "Archived Websites"
+      thumbnail: "comingsoon.png"
+      description: "Older websites that are no longer live."

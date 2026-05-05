@@ -1,0 +1,44 @@
+# Websites for Businesses
+- title: Websites for Businesses
+  description:
+  items:
+    - thumbnail: wabeauty.png
+      title: Wa Beauty Co.
+      description: 
+
+    - thumbnail: alleviate.png
+      title: Alleviate by ActiveReleaf
+      description: Links temp hidden
+
+    - thumbnail: mkwt.png
+      title: Magokoro Wellness
+
+    - thumbnail: koibyj.png
+      title: Koi by J
+      description: Links temp hidden
+
+    - thumbnail: bijinspa.png
+      title: Beauty Salon Bijin Spa
+      description: Links temp hidden
+    
+# Websites for Organizations
+- title: Websites for Organizations
+  description:
+  items:
+    - thumbnail: tedx.png
+      title: TEDxYouth Minoru Park
+      links:
+        - text: View
+          url: https://akixuu.github.io/tedxminorupark-site/
+        - text: Repo
+          url: https://akixuu.github.io/tedxminorupark-site/
+      description: (Archived)
+
+    - thumbnail: cluborate.png
+      title: Cluborate Community
+      links:
+        - text: View
+          url: https://akixuu.github.io/cluborate-community-site/
+        - text: Repo
+          url: https://akixuu.github.io/cluborate-community-site/
+      description: (Archived)
