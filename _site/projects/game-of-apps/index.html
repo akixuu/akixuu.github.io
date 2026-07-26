@@ -21,11 +21,10 @@
     (function () {
       try {
         var stored = localStorage.getItem('theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var theme = stored || (prefersDark ? 'dark' : 'light');
+        var theme = stored || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
       } catch (e) {
-        document.documentElement.setAttribute('data-bs-theme', 'dark');
+        document.documentElement.setAttribute('data-bs-theme', 'light');
       }
     })();
   </script>
@@ -178,7 +177,7 @@ here later. For now, jump to the <a href="/projects/">projects gallery</a> for d
       if (!toggle) return;
 
       function currentTheme() {
-        return document.documentElement.getAttribute('data-bs-theme') || 'dark';
+        return document.documentElement.getAttribute('data-bs-theme') || 'light';
       }
 
       function setTheme(theme) {
