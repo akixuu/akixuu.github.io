@@ -1,0 +1,58 @@
+---
+layout: page
+---
+
+<h1 class="display-1 fw-bold text-center mt-4 mb-2">{{ page.title }}</h1>
+
+{% if page.description %}
+<p class="lead text-center text-body-secondary mb-3">{{ page.description }}</p>
+{% endif %}
+
+{% assign current_data = site.data[page.data_source] %}
+
+{% for project_collection in current_data %}
+<section class="my-4">
+  <h2 class="fw-bold my-2">{{ project_collection.title }}</h2>
+  {% if project_collection.description and project_collection.description != "" %}
+  <p class="text-body-secondary mb-3">{{ project_collection.description }}</p>
+  {% endif %}
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
+    {% for item in project_collection.items %}
+    <div class="col d-flex flex-column">
+      {% if item.thumbnail %}
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/{{ item.thumbnail }}"
+          class="object-fit-cover h-100 w-100" alt="{{ item.title }} thumbnail" loading="lazy">
+      </div>
+      {% endif %}
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">{{ item.title }}</span>{% if item.description %} — <em>{{ item.description }}</em>{% endif %}
+      </p>
+
+      <div class="mt-auto">
+        {% for link in item.links %}
+          {% assign is_external = false %}
+          {% if link.url contains "://" %}
+            {% assign is_external = true %}
+          {% endif %}
+          <a data-cursor-stick
+            class="btn rounded-pill btn-sm fw-bolder mb-1 {% if forloop.first %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+            href="{{ link.url }}"
+            {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {% if link.icon %}
+              <i class="fa-solid fa-{{ link.icon }}"></i>
+            {% else %}
+              {{ link.text }}
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+{{ content }}

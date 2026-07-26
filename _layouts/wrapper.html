@@ -1,5 +1,5 @@
 <!doctype html>
-<html data-bs-theme="dark">
+<html lang="en">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -8,14 +8,26 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-7S0SFN1LFP');
   </script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Apply theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+    })();
+  </script>
 
   <!-- Mouse Follower -->
   <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
@@ -23,30 +35,53 @@
   <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/" />
+  <link rel="icon" type="image/x-icon" href="{{ '/' | relative_url }}" />
 </head>
 
 <body>
   {{ content }}
 
-  <!-- jQuery, Popper.js, and Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/51e1f7ac6b.js" crossorigin="anonymous"></script>
 
+  <!-- Theme toggle -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-bs-theme') || 'dark';
+      }
+
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+
+      toggle.addEventListener('click', function () {
+        setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+      });
+
+      setTheme(currentTheme());
+    })();
+  </script>
+
   <!-- Mouse Follower -->
   <script>
-    const cursor = new MouseFollower({
-      container: 'body',
-      speed: 0.3
-    });  
+    if (window.MouseFollower) {
+      new MouseFollower({
+        container: 'body',
+        speed: 0.3
+      });
+    }
   </script>
 </body>
 

@@ -1,0 +1,61 @@
+- title: "Experiments & School Projects"
+  description: "Early coding experiments, class projects, and playful prototypes."
+  items:
+    - title: "Algorithm Visualizer"
+      thumbnail: "algo.png"
+      description: "Visual walkthroughs of classic sorting and search algorithms."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+    - title: "Fractal Explorer"
+      thumbnail: "fractal.png"
+      description: "Zoomable fractal renderings and generative patterns."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+    - title: "Particle Simulations"
+      thumbnail: "particles.png"
+      description: "Simple particle systems and physics experiments."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+    - title: "Programming 12 Showcase"
+      thumbnail: "programming12.png"
+      description: "Coursework and demos from high school Programming 12."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+    - title: "StudyMania"
+      thumbnail: "studymania.png"
+      description: "A study helper prototype built for school."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+- title: "Creative Coding"
+  description: "Sound, rhythm, and interactive sketches."
+  items:
+    - title: "Pocket Orchestra"
+      thumbnail: "pocketorchestra.png"
+      description: "Tiny musical playground experiments."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+    - title: "Polyrhythm"
+      thumbnail: "polyrithm.png"
+      description: "Playing with layered rhythmic patterns."
+      links:
+        - text: "Coming Soon"
+          url: "#"
+
+    - title: "Ringo"
+      thumbnail: "ringo.png"
+      description: "An early interactive web experiment."
+      links:
+        - text: "Coming Soon"
+          url: "#"

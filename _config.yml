@@ -11,33 +11,35 @@ sass:
 
 collections_dir: collections
 collections:
+  collection:
+    output: true
   projects:
     output: true
-    permalink: :collection/:name/
+    permalink: /projects/:name/
 
 defaults:
   - scope:
       path: assets/imgs
     values:
       image: true
-      # project_thumbnail: true
+
+  - scope:
+      path: ""
+      type: collection
+    values:
+      layout: collection
 
   - scope:
       path: ""
       type: projects
     values:
       layout: project
-  - scope:
-      path: "collections/_project/private"
-      type: projects
-    values:
-      published: false
 
   - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
-      layout: "page"
+      layout: page
 
 plugins:
   - jekyll-loading-lazy

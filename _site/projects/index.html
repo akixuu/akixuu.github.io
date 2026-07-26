@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7S0SFN1LFP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-7S0SFN1LFP');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Aki Xu</title>
+
+  <!-- Apply theme before paint to avoid flash -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = stored || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-bs-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Mouse Follower -->
+  <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/">
+</head>
+
+<body>
+  <header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">AKI XU</a>
+
+      <div class="d-flex align-items-center gap-1 order-lg-last">
+        <a href="https://www.github.com/akixuu" class="text-decoration-none text-body" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/akixuu" class="text-decoration-none text-body" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <span class="text-body-secondary" aria-hidden="true">|</span>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+        </button>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/resume.pdf">Resume</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<main class="my-4">
+    <section class="container">
+        <h1 class="display-1 fw-bold text-center mt-4 mb-2">Projects</h1>
+
+
+<p class="lead text-center text-body-secondary mb-3">Selected work across competitions, community, and experiments.</p>
+
+
+
+
+
+<section class="my-4">
+  <h2 class="fw-bold my-2">Competitions &amp; Hackathons</h2>
+  
+  <p class="text-body-secondary mb-3">Fast-paced builds and award-winning solutions from various events, most notably from <a href="/projects/game-of-apps">Game of Apps</a>.</p>
+  
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/urelief.png" class="object-fit-cover h-100 w-100" alt="uRelief thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">uRelief</span> — <em>Ultimate resource finder app for the homeless.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS" target="_blank" rel="noopener noreferrer">
+            
+              Showcase
+            
+          </a>
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_" target="_blank" rel="noopener noreferrer">
+            
+              <i class="fa-solid fa-award"></i>
+            
+          </a>
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://github.com/akixuu/goa_s06" target="_blank" rel="noopener noreferrer">
+            
+              Repo
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/nonotes.png" class="object-fit-cover h-100 w-100" alt="Poses for Dummies thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Poses for Dummies</span> — <em>Real-time pose tracking party game.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="https://2026.quackhacks.org/projects/poses-for-dummies" target="_blank" rel="noopener noreferrer">
+            
+              Writeup
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/comingsoon.png" class="object-fit-cover h-100 w-100" alt="LitReading thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">LitReading</span> — <em>App to improve literacy through ranked reading for schools.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="https://www.youtube.com/live/exuFlWFGCwI?t=2627s" target="_blank" rel="noopener noreferrer">
+            
+              Showcase
+            
+          </a>
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&amp;t=11619" target="_blank" rel="noopener noreferrer">
+            
+              <i class="fa-solid fa-award"></i>
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/resumer.png" class="object-fit-cover h-100 w-100" alt="Resumer thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Resumer</span> — <em>Job finding app portal for new immigrants.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="https://www.youtube.com/live/exuFlWFGCwI?t=2627s" target="_blank" rel="noopener noreferrer">
+            
+              Showcase
+            
+          </a>
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&amp;t=11619" target="_blank" rel="noopener noreferrer">
+            
+              <i class="fa-solid fa-award"></i>
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/nonotes.png" class="object-fit-cover h-100 w-100" alt="NoNotes thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">NoNotes</span> — <em>Your AI note-taking companion.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="https://devpost.com/software/noname-pht40q" target="_blank" rel="noopener noreferrer">
+            
+              Devpost
+            
+          </a>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="my-4">
+  <h2 class="fw-bold my-2">Miscellaneous</h2>
+  
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/comingsoon.png" class="object-fit-cover h-100 w-100" alt="Spectral Analysis of Memory-N-Back Test thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Spectral Analysis of Memory-N-Back Test</span> — <em>Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="#">
+            
+              Presentation Slides
+            
+          </a>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="my-4">
+  <h2 class="fw-bold my-2">Meaningful Experiences</h2>
+  
+  <p class="text-body-secondary mb-3">Collaborative work focused on social impact and community.</p>
+  
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/ttg.png" class="object-fit-cover h-100 w-100" alt="Tech To Go by Tonari Gumi thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Tech To Go by Tonari Gumi</span> — <em>Workshops and services across Metro Vancouver to support technology fluency.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="/projects/tech-to-go">
+            
+              Writeup
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/comingsoon.png" class="object-fit-cover h-100 w-100" alt="Bucket Robotics thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Bucket Robotics</span> — <em>High school robotics club.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="/projects/bucket-robotics">
+            
+              Writeup
+            
+          </a>
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://www.bucketrobotics.ca/" target="_blank" rel="noopener noreferrer">
+            
+              Website
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/comingsoon.png" class="object-fit-cover h-100 w-100" alt="EcoConnect thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">EcoConnect</span> — <em>Inspiring youth in sustainability through eco-conscious environments.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="/projects/ecoconnect">
+            
+              Writeup
+            
+          </a>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section class="my-4">
+  <h2 class="fw-bold my-2">Archives</h2>
+  
+  <p class="text-body-secondary mb-3">Older work from high school — kept here for nostalgia.</p>
+  
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-3 gx-2 g-lg-3 gy-lg-4">
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/comingsoon.png" class="object-fit-cover h-100 w-100" alt="Projects thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Projects</span> — <em>Some old things I worked on.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="/old_projects">
+            
+              Gallery
+            
+          </a>
+        
+      </div>
+    </div>
+    
+    <div class="col d-flex flex-column">
+      
+      <div class="ratio ratio-16x9">
+        <img src="/assets/imgs/project/thumbnails/websites.png" class="object-fit-cover h-100 w-100" alt="Websites thumbnail" loading="lazy">
+      </div>
+      
+
+      <p class="fs-6 mt-1">
+        <span class="fw-bold">Websites</span> — <em>Older websites that are no longer live.</em>
+      </p>
+
+      <div class="mt-auto">
+        
+          
+          
+          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="/old_websites">
+            
+              Gallery
+            
+          </a>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+
+    </section>
+</main>
+
+<footer class="site-footer py-3 mt-5">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <span class="text-body-secondary small">© 2026 Aki Xu</span>
+    <div class="d-flex gap-3 small">
+      <a class="text-body-secondary text-decoration-none" href="/projects">Projects</a>
+      <a class="text-body-secondary text-decoration-none" href="/resume.pdf">Resume</a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/51e1f7ac6b.js" crossorigin="anonymous"></script>
+
+  <!-- Theme toggle -->
+  <script>
+    (function () {
+      var toggle = document.getElementById('theme-toggle');
+      if (!toggle) return;
+
+      function currentTheme() {
+        return document.documentElement.getAttribute('data-bs-theme') || 'dark';
+      }
+
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-bs-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+
+      toggle.addEventListener('click', function () {
+        setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+      });
+
+      setTheme(currentTheme());
+    })();
+  </script>
+
+  <!-- Mouse Follower -->
+  <script>
+    if (window.MouseFollower) {
+      new MouseFollower({
+        container: 'body',
+        speed: 0.3
+      });
+    }
+  </script>
+</body>
+
+</html>

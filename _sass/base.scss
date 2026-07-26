@@ -2,12 +2,12 @@
 @import "animations";
 
 * {
-  transition: 50ms;
+  transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease, opacity 120ms ease;
 }
 
 ::selection {
-  color: black;
-  background: white;
+  color: var(--bs-body-bg);
+  background: var(--bs-body-color);
 }
 
 html {
@@ -27,8 +27,8 @@ html {
 
 // general
 .overflow-hidden {
-    overflow:hidden;
-    object-fit: cover;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .object-fit-cover {
@@ -39,9 +39,93 @@ html {
   letter-spacing: 5px;
 }
 
-
 .btn {
   text-transform: uppercase;
 }
 
 @import "bootstrap/bootstrap";
+
+// Theme-aware primary + buttons (Bootstrap btn-* colors are compile-time)
+[data-bs-theme="dark"] {
+  --bs-primary: #d8d8d8;
+  --bs-primary-rgb: 216, 216, 216;
+  --bs-primary-text-emphasis: #f5f5f5;
+  --bs-link-color: #d8d8d8;
+  --bs-link-hover-color: #ffffff;
+
+  .btn-primary {
+    --bs-btn-color: #1b1b1b;
+    --bs-btn-bg: #d8d8d8;
+    --bs-btn-border-color: #d8d8d8;
+    --bs-btn-hover-color: #1b1b1b;
+    --bs-btn-hover-bg: #f5f5f5;
+    --bs-btn-hover-border-color: #f5f5f5;
+    --bs-btn-active-color: #1b1b1b;
+    --bs-btn-active-bg: #ffffff;
+    --bs-btn-active-border-color: #ffffff;
+  }
+
+  .btn-outline-secondary {
+    --bs-btn-color: #d8d8d8;
+    --bs-btn-border-color: #7a7a7a;
+    --bs-btn-hover-color: #1b1b1b;
+    --bs-btn-hover-bg: #d8d8d8;
+    --bs-btn-hover-border-color: #d8d8d8;
+    --bs-btn-active-color: #1b1b1b;
+    --bs-btn-active-bg: #f5f5f5;
+    --bs-btn-active-border-color: #f5f5f5;
+  }
+}
+
+[data-bs-theme="light"] {
+  --bs-primary: #1b1b1b;
+  --bs-primary-rgb: 27, 27, 27;
+  --bs-link-color: #1b1b1b;
+  --bs-link-hover-color: #000000;
+}
+
+.site-header {
+  background-color: var(--bs-body-bg);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.site-footer {
+  background-color: var(--bs-body-bg);
+  border-top: 1px solid var(--bs-border-color);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--bs-body-color);
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background: transparent;
+  color: var(--bs-body-color);
+  outline: none;
+  box-shadow: none;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+[data-bs-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+[data-bs-theme="dark"] .theme-toggle .icon-sun {
+  display: inline;
+}
+
+.project-body p {
+  margin-bottom: 1rem;
+}

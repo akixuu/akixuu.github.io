@@ -1,0 +1,98 @@
+- title: "Competitions & Hackathons"
+  description: "Fast-paced builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
+  items:
+    - title: "uRelief"
+      thumbnail: "urelief.png"
+      description: "Ultimate resource finder app for the homeless."
+      links:
+        - text: "Showcase"
+          url: "https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS"
+        - icon: "award"
+          url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
+        - text: "Repo"
+          url: "https://github.com/akixuu/goa_s06"
+
+    - title: "Poses for Dummies"
+      thumbnail: "nonotes.png"
+      description: "Real-time pose tracking party game."
+      links:
+        - text: "Writeup"
+          url: "https://2026.quackhacks.org/projects/poses-for-dummies"
+
+    - title: "LitReading"
+      thumbnail: "comingsoon.png"
+      description: "App to improve literacy through ranked reading for schools."
+      links:
+        - text: "Showcase"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
+        - icon: "award"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
+
+    - title: "Resumer"
+      thumbnail: "resumer.png"
+      description: "Job finding app portal for new immigrants."
+      links:
+        - text: "Showcase"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
+        - icon: "award"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
+
+    - title: "NoNotes"
+      thumbnail: "nonotes.png"
+      description: "Your AI note-taking companion."
+      links:
+        - text: "Devpost"
+          url: "https://devpost.com/software/noname-pht40q"
+
+- title: "Miscellaneous"
+  description: ""
+  items:
+    - title: "Spectral Analysis of Memory-N-Back Test"
+      thumbnail: "comingsoon.png"
+      description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."
+      links:
+        - text: "Presentation Slides"
+          url: "#"
+
+- title: "Meaningful Experiences"
+  description: "Collaborative work focused on social impact and community."
+  items:
+    - title: "Tech To Go by Tonari Gumi"
+      thumbnail: "ttg.png"
+      description: "Workshops and services across Metro Vancouver to support technology fluency."
+      links:
+        - text: "Writeup"
+          url: "/projects/tech-to-go"
+
+    - title: "Bucket Robotics"
+      thumbnail: "comingsoon.png"
+      description: "High school robotics club."
+      links:
+        - text: "Writeup"
+          url: "/projects/bucket-robotics"
+        - text: "Website"
+          url: "https://www.bucketrobotics.ca/"
+
+    - title: "EcoConnect"
+      thumbnail: "comingsoon.png"
+      description: "Inspiring youth in sustainability through eco-conscious environments."
+      links:
+        - text: "Writeup"
+          url: "/projects/ecoconnect"
+
+- title: "Archives"
+  description: "Older work from high school — kept here for nostalgia."
+  items:
+    - title: "Projects"
+      thumbnail: "comingsoon.png"
+      description: "Some old things I worked on."
+      links:
+        - text: "Gallery"
+          url: "/old_projects"
+
+    - title: "Websites"
+      thumbnail: "websites.png"
+      description: "Older websites that are no longer live."
+      links:
+        - text: "Gallery"
+          url: "/old_websites"

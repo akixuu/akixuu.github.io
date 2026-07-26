@@ -4,42 +4,58 @@ layout: wrapper
 
 {% include header.html %}
 
-<h1 class="text-center col-12 col-md-6 mx-auto display-2 mt-4">{{ page.title }}</h1>
-<div class="col-11 col-sm-10 col-md-5 mx-auto">
-    <div class="ratio ratio-16x9">
-        {% if page.video %}
-        <iframe class="h-100 w-100" src="https://www.youtube.com/embed/{{ page.video }}?autoplay=1&loop=1&rel=0&start=0&controls=1&color=white&modestbranding=1&frameborder=0" allowfullscreen></iframe>
-        {% else %}
-        <img class="h-100 w-100 object-fit-cover" src="/assets/imgs/project_thumbnails/{{page.thumbnail}}" alt="thumbnail">
-        {% endif %}
-    </div>
+<main class="my-4">
+  <section class="container">
+    <h1 class="text-center col-12 col-md-8 mx-auto display-2 mt-4">{{ page.title }}</h1>
 
-    <!-- Description -->
-    {% if page.description %}
-    <div class="col-12 col-sm-9 mx-auto mt-4">
+    <div class="col-11 col-sm-10 col-md-8 mx-auto">
+      {% if page.thumbnail or page.video %}
+      <div class="ratio ratio-16x9">
+        {% if page.video %}
+        <iframe class="h-100 w-100"
+          src="https://www.youtube.com/embed/{{ page.video }}?rel=0&controls=1&modestbranding=1"
+          title="{{ page.title }} video"
+          allowfullscreen
+          loading="lazy"></iframe>
+        {% else %}
+        <img class="h-100 w-100 object-fit-cover"
+          src="/assets/imgs/project/thumbnails/{{ page.thumbnail }}"
+          alt="{{ page.title }} thumbnail"
+          loading="lazy">
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if page.description %}
+      <div class="col-12 col-sm-10 mx-auto mt-4">
         <p class="lead text-start text-sm-center">
-        {{ page.description }}
+          {{ page.description }}
         </p>
 
-        <!-- Supplemental Links -->
         {% if page.supplemental_links %}
-        <div class="col-12 col-sm-9 mx-auto m-0 text-start text-sm-center">
-            {% for button in page.supplemental_links %}
-            <a data-cursor-stick
-                class="btn rounded-pill {% if button.primary %}btn-outline-primary {% else %} btn-outline-secondary{% endif %}"
-                href="{{button.link}}">{{button.text}}</a>
-            {% endfor %}
+        <div class="text-start text-sm-center">
+          {% for button in page.supplemental_links %}
+          {% assign is_external = false %}
+          {% if button.link contains "://" %}
+            {% assign is_external = true %}
+          {% endif %}
+          <a data-cursor-stick
+            class="btn rounded-pill btn-sm fw-bolder mb-1 {% if button.primary %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+            href="{{ button.link }}"
+            {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ button.text }}
+          </a>
+          {% endfor %}
         </div>
         {% endif %}
+      </div>
+      {% endif %}
+
+      <div class="col-12 col-sm-10 mx-auto mt-4 project-body">
+        {{ content }}
+      </div>
     </div>
-    {% endif %}
-    
-    <!-- Other Content -->
-    {{ content }}
-
-    <br>
-</div>
-
-<br>
+  </section>
+</main>
 
 {% include footer.html %}
