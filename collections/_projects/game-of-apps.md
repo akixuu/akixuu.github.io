@@ -8,8 +8,6 @@ supplemental_links:
   - text: Official Site
     link: https://gameofapps.com
     primary: true
-  - text: Back to Projects
-    link: /projects/
 ---
 
 Placeholder writeup — more details coming soon.

@@ -4,10 +4,6 @@ thumbnail: comingsoon.png
 description: >-
   A youth sustainability project that brought green spaces and eco-awareness
   activities to schools across Vancouver and Richmond.
-supplemental_links:
-  - text: Back to Projects
-    link: /projects/
-    primary: true
 ---
 
 Placeholder writeup — more details coming soon.

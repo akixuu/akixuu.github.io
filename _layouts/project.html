@@ -4,58 +4,70 @@ layout: wrapper
 
 {% include header.html %}
 
-<main class="my-4">
-  <section class="container">
-    <h1 class="text-center col-12 col-md-8 mx-auto display-2 mt-4">{{ page.title }}</h1>
+<main class="project-page py-3">
+  <article class="container">
+    <div class="row g-4">
+      <div class="col-12">
+        <a class="project-back text-body-secondary text-decoration-none small" href="/projects/">← Projects</a>
+      </div>
 
-    <div class="col-11 col-sm-10 col-md-8 mx-auto">
       {% if page.thumbnail or page.video %}
-      <div class="ratio ratio-16x9">
-        {% if page.video %}
-        <iframe class="h-100 w-100"
-          src="https://www.youtube.com/embed/{{ page.video }}?rel=0&controls=1&modestbranding=1"
-          title="{{ page.title }} video"
-          allowfullscreen
-          loading="lazy"></iframe>
-        {% else %}
-        <img class="h-100 w-100 object-fit-cover"
-          src="/assets/imgs/project/thumbnails/{{ page.thumbnail }}"
-          alt="{{ page.title }} thumbnail"
-          loading="lazy">
-        {% endif %}
+      <div class="col-lg-5">
+        <div class="project-media ratio ratio-16x9">
+          {% if page.video %}
+          <iframe class="h-100 w-100"
+            src="https://www.youtube.com/embed/{{ page.video }}?rel=0&controls=1&modestbranding=1"
+            title="{{ page.title }} video"
+            allowfullscreen
+            loading="lazy"></iframe>
+          {% else %}
+          <img class="h-100 w-100 object-fit-cover"
+            src="/assets/imgs/project/thumbnails/{{ page.thumbnail }}"
+            alt="{{ page.title }} thumbnail"
+            loading="lazy">
+          {% endif %}
+        </div>
       </div>
       {% endif %}
 
-      {% if page.description %}
-      <div class="col-12 col-sm-10 mx-auto mt-4">
-        <p class="lead text-start text-sm-center">
-          {{ page.description }}
-        </p>
+      <div class="{% if page.thumbnail or page.video %}col-lg-7{% else %}col-12{% endif %} d-flex flex-column justify-content-center">
+        <h1 class="project-title display-5 fw-bold mb-2">{{ page.title }}</h1>
+
+        {% if page.description %}
+        <p class="project-dek text-body-secondary mb-3">{{ page.description }}</p>
+        {% endif %}
 
         {% if page.supplemental_links %}
-        <div class="text-start text-sm-center">
+        <div class="project-links d-flex flex-wrap gap-2">
           {% for button in page.supplemental_links %}
-          {% assign is_external = false %}
-          {% if button.link contains "://" %}
-            {% assign is_external = true %}
-          {% endif %}
-          <a data-cursor-stick
-            class="btn rounded-pill btn-sm fw-bolder mb-1 {% if button.primary %}btn-primary{% else %}btn-outline-secondary{% endif %}"
-            href="{{ button.link }}"
-            {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-            {{ button.text }}
-          </a>
+            {% assign is_back = false %}
+            {% if button.link == "/projects/" or button.link == "/projects" %}
+              {% assign is_back = true %}
+            {% endif %}
+            {% unless is_back %}
+              {% assign is_external = false %}
+              {% if button.link contains "://" %}
+                {% assign is_external = true %}
+              {% endif %}
+              <a data-cursor-stick
+                class="btn rounded-pill btn-sm fw-bolder {% if button.primary %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+                href="{{ button.link }}"
+                {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                {{ button.text }}
+              </a>
+            {% endunless %}
           {% endfor %}
         </div>
         {% endif %}
       </div>
-      {% endif %}
 
-      <div class="col-12 col-sm-10 mx-auto mt-4 project-body">
-        {{ content }}
+      <div class="col-12">
+        <div class="project-body border-top pt-3">
+          {{ content }}
+        </div>
       </div>
     </div>
-  </section>
+  </article>
 </main>
 
 {% include footer.html %}

@@ -5,11 +5,9 @@ description: >-
   Workshops and tech support across Metro Vancouver, helping community members
   build confidence with everyday technology.
 supplemental_links:
-  - text: Back to Projects
-    link: /projects/
-    primary: true
   - text: Tonari Gumi
     link: https://www.tonarigumi.ca/
+    primary: true
 ---
 
 Placeholder writeup — more details coming soon.

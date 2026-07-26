@@ -48,18 +48,20 @@
     <div class="container">
       <a class="navbar-brand fw-bold" href="/">AKI XU</a>
 
-      <div class="d-flex align-items-center gap-1 order-lg-last">
-        <a href="https://www.github.com/akixuu" class="text-decoration-none text-body" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/akixuu" class="text-decoration-none text-body" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <span class="text-body-secondary" aria-hidden="true">|</span>
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
-          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
-          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
-        </button>
+      <div class="d-flex align-items-center gap-3 order-lg-last">
+        <div class="header-actions">
+          <a href="https://www.github.com/akixuu" class="text-decoration-none text-body" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/akixuu" class="text-decoration-none text-body" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <span class="header-divider" aria-hidden="true"></span>
+          <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+            <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+            <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          </button>
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -81,59 +83,70 @@
 </header>
 
 
-<main class="my-4">
-  <section class="container">
-    <h1 class="text-center col-12 col-md-8 mx-auto display-2 mt-4">Bucket Robotics</h1>
+<main class="project-page py-3">
+  <article class="container">
+    <div class="row g-4">
+      <div class="col-12">
+        <a class="project-back text-body-secondary text-decoration-none small" href="/projects/">← Projects</a>
+      </div>
 
-    <div class="col-11 col-sm-10 col-md-8 mx-auto">
       
-      <div class="ratio ratio-16x9">
-        
-        <img class="h-100 w-100 object-fit-cover" src="/assets/imgs/project/thumbnails/comingsoon.png" alt="Bucket Robotics thumbnail" loading="lazy">
-        
+      <div class="col-lg-5">
+        <div class="project-media ratio ratio-16x9">
+          
+          <img class="h-100 w-100 object-fit-cover" src="/assets/imgs/project/thumbnails/comingsoon.png" alt="Bucket Robotics thumbnail" loading="lazy">
+          
+        </div>
       </div>
       
 
-      
-      <div class="col-12 col-sm-10 mx-auto mt-4">
-        <p class="lead text-start text-sm-center">
-          Palmer Secondary's first robotics club — STEM activities, VEX kits, and school competitions from 2022 to 2025.
-        </p>
+      <div class="col-lg-7 d-flex flex-column justify-content-center">
+        <h1 class="project-title display-5 fw-bold mb-2">Bucket Robotics</h1>
 
         
-        <div class="text-start text-sm-center">
+        <p class="project-dek text-body-secondary mb-3">Palmer Secondary's first robotics club — STEM activities, VEX kits, and school competitions from 2022 to 2025.</p>
+        
+
+        
+        <div class="project-links d-flex flex-wrap gap-2">
           
+            
+            
+            
+              
+              
+              <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder btn-primary" href="https://www.bucketrobotics.ca/" target="_blank" rel="noopener noreferrer">
+                Website
+              </a>
+            
           
+            
+            
+            
+              
+              
+              <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder btn-outline-secondary" href="https://www.youtube.com/watch?v=Xe0JfIkz788" target="_blank" rel="noopener noreferrer">
+                Competition 2022
+              </a>
+            
           
-          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-primary" href="/projects/">
-            Back to Projects
-          </a>
-          
-          
-          
-          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://www.bucketrobotics.ca/" target="_blank" rel="noopener noreferrer">
-            Website
-          </a>
-          
-          
-          
-          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://www.youtube.com/watch?v=Xe0JfIkz788" target="_blank" rel="noopener noreferrer">
-            Competition 2022
-          </a>
-          
-          
-          
-          <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder mb-1 btn-outline-secondary" href="https://www.youtube.com/watch?v=uFRDAW7LfXM" target="_blank" rel="noopener noreferrer">
-            Competition 2023
-          </a>
+            
+            
+            
+              
+              
+              <a data-cursor-stick class="btn rounded-pill btn-sm fw-bolder btn-outline-secondary" href="https://www.youtube.com/watch?v=uFRDAW7LfXM" target="_blank" rel="noopener noreferrer">
+                Competition 2023
+              </a>
+            
           
         </div>
         
       </div>
-      
 
-      <div class="col-12 col-sm-10 mx-auto mt-4 project-body">
-        <p>Placeholder writeup — more details coming soon.</p>
+      <div class="col-12">
+        <div class="project-body border-top pt-3">
+          <p>Placeholder writeup — more details coming soon.</p>
 
 <p><strong>Bucket Robotics</strong> was Palmer Secondary’s first robotics club. We hosted STEM
 activities with VEX kits to learn hardware, software control, and robot design,
@@ -157,9 +170,10 @@ and bubble tea fundraiser.</p>
 <p>This page will eventually include a longer story, photos from competitions, and
 notes on what the club taught me about leading a team.</p>
 
+        </div>
       </div>
     </div>
-  </section>
+  </article>
 </main>
 
 <footer class="site-footer py-3 mt-5">
