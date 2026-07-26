@@ -2,6 +2,11 @@
 layout: page
 ---
 
+{% assign is_archive_page = false %}
+{% if page.data_source == "old_projects" or page.data_source == "old_websites" %}
+  {% assign is_archive_page = true %}
+{% endif %}
+
 <header class="gallery-page-header fade-in{% unless page.description %} gallery-page-header--solo{% endunless %}">
   <h1 class="gallery-page-title pb-3">{{ page.title }}</h1>
   {% if page.description %}
@@ -13,6 +18,11 @@ layout: page
 
 {% for project_collection in current_data %}
 {% assign is_first_section = forloop.first %}
+{% assign is_archives_section = false %}
+{% if project_collection.title == "Archives" %}
+  {% assign is_archives_section = true %}
+{% endif %}
+
 <section class="gallery-section">
   <header class="gallery-section-header">
     <div>
@@ -23,6 +33,41 @@ layout: page
     </div>
   </header>
 
+  {% if is_archives_section %}
+  <div class="row g-3 g-lg-4 archive-list">
+    {% for item in project_collection.items %}
+    <div class="col-12 col-md-6">
+      <div class="archive-row h-100">
+        <div class="archive-row-copy">
+          <h3 class="archive-row-title">{{ item.title }}</h3>
+          {% if item.description %}
+          <p class="archive-row-desc">{{ item.description }}</p>
+          {% endif %}
+        </div>
+        <div class="archive-row-actions">
+          {% for link in item.links %}
+            {% assign is_external = false %}
+            {% if link.url contains "://" %}
+              {% assign is_external = true %}
+            {% endif %}
+            <a data-cursor-stick
+              class="btn rounded-pill btn-sm fw-bolder btn-outline-secondary archive-row-link"
+              href="{{ link.url }}"
+              {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              {% if link.icon %}
+                <i class="fa-solid fa-{{ link.icon }}"></i>
+              {% else %}
+                {{ link.text }}
+              {% endif %}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% else %}
   <div class="row g-3 g-lg-4">
     {% for item in project_collection.items %}
       {% assign card_col = "col-12 col-md-6 col-lg-4" %}
@@ -31,39 +76,50 @@ layout: page
         {% assign card_col = "col-12 col-md-6" %}
         {% assign is_featured = true %}
       {% endif %}
-      {% if project_collection.title == "Archives" %}
+      {% if is_archive_page %}
         {% assign card_col = "col-12 col-md-6" %}
         {% assign is_featured = false %}
       {% endif %}
 
+      {% assign link_count = 0 %}
+      {% if item.links %}
+        {% assign link_count = item.links.size %}
+      {% endif %}
+      {% assign single_link = false %}
+      {% if link_count == 1 %}
+        {% assign single_link = true %}
+      {% endif %}
+
     <div class="{{ card_col }}">
-      <article class="project-card{% if is_featured %} project-card--featured{% endif %}">
+      <article class="project-card{% if is_featured %} project-card--featured{% endif %}{% if single_link %} project-card--stretch position-relative{% endif %}">
         {% if item.thumbnail %}
         <div class="project-card-media ratio ratio-16x9">
           <img src="/assets/imgs/project/thumbnails/{{ item.thumbnail }}"
             class="object-fit-cover" alt="{{ item.title }} thumbnail" loading="lazy">
 
-          {% if item.links and item.links.size > 0 %}
-          <div class="project-card-overlay">
-            <div class="project-card-links">
-              {% for link in item.links %}
-                {% assign is_external = false %}
-                {% if link.url contains "://" %}
-                  {% assign is_external = true %}
-                {% endif %}
-                <a data-cursor-stick
-                  class="btn rounded-pill btn-sm fw-bolder {% if forloop.first %}btn-primary{% else %}btn-outline-secondary{% endif %}"
-                  href="{{ link.url }}"
-                  {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-                  {% if link.icon %}
-                    <i class="fa-solid fa-{{ link.icon }}"></i>
-                  {% else %}
-                    {{ link.text }}
+          {% if item.links and link_count > 0 %}
+            {% unless single_link %}
+            <div class="project-card-overlay">
+              <div class="project-card-links">
+                {% for link in item.links %}
+                  {% assign is_external = false %}
+                  {% if link.url contains "://" %}
+                    {% assign is_external = true %}
                   {% endif %}
-                </a>
-              {% endfor %}
+                  <a data-cursor-stick
+                    class="btn rounded-pill btn-sm fw-bolder {% if forloop.first %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+                    href="{{ link.url }}"
+                    {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                    {% if link.icon %}
+                      <i class="fa-solid fa-{{ link.icon }}"></i>
+                    {% else %}
+                      {{ link.text }}
+                    {% endif %}
+                  </a>
+                {% endfor %}
+              </div>
             </div>
-          </div>
+            {% endunless %}
           {% endif %}
         </div>
         {% endif %}
@@ -74,7 +130,18 @@ layout: page
           <p class="project-card-desc">{{ item.description }}</p>
           {% endif %}
 
-          {% unless item.thumbnail %}
+          {% if single_link %}
+            {% assign link = item.links | first %}
+            {% assign is_external = false %}
+            {% if link.url contains "://" %}
+              {% assign is_external = true %}
+            {% endif %}
+            <a class="stretched-link"
+              href="{{ link.url }}"
+              {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+              <span class="visually-hidden">{{ link.text | default: item.title }}</span>
+            </a>
+          {% elsif item.thumbnail == blank %}
           <div class="project-card-links project-card-links--static mt-2">
             {% for link in item.links %}
               {% assign is_external = false %}
@@ -93,12 +160,13 @@ layout: page
               </a>
             {% endfor %}
           </div>
-          {% endunless %}
+          {% endif %}
         </div>
       </article>
     </div>
     {% endfor %}
   </div>
+  {% endif %}
 </section>
 {% endfor %}
 

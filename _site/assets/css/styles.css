@@ -3509,6 +3509,25 @@ textarea.form-control-lg { min-height: calc(1.7em + 1rem + calc($input-border-wi
 
 .project-card--featured .project-card-title { font-size: 1.2rem; }
 
+.project-card--stretch { cursor: pointer; }
+.project-card--stretch:hover .project-card-media img, .project-card--stretch:focus-within .project-card-media img { transform: scale(1.04); }
+
+.archive-list { --bs-gutter-x: 1.5rem; }
+
+.archive-row { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 1.1rem 0; border-top: 1px solid var(--bs-border-color); border-bottom: 1px solid var(--bs-border-color); }
+
+.archive-row-copy { min-width: 0; flex: 1; }
+
+.archive-row-title { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.15rem; letter-spacing: -0.01em; }
+
+.archive-row-desc { font-size: 0.95rem; color: var(--bs-secondary-color); font-style: italic; margin-bottom: 0; line-height: 1.45; }
+
+.archive-row-actions { flex-shrink: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: flex-end; }
+
+.archive-row-link { --bs-btn-color: var(--bs-secondary-color); --bs-btn-border-color: var(--bs-border-color); --bs-btn-hover-color: var(--bs-body-color); --bs-btn-hover-bg: transparent; --bs-btn-hover-border-color: var(--bs-body-color); --bs-btn-active-color: var(--bs-body-color); --bs-btn-active-bg: transparent; --bs-btn-active-border-color: var(--bs-body-color); font-weight: 600 !important; opacity: 0.85; }
+
+@media (max-width: 575.98px) { .archive-row { flex-direction: column; align-items: flex-start; }
+  .archive-row-actions { justify-content: flex-start; } }
 @media (hover: hover) and (pointer: fine) { .project-card:hover .project-card-media img, .project-card:focus-within .project-card-media img { transform: scale(1.04); }
   .project-card:hover .project-card-overlay, .project-card:focus-within .project-card-overlay { opacity: 1; } }
 @media (hover: none), (pointer: coarse) { .project-card-overlay { opacity: 1; background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 55%); } }

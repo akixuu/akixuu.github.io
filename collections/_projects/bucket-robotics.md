@@ -1,6 +1,6 @@
 ---
 title: Bucket Robotics
-thumbnail: comingsoon.png
+thumbnail: br.png
 description: >-
   Palmer Secondary's first robotics club — STEM activities, VEX kits, and
   school competitions from 2022 to 2025.

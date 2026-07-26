@@ -1,26 +1,8 @@
 - title: "Competitions & Hackathons"
   description: "Quick builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
   items:
-    - title: "uRelief"
-      thumbnail: "urelief.png"
-      description: "Ultimate resource finder app for the homeless."
-      links:
-        - text: "Showcase"
-          url: "https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS"
-        - icon: "award"
-          url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
-        - text: "Repo"
-          url: "https://github.com/akixuu/goa_s06"
-
-    - title: "Poses for Dummies"
-      thumbnail: "nonotes.png"
-      description: "Real-time pose tracking party game."
-      links:
-        - text: "Writeup"
-          url: "https://2026.quackhacks.org/projects/poses-for-dummies"
-
     - title: "LitReading"
-      thumbnail: "comingsoon.png"
+      thumbnail: "litreading.png"
       description: "App to improve literacy through ranked reading for schools."
       links:
         - text: "Showcase"
@@ -37,6 +19,24 @@
         - icon: "award"
           url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
 
+    - title: "uRelief"
+      thumbnail: "urelief.png"
+      description: "Ultimate resource finder app for the homeless."
+      links:
+        - text: "Showcase"
+          url: "https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS"
+        - icon: "award"
+          url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
+        - text: "Repo"
+          url: "https://github.com/akixuu/goa_s06"
+
+    - title: "Poses for Dummies"
+      thumbnail: "poses.png"
+      description: "Real-time pose tracking party game."
+      links:
+        - text: "Writeup"
+          url: "https://2026.quackhacks.org/projects/poses-for-dummies"
+      
     - title: "NoNotes"
       thumbnail: "nonotes.png"
       description: "Your AI note-taking companion."
@@ -48,11 +48,11 @@
   description: ""
   items:
     - title: "Spectral Analysis of Memory-N-Back Test"
-      thumbnail: "comingsoon.png"
+      thumbnail: "nm.png"
       description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."
       links:
         - text: "Presentation Slides"
-          url: "#"
+          url: "https://docs.google.com/presentation/d/1_EHGt-UPcvcErtjuemU1fLT-UjMlWKPM9LwDEN1otqU/edit?usp=sharing"
 
 - title: "Meaningful Experiences"
   description: "Collaborative work focused on social impact and community."
@@ -65,16 +65,14 @@
           url: "/projects/tech-to-go"
 
     - title: "Bucket Robotics"
-      thumbnail: "comingsoon.png"
+      thumbnail: "br.png"
       description: "High school robotics club."
       links:
         - text: "Writeup"
           url: "/projects/bucket-robotics"
-        - text: "Website"
-          url: "https://www.bucketrobotics.ca/"
 
     - title: "EcoConnect"
-      thumbnail: "comingsoon.png"
+      thumbnail: "ecoconnect.png"
       description: "Inspiring youth in sustainability through eco-conscious environments."
       links:
         - text: "Writeup"
@@ -84,14 +82,12 @@
   description: "Older work from high school — kept here for nostalgia."
   items:
     - title: "Projects"
-      thumbnail: "fractal.png"
       description: "Some old things I worked on."
       links:
         - text: "Gallery"
           url: "/old_projects/"
 
     - title: "Websites"
-      thumbnail: "websites.png"
       description: "Older websites that are no longer live."
       links:
         - text: "Gallery"

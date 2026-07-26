@@ -1,6 +1,6 @@
 ---
 title: EcoConnect
-thumbnail: comingsoon.png
+thumbnail: ecoconnect.png
 description: >-
   A youth sustainability project that brought green spaces and eco-awareness
   activities to schools across Vancouver and Richmond.
