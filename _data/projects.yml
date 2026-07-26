@@ -1,5 +1,5 @@
 - title: "Competitions & Hackathons"
-  description: "Fast-paced builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
+  description: "Quick builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
   items:
     - title: "uRelief"
       thumbnail: "urelief.png"
@@ -84,15 +84,15 @@
   description: "Older work from high school — kept here for nostalgia."
   items:
     - title: "Projects"
-      thumbnail: "comingsoon.png"
+      thumbnail: "fractal.png"
       description: "Some old things I worked on."
       links:
         - text: "Gallery"
-          url: "/old_projects"
+          url: "/old_projects/"
 
     - title: "Websites"
       thumbnail: "websites.png"
       description: "Older websites that are no longer live."
       links:
         - text: "Gallery"
-          url: "/old_websites"
+          url: "/old_websites/"

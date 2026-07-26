@@ -41,7 +41,7 @@
   <link rel="icon" type="image/x-icon" href="{{ '/' | relative_url }}" />
 </head>
 
-<body>
+<body{% if page.layout == "home" %} class="home-page"{% endif %}>
   {{ content }}
 
   <!-- Bootstrap 5 JS -->
@@ -67,7 +67,11 @@
       }
 
       toggle.addEventListener('click', function () {
+        document.documentElement.classList.add('theme-animating');
         setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+        window.setTimeout(function () {
+          document.documentElement.classList.remove('theme-animating');
+        }, 400);
       });
 
       setTheme(currentTheme());

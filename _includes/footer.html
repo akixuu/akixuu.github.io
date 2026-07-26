@@ -1,9 +1,10 @@
-<footer class="site-footer py-3 mt-5">
+<footer class="site-footer py-3{% unless page.layout == 'home' %} mt-4{% endunless %}">
   <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
     <span class="text-body-secondary small">&copy; {{ 'now' | date: "%Y" }} Aki Xu</span>
-    <div class="d-flex gap-3 small">
-      <a class="text-body-secondary text-decoration-none" href="/projects">Projects</a>
+    <div class="site-footer-links d-flex flex-wrap align-items-center gap-3">
+      <a class="text-body-secondary text-decoration-none" href="/projects/">Projects</a>
       <a class="text-body-secondary text-decoration-none" href="/resume.pdf">Resume</a>
+      <span class="text-body-secondary small footer-note">Site updating through summer 2026</span>
     </div>
   </div>
 </footer>

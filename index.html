@@ -1,25 +1,24 @@
 ---
 title: Home
+layout: home
 ---
 
-<section class="mb-4">
-  <div class="alert alert-warning text-center rounded-0 mb-0" role="alert">
-    As of May 2026, this website is being updated. Some writeups are still placeholders — thanks for stopping by!
-  </div>
-</section>
-
-<section>
-  <div class="d-flex row row-cols-1 row-cols-lg-2 align-items-center g-3">
-    <div class="col">
-      <p class="lead mb-1"><em>Hello! My name is</em></p>
-      <h1 class="display-1">AKI XU</h1>
-      <p class="mb-2">Studying CS @ UBC</p>
-      <p>I'm exploring natural physics simulations and investigating emergent systems. I enjoy reading and taking walks — I regularly touch grass!!</p>
-      <a class="fw-bold text-decoration-none" href="/projects/">View my projects →</a>
+<section class="home-hero container">
+  <div class="row align-items-center g-4 g-lg-5">
+    <div class="col-lg-6 home-hero-copy slide-in-from-left">
+      <p class="home-kicker">Hello, my name is</p>
+      <h1 class="home-name">AKI XU</h1>
+      <p class="home-meta">Studying CS @ UBC</p>
+      <p class="home-blurb">
+        I'm exploring natural physics simulations and investigating emergent systems.
+        I enjoy reading and taking walks — I regularly touch grass!!
+      </p>
+      <a class="home-cta" href="/projects/">View my projects →</a>
     </div>
-    <div class="col">
-      <div class="ratio ratio-1x1">
-        <img src="{{ '/assets/imgs/me.png' | relative_url }}" alt="Portrait of Aki Xu" loading="lazy">
+
+    <div class="col-lg-6 home-hero-visual slide-in-from-right">
+      <div class="home-portrait">
+        <img src="{{ '/assets/imgs/me.png' | relative_url }}" alt="Portrait of Aki Xu" width="800" height="800">
       </div>
     </div>
   </div>

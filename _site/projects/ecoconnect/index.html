@@ -43,10 +43,10 @@
 </head>
 
 <body>
-  <header class="site-header sticky-top">
+  <header class="site-header sticky-top slide-down">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="/">AKI XU</a>
+      <a class="navbar-brand site-brand fw-bold" href="/">AKI XU</a>
 
       <div class="d-flex align-items-center gap-3 order-lg-last">
         <div class="header-actions">
@@ -69,9 +69,9 @@
       </div>
 
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 site-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/projects">Projects</a>
+            <a class="nav-link" href="/projects/">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/resume.pdf">Resume</a>
@@ -135,12 +135,13 @@ raise awareness around environmental issues.</p>
   </article>
 </main>
 
-<footer class="site-footer py-3 mt-5">
+<footer class="site-footer py-3 mt-4">
   <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
     <span class="text-body-secondary small">© 2026 Aki Xu</span>
-    <div class="d-flex gap-3 small">
-      <a class="text-body-secondary text-decoration-none" href="/projects">Projects</a>
+    <div class="site-footer-links d-flex flex-wrap align-items-center gap-3">
+      <a class="text-body-secondary text-decoration-none" href="/projects/">Projects</a>
       <a class="text-body-secondary text-decoration-none" href="/resume.pdf">Resume</a>
+      <span class="text-body-secondary small footer-note">Site updating through summer 2026</span>
     </div>
   </div>
 </footer>
@@ -170,7 +171,11 @@ raise awareness around environmental issues.</p>
       }
 
       toggle.addEventListener('click', function () {
+        document.documentElement.classList.add('theme-animating');
         setTheme(currentTheme() === 'dark' ? 'light' : 'dark');
+        window.setTimeout(function () {
+          document.documentElement.classList.remove('theme-animating');
+        }, 400);
       });
 
       setTheme(currentTheme());
