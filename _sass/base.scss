@@ -45,6 +45,123 @@ html, body,
   color: white;
 }
 
+// ---------- Emergent butterflies ----------
+.butterfly-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 240;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.butterfly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  will-change: transform;
+  opacity: 1;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.18));
+  transition: filter 0.3s ease;
+}
+
+.butterfly-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.butterfly .wing {
+  fill: currentColor;
+  opacity: 1;
+  transform-origin: 32px 32px;
+  transform-box: fill-box;
+}
+
+.butterfly .wing-l {
+  animation: butterfly-flap-l calc(0.28s / var(--flap, 1)) ease-in-out infinite;
+}
+
+.butterfly .wing-r {
+  animation: butterfly-flap-r calc(0.28s / var(--flap, 1)) ease-in-out infinite;
+}
+
+.butterfly .wing-l-lower,
+.butterfly .wing-r-lower {
+  opacity: 1;
+  fill: color-mix(in srgb, currentColor 78%, #000 22%);
+}
+
+.butterfly .butterfly-body {
+  fill: currentColor;
+  opacity: 1;
+}
+
+.butterfly .butterfly-antenna {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  opacity: 1;
+}
+
+.butterfly.is-perched .wing-l,
+.butterfly.is-perched .wing-r {
+  animation: none;
+}
+
+.butterfly.is-perched .wing-l {
+  transform: scaleX(1) rotate(10deg);
+}
+
+.butterfly.is-perched .wing-r {
+  transform: scaleX(1) rotate(-10deg);
+}
+
+[data-bs-theme="dark"] .butterfly {
+  color: #d4b896;
+  opacity: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+}
+
+[data-bs-theme="light"] .butterfly {
+  color: #9a7b4f;
+  opacity: 1;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12));
+}
+
+.butterfly--companion {
+  opacity: 1;
+}
+
+[data-bs-theme="dark"] .butterfly--companion {
+  color: #e6c9a0;
+  filter: drop-shadow(0 1px 3px rgba(212, 184, 150, 0.35));
+}
+
+[data-bs-theme="light"] .butterfly--companion {
+  color: #8a6a3e;
+  filter: drop-shadow(0 1px 2px rgba(138, 106, 62, 0.2));
+}
+
+@keyframes butterfly-flap-l {
+  0%, 100% { transform: scaleX(calc(0.35 + 0.65 * var(--flap-amp, 1))) rotate(calc(-8deg * var(--flap-amp, 1))); }
+  50% { transform: scaleX(1) rotate(calc(12deg * var(--flap-amp, 1))); }
+}
+
+@keyframes butterfly-flap-r {
+  0%, 100% { transform: scaleX(calc(0.35 + 0.65 * var(--flap-amp, 1))) rotate(calc(8deg * var(--flap-amp, 1))); }
+  50% { transform: scaleX(1) rotate(calc(-12deg * var(--flap-amp, 1))); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .butterfly-layer {
+    display: none !important;
+  }
+}
+
 .overflow-hidden {
   overflow: hidden;
   object-fit: cover;
