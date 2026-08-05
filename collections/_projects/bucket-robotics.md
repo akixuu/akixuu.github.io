@@ -14,8 +14,6 @@ supplemental_links:
     link: https://www.youtube.com/watch?v=uFRDAW7LfXM
 ---
 
-Placeholder writeup — more details coming soon.
-
 **Bucket Robotics** was Palmer Secondary's first robotics club. We hosted STEM
 activities with VEX kits to learn hardware, software control, and robot design,
 then shared our builds at school events — plus the occasional freezie, candy,
@@ -30,5 +28,4 @@ and bubble tea fundraiser.
 - Ran yearly competitions and community fundraisers
 
 ### Status
-This page will eventually include a longer story, photos from competitions, and
-notes on what the club taught me about leading a team.
+This page will eventually include a longer story and photos from competitions.

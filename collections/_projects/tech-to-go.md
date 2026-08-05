@@ -22,4 +22,4 @@ want to feel more comfortable with devices, software, and the web.
 - Contributing to outreach and materials for Metro Vancouver communities
 
 ### Status
-This page is a stub while I gather photos, session notes, and a fuller writeup.
+Full writeup, photos, and outcomes are still being collected for this page.

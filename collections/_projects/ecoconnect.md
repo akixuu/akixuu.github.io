@@ -6,8 +6,6 @@ description: >-
   activities to schools across Vancouver and Richmond.
 ---
 
-Placeholder writeup — more details coming soon.
-
 **EcoConnect** (also known as E-Connect through S.U.C.C.E.S.S. BC) was a
 community program where our team budgeted and used funding to introduce more
 green spaces to schools. We provided gardening kits and organized activities to
