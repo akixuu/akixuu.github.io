@@ -1,4 +1,5 @@
 *.css linguist-vendored
 *.scss linguist-vendored
+*.html linguist-vendored
 dist/** linguist-vendored
 build/** linguist-vendored
