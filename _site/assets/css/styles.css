@@ -3546,6 +3546,8 @@ textarea.form-control-lg { min-height: calc(1.7em + 1rem + calc($input-border-wi
 
 .project-card-desc { font-size: 0.92rem; color: var(--bs-secondary-color); margin-bottom: 0; font-style: italic; line-height: 1.45; }
 
+.project-card-stack { font-size: 0.78rem; color: var(--bs-tertiary-color); margin: 0.35rem 0 0; letter-spacing: 0.02em; line-height: 1.35; }
+
 .project-card--featured .project-card-title { font-size: 1.2rem; }
 
 .project-card--stretch { cursor: pointer; }
