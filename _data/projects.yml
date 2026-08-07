@@ -4,6 +4,7 @@
     - title: "LitReading"
       thumbnail: "litreading.png"
       description: "App to improve literacy through ranked reading for schools."
+      stack: "Android · Java"
       links:
         - text: "Showcase"
           url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
@@ -13,6 +14,7 @@
     - title: "Resumer"
       thumbnail: "resumer.png"
       description: "Job finding app portal for new immigrants."
+      stack: "Android · Java"
       links:
         - text: "Showcase"
           url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
@@ -22,6 +24,7 @@
     - title: "uRelief"
       thumbnail: "urelief.png"
       description: "Ultimate resource finder app for the homeless."
+      stack: "Android · Java"
       links:
         - text: "Showcase"
           url: "https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS"
@@ -33,6 +36,7 @@
     - title: "Poses for Dummies"
       thumbnail: "poses.png"
       description: "Real-time pose tracking party game."
+      stack: "React · TypeScript · MediaPipe · p5.js"
       links:
         - text: "Writeup"
           url: "https://2026.quackhacks.org/projects/poses-for-dummies"
@@ -40,6 +44,7 @@
     - title: "NoNotes"
       thumbnail: "nonotes.png"
       description: "Your AI note-taking companion."
+      stack: "Python · Flask · JavaScript"
       links:
         - text: "Devpost"
           url: "https://devpost.com/software/noname-pht40q"
@@ -50,6 +55,7 @@
     - title: "Spectral Analysis of Memory-N-Back Test"
       thumbnail: "nm.png"
       description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."
+      stack: "Python"
       links:
         - text: "Presentation Slides"
           url: "https://docs.google.com/presentation/d/1_EHGt-UPcvcErtjuemU1fLT-UjMlWKPM9LwDEN1otqU/edit?usp=sharing"
@@ -67,6 +73,7 @@
     - title: "Bucket Robotics"
       thumbnail: "br.png"
       description: "High school robotics club."
+      stack: "VEX"
       links:
         - text: "Writeup"
           url: "/projects/bucket-robotics"

@@ -567,6 +567,14 @@ html, body,
   line-height: 1.45;
 }
 
+.project-card-stack {
+  font-size: 0.78rem;
+  color: var(--bs-tertiary-color);
+  margin: 0.35rem 0 0;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+}
+
 .project-card--featured .project-card-title {
   font-size: 1.2rem;
 }

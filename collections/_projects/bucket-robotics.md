@@ -4,6 +4,7 @@ thumbnail: br.png
 description: >-
   Palmer Secondary's first robotics club — STEM activities, VEX kits, and
   school competitions from 2022 to 2025.
+stack: "VEX"
 supplemental_links:
   - text: Website
     link: https://www.bucketrobotics.ca/

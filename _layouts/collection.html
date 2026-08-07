@@ -129,6 +129,9 @@ layout: page
           {% if item.description %}
           <p class="project-card-desc">{{ item.description }}</p>
           {% endif %}
+          {% if item.stack %}
+          <p class="project-card-stack">{{ item.stack }}</p>
+          {% endif %}
 
           {% if single_link %}
             {% assign link = item.links | first %}
