@@ -81,17 +81,18 @@ html, body,
 }
 
 .butterfly .wing-l {
-  animation: butterfly-flap-l calc(0.28s / var(--flap, 1)) ease-in-out infinite;
+  // Quote calc() so Ruby Sass (github-pages) doesn't treat `/` as division
+  animation: butterfly-flap-l #{"calc(0.28s / var(--flap, 1))"} ease-in-out infinite;
 }
 
 .butterfly .wing-r {
-  animation: butterfly-flap-r calc(0.28s / var(--flap, 1)) ease-in-out infinite;
+  animation: butterfly-flap-r #{"calc(0.28s / var(--flap, 1))"} ease-in-out infinite;
 }
 
 .butterfly .wing-l-lower,
 .butterfly .wing-r-lower {
   opacity: 1;
-  fill: color-mix(in srgb, currentColor 78%, #000 22%);
+  fill: #{"color-mix(in srgb, currentColor 78%, #000 22%)"};
 }
 
 .butterfly .butterfly-body {
@@ -147,13 +148,19 @@ html, body,
 }
 
 @keyframes butterfly-flap-l {
-  0%, 100% { transform: scaleX(calc(0.35 + 0.65 * var(--flap-amp, 1))) rotate(calc(-8deg * var(--flap-amp, 1))); }
-  50% { transform: scaleX(1) rotate(calc(12deg * var(--flap-amp, 1))); }
+  0%, 100% {
+    transform: scaleX(#{'calc(0.35 + 0.65 * var(--flap-amp, 1))'})
+      rotate(#{'calc(-8deg * var(--flap-amp, 1))'});
+  }
+  50% { transform: scaleX(1) rotate(#{'calc(12deg * var(--flap-amp, 1))'}); }
 }
 
 @keyframes butterfly-flap-r {
-  0%, 100% { transform: scaleX(calc(0.35 + 0.65 * var(--flap-amp, 1))) rotate(calc(8deg * var(--flap-amp, 1))); }
-  50% { transform: scaleX(1) rotate(calc(-12deg * var(--flap-amp, 1))); }
+  0%, 100% {
+    transform: scaleX(#{'calc(0.35 + 0.65 * var(--flap-amp, 1))'})
+      rotate(#{'calc(8deg * var(--flap-amp, 1))'});
+  }
+  50% { transform: scaleX(1) rotate(#{'calc(-12deg * var(--flap-amp, 1))'}); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -353,8 +360,8 @@ html, body,
     content: "";
     position: absolute;
     inset: 8% -5% auto auto;
-    width: min(52vw, 28rem);
-    height: min(52vw, 28rem);
+    width: #{"min(52vw, 28rem)"};
+    height: #{"min(52vw, 28rem)"};
     border-radius: 50%;
     background: radial-gradient(circle, var(--wash) 0%, transparent 70%);
     pointer-events: none;
@@ -378,7 +385,7 @@ html, body,
 .home-name {
   font-family: $font-family-display;
   font-weight: 800;
-  font-size: clamp(3.2rem, 9vw, 5.5rem);
+  font-size: #{"clamp(3.2rem, 9vw, 5.5rem)"};
   letter-spacing: 0.04em;
   line-height: 0.95;
   margin-bottom: 0.75rem;
@@ -455,7 +462,7 @@ html, body,
 .gallery-page-title {
   font-family: $font-family-display;
   font-weight: 800;
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-size: #{"clamp(2.5rem, 6vw, 3.75rem)"};
   letter-spacing: -0.02em;
   line-height: 1;
   margin-bottom: 0;
