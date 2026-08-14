@@ -1,7 +1,7 @@
 ---
 layout: challenge
 title: 30 Days of Blender
-kicker: Misc · Challenge log
+kicker: Challenge log · Aug 2026
 thumbnail: blender.png
 description: >-
   Challenging myself to learn Blender this summer!

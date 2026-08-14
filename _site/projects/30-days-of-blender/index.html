@@ -100,7 +100,7 @@
       
 
       <div class="col-lg-7 d-flex flex-column justify-content-center">
-        <p class="challenge-kicker text-body-secondary mb-2">Misc · Challenge log</p>
+        <p class="challenge-kicker text-body-secondary mb-2">Challenge log · Aug 2026</p>
         <h1 class="project-title display-5 fw-bold mb-2">30 Days of Blender</h1>
 
         
@@ -115,7 +115,9 @@
         
         <div class="col-lg-7">
           <h2 class="challenge-section-title">Why</h2>
-          <p class="challenge-section-copy mb-0">This summer, I am spending thirty days in Blender! I want to make games and interesting 3.js animations at some point,  so I want to be able to create my own assets. It's a useful skill and a fun challenge. Between work and school, I will spend an hour a day.</p>
+          <div class="challenge-section-copy">
+<p>This summer, I am spending thirty days in Blender! I want to make games and interesting 3.js animations at some point,  so I want to be able to create my own assets. It’s a useful skill and a fun challenge. Between work and school, I will spend an hour a day.</p>
+</div>
         </div>
         
 
@@ -124,9 +126,11 @@
           <h2 class="challenge-section-title">Goals</h2>
           <ul class="challenge-goals mb-0">
             
-            <li>Finish one render per day for 30 days straight</li>
+            <li>Finish one render per day
+</li>
             
-            <li>Become good enough where I can make simple assets for games &amp; animations</li>
+            <li>Become good enough where I can make simple assets for games &amp; animations
+</li>
             
           </ul>
         </div>
@@ -139,7 +143,7 @@
       <header class="challenge-log-header mb-3">
         <h2 class="challenge-section-title mb-1">Daily log</h2>
         <p class="challenge-section-copy text-body-secondary mb-0">
-          One render a day — swap the placeholders as I go.
+          Click image to enlarge
         </p>
       </header>
 
@@ -149,14 +153,20 @@
           <article class="challenge-day h-100">
             <div class="challenge-day-media ratio ratio-1x1">
               
-              <img class="object-fit-cover" src="/assets/imgs/project/galleries/blender-30/day-01.png" alt="Day 1 — Sushi" loading="lazy">
+              
+              
+              <button type="button" class="challenge-day-zoom" data-bs-toggle="modal" data-bs-target="#challenge-lightbox" data-lightbox-src="/assets/imgs/project/galleries/blender-30/day-01.png" data-lightbox-alt="Day 1 — Sushi" data-lightbox-caption="Day 1 — Sushi" aria-label="View day 1 render larger">
+                <img class="object-fit-cover" src="/assets/imgs/project/galleries/blender-30/day-01.png" alt="Day 1 — Sushi" loading="lazy">
+              </button>
               
             </div>
             <div class="challenge-day-meta">
               <p class="challenge-day-number mb-1">Day 1</p>
               <h3 class="challenge-day-title">Sushi</h3>
               
-              <p class="challenge-day-desc mb-0">XXX</p>
+              <div class="challenge-day-desc">
+<p>Had help from <a href="https://polygonrunway.com/p/become-a-3d-illustrator-in-one-hour">this Polygon Runway tutorial</a>.</p>
+</div>
               
             </div>
           </article>
@@ -166,14 +176,20 @@
           <article class="challenge-day h-100">
             <div class="challenge-day-media ratio ratio-1x1">
               
-              <img class="object-fit-cover" src="/assets/imgs/project/galleries/blender-30/day-02.png" alt="Day 2 — Well well well..." loading="lazy">
+              
+              
+              <button type="button" class="challenge-day-zoom" data-bs-toggle="modal" data-bs-target="#challenge-lightbox" data-lightbox-src="/assets/imgs/project/galleries/blender-30/day-02.png" data-lightbox-alt="Day 2 — Well well well..." data-lightbox-caption="Day 2 — Well well well..." aria-label="View day 2 render larger">
+                <img class="object-fit-cover" src="/assets/imgs/project/galleries/blender-30/day-02.png" alt="Day 2 — Well well well..." loading="lazy">
+              </button>
               
             </div>
             <div class="challenge-day-meta">
               <p class="challenge-day-number mb-1">Day 2</p>
               <h3 class="challenge-day-title">Well well well...</h3>
               
-              <p class="challenge-day-desc mb-0">XXX</p>
+              <div class="challenge-day-desc">
+<p>Had help from <a href="https://www.youtube.com/watch?v=QPh8h0hWkg0&amp;list=PLn3ukorJv4vvMwZPLzlajVII2zJd-_BM-">this YouTube tutorial</a>.</p>
+</div>
               
             </div>
           </article>
@@ -192,7 +208,9 @@
               <p class="challenge-day-number mb-1">Day 3</p>
               <h3 class="challenge-day-title">XXX</h3>
               
-              <p class="challenge-day-desc mb-0">XXX</p>
+              <div class="challenge-day-desc">
+<p>XXX</p>
+</div>
               
             </div>
           </article>
@@ -204,7 +222,9 @@
     
     <section class="challenge-reflection border-top mt-4 pt-4 mb-2">
       <h2 class="challenge-section-title">Reflection</h2>
-      <p class="challenge-section-copy mb-0">XXX</p>
+      <div class="challenge-section-copy">
+<p>XXX</p>
+</div>
     </section>
     
 
@@ -217,6 +237,56 @@
   </article>
 </main>
 
+<div class="modal fade challenge-lightbox" id="challenge-lightbox" tabindex="-1" aria-labelledby="challenge-lightbox-caption" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content challenge-lightbox-content">
+      <figure class="challenge-lightbox-figure mb-0">
+        <img id="challenge-lightbox-image" class="challenge-lightbox-image" src="" alt="" loading="lazy">
+        <figcaption id="challenge-lightbox-caption" class="challenge-lightbox-caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById('challenge-lightbox');
+    if (!modal) return;
+
+    var image = document.getElementById('challenge-lightbox-image');
+    var caption = document.getElementById('challenge-lightbox-caption');
+
+    modal.addEventListener('show.bs.modal', function (event) {
+      var trigger = event.relatedTarget;
+      if (!trigger || !image) return;
+
+      var src = trigger.getAttribute('data-lightbox-src');
+      var alt = trigger.getAttribute('data-lightbox-alt') || '';
+      var label = trigger.getAttribute('data-lightbox-caption') || '';
+
+      image.src = src || '';
+      image.alt = alt;
+      if (caption) caption.textContent = label;
+    });
+
+    modal.addEventListener('hidden.bs.modal', function () {
+      if (!image) return;
+      image.removeAttribute('src');
+      image.alt = '';
+      if (caption) caption.textContent = '';
+    });
+
+    // Close when clicking anywhere except the image itself
+    // (Bootstrap only closes on the backdrop; empty dialog space still counts as "inside")
+    modal.addEventListener('click', function (event) {
+      if (event.target === image) return;
+      if (window.bootstrap && bootstrap.Modal) {
+        bootstrap.Modal.getOrCreateInstance(modal).hide();
+      }
+    });
+  })();
+</script>
+
 <footer class="site-footer py-3 mt-4">
   <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
     <span class="text-body-secondary small">© 2026 Aki Xu</span>
@@ -227,7 +297,6 @@
     </div>
   </div>
 </footer>
-
 
 
   <!-- Bootstrap 5 JS -->

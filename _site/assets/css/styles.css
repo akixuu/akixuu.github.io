@@ -3586,10 +3586,17 @@ textarea.form-control-lg { min-height: calc(1.7em + 1rem + calc($input-border-wi
 .challenge-page .challenge-kicker { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0; }
 .challenge-page .challenge-section-title { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.65rem; }
 .challenge-page .challenge-section-copy { font-size: 1.02rem; line-height: 1.65; color: var(--bs-body-color); }
-.challenge-page .challenge-goals { padding-left: 1.15rem; margin-bottom: 0; }
-.challenge-page .challenge-goals li { margin-bottom: 0.4rem; line-height: 1.5; }
+.challenge-page .challenge-section-copy a { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
+.challenge-page .challenge-section-copy a:hover { color: var(--bs-body-color); }
+.challenge-page .challenge-section-copy > p:last-child { margin-bottom: 0; }
+.challenge-page .challenge-goals { padding-left: 1.15rem; margin-bottom: 0; font-size: 1.02rem; line-height: 1.65; }
+.challenge-page .challenge-goals li { margin-bottom: 0.4rem; line-height: 1.65; }
 .challenge-page .challenge-goals li:last-child { margin-bottom: 0; }
 .challenge-page .challenge-day-media { overflow: hidden; background: var(--surface-elevated, var(--bs-secondary-bg)); border: 1px solid var(--bs-border-color); }
+.challenge-page .challenge-day-zoom { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.challenge-page .challenge-day-zoom img { width: 100%; height: 100%; transition: transform 0.35s ease; }
+.challenge-page .challenge-day-zoom:focus-visible { outline: 2px solid var(--bs-body-color); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .challenge-page .challenge-day-zoom:hover img { transform: scale(1.04); } }
 .challenge-page .challenge-day-placeholder { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 0, 0.04), transparent 55%), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.03) 10px, rgba(0, 0, 0, 0.03) 11px); }
 [data-bs-theme="dark"] .challenge-page .challenge-day-placeholder { background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 55%), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.04) 10px, rgba(255, 255, 255, 0.04) 11px); }
 .challenge-page .challenge-day-placeholder-label { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bs-secondary-color); }
@@ -3597,3 +3604,14 @@ textarea.form-control-lg { min-height: calc(1.7em + 1rem + calc($input-border-wi
 .challenge-page .challenge-day-number { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bs-secondary-color); }
 .challenge-page .challenge-day-title { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.35rem; }
 .challenge-page .challenge-day-desc { font-size: 0.92rem; line-height: 1.5; color: var(--bs-secondary-color); }
+.challenge-page .challenge-day-desc p { margin-bottom: 0.5rem; }
+.challenge-page .challenge-day-desc p:last-child { margin-bottom: 0; }
+.challenge-page .challenge-day-desc a { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
+.challenge-page .challenge-day-desc a:hover { color: var(--bs-body-color); }
+.challenge-page .challenge-goals a { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
+
+.challenge-lightbox .modal-dialog { max-width: min(1100px, calc(100vw - 2rem)); }
+.challenge-lightbox .challenge-lightbox-content { position: relative; background: transparent; border: 0; box-shadow: none; }
+.challenge-lightbox .challenge-lightbox-figure { margin: 0; text-align: center; }
+.challenge-lightbox .challenge-lightbox-image { display: block; max-width: 100%; max-height: min(82vh, 900px); width: auto; height: auto; margin: 0 auto; object-fit: contain; background: var(--surface-elevated, #111); }
+.challenge-lightbox .challenge-lightbox-caption { margin-top: 0.75rem; color: #f0eee9; font-size: 0.9rem; letter-spacing: 0.02em; }

@@ -40,7 +40,7 @@ layout: wrapper
         {% if challenge.why %}
         <div class="col-lg-7">
           <h2 class="challenge-section-title">Why</h2>
-          <p class="challenge-section-copy mb-0">{{ challenge.why }}</p>
+          <div class="challenge-section-copy">{{ challenge.why | markdownify }}</div>
         </div>
         {% endif %}
 
@@ -49,7 +49,7 @@ layout: wrapper
           <h2 class="challenge-section-title">Goals</h2>
           <ul class="challenge-goals mb-0">
             {% for goal in challenge.goals %}
-            <li>{{ goal }}</li>
+            <li>{{ goal | markdownify | remove: '<p>' | remove: '</p>' }}</li>
             {% endfor %}
           </ul>
         </div>
@@ -62,7 +62,7 @@ layout: wrapper
       <header class="challenge-log-header mb-3">
         <h2 class="challenge-section-title mb-1">Daily log</h2>
         <p class="challenge-section-copy text-body-secondary mb-0">
-          One render a day — swap the placeholders as I go.
+          Click image to enlarge
         </p>
       </header>
 
@@ -72,10 +72,21 @@ layout: wrapper
           <article class="challenge-day h-100">
             <div class="challenge-day-media ratio ratio-1x1">
               {% if entry.image %}
-              <img class="object-fit-cover"
-                src="/assets/imgs/project/galleries/{{ page.gallery_dir }}/{{ entry.image }}"
-                alt="Day {{ entry.day }} — {{ entry.title }}"
-                loading="lazy">
+              {% assign image_src = "/assets/imgs/project/galleries/" | append: page.gallery_dir | append: "/" | append: entry.image %}
+              {% assign image_alt = "Day " | append: entry.day | append: " — " | append: entry.title %}
+              <button type="button"
+                class="challenge-day-zoom"
+                data-bs-toggle="modal"
+                data-bs-target="#challenge-lightbox"
+                data-lightbox-src="{{ image_src }}"
+                data-lightbox-alt="{{ image_alt | escape }}"
+                data-lightbox-caption="Day {{ entry.day }} — {{ entry.title | escape }}"
+                aria-label="View day {{ entry.day }} render larger">
+                <img class="object-fit-cover"
+                  src="{{ image_src }}"
+                  alt="{{ image_alt }}"
+                  loading="lazy">
+              </button>
               {% else %}
               <div class="challenge-day-placeholder" aria-hidden="true">
                 <span class="challenge-day-placeholder-label">Day {{ entry.day }}</span>
@@ -86,7 +97,7 @@ layout: wrapper
               <p class="challenge-day-number mb-1">Day {{ entry.day }}</p>
               <h3 class="challenge-day-title">{{ entry.title }}</h3>
               {% if entry.description %}
-              <p class="challenge-day-desc mb-0">{{ entry.description }}</p>
+              <div class="challenge-day-desc">{{ entry.description | markdownify }}</div>
               {% endif %}
             </div>
           </article>
@@ -98,7 +109,7 @@ layout: wrapper
     {% if challenge.reflection %}
     <section class="challenge-reflection border-top mt-4 pt-4 mb-2">
       <h2 class="challenge-section-title">Reflection</h2>
-      <p class="challenge-section-copy mb-0">{{ challenge.reflection }}</p>
+      <div class="challenge-section-copy">{{ challenge.reflection | markdownify }}</div>
     </section>
     {% endif %}
 
@@ -109,5 +120,56 @@ layout: wrapper
     {% endif %}
   </article>
 </main>
+
+<div class="modal fade challenge-lightbox" id="challenge-lightbox" tabindex="-1"
+  aria-labelledby="challenge-lightbox-caption" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content challenge-lightbox-content">
+      <figure class="challenge-lightbox-figure mb-0">
+        <img id="challenge-lightbox-image" class="challenge-lightbox-image" src="" alt="">
+        <figcaption id="challenge-lightbox-caption" class="challenge-lightbox-caption"></figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById('challenge-lightbox');
+    if (!modal) return;
+
+    var image = document.getElementById('challenge-lightbox-image');
+    var caption = document.getElementById('challenge-lightbox-caption');
+
+    modal.addEventListener('show.bs.modal', function (event) {
+      var trigger = event.relatedTarget;
+      if (!trigger || !image) return;
+
+      var src = trigger.getAttribute('data-lightbox-src');
+      var alt = trigger.getAttribute('data-lightbox-alt') || '';
+      var label = trigger.getAttribute('data-lightbox-caption') || '';
+
+      image.src = src || '';
+      image.alt = alt;
+      if (caption) caption.textContent = label;
+    });
+
+    modal.addEventListener('hidden.bs.modal', function () {
+      if (!image) return;
+      image.removeAttribute('src');
+      image.alt = '';
+      if (caption) caption.textContent = '';
+    });
+
+    // Close when clicking anywhere except the image itself
+    // (Bootstrap only closes on the backdrop; empty dialog space still counts as "inside")
+    modal.addEventListener('click', function (event) {
+      if (event.target === image) return;
+      if (window.bootstrap && bootstrap.Modal) {
+        bootstrap.Modal.getOrCreateInstance(modal).hide();
+      }
+    });
+  })();
+</script>
 
 {% include footer.html %}

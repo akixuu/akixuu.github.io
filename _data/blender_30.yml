@@ -4,7 +4,7 @@ why: >-
   so I want to be able to create my own assets. It's a useful skill and
   a fun challenge. Between work and school, I will spend an hour a day.
 goals:
-  - Finish one render per day for 30 days straight
+  - Finish one render per day
   - Become good enough where I can make simple assets for games & animations 
 
 reflection: >-
@@ -13,12 +13,14 @@ reflection: >-
 days:
   - day: 1
     title: Sushi
-    description: XXX
+    description: >-
+      Had help from [this Polygon Runway tutorial](https://polygonrunway.com/p/become-a-3d-illustrator-in-one-hour).
     image: day-01.png
 
   - day: 2
     title: Well well well...
-    description: XXX
+    description: >-
+      Had help from [this YouTube tutorial by Gabbitt](https://www.youtube.com/watch?v=QPh8h0hWkg0&list=PLn3ukorJv4vvMwZPLzlajVII2zJd-_BM-).
     image: day-02.png
 
   - day: 3
