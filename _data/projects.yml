@@ -52,6 +52,14 @@
 - title: "Miscellaneous"
   description: ""
   items:
+    - title: "30 Days of Blender"
+      thumbnail: "blender.png"
+      description: "Daily Blender render challenge!"
+      stack: "Blender"
+      links:
+        - text: "Log"
+          url: "/projects/30-days-of-blender"
+
     - title: "Spectral Analysis of Memory-N-Back Test"
       thumbnail: "nm.png"
       description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."

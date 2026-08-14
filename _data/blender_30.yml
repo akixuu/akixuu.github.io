@@ -1,0 +1,27 @@
+why: >-
+  This summer, I am spending thirty days in Blender!
+  I want to make games and interesting 3.js animations at some point, 
+  so I want to be able to create my own assets. It's a useful skill and
+  a fun challenge. Between work and school, I will spend an hour a day.
+goals:
+  - Finish one render per day for 30 days straight
+  - Become good enough where I can make simple assets for games & animations 
+
+reflection: >-
+  XXX
+
+days:
+  - day: 1
+    title: Sushi
+    description: XXX
+    image: day-01.png
+
+  - day: 2
+    title: Well well well...
+    description: XXX
+    image: day-02.png
+
+  - day: 3
+    title: XXX
+    description: XXX
+    # image: day-03.png

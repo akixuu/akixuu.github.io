@@ -58,7 +58,7 @@ html, body, .site-header, .site-footer, .btn, .project-card-media, .home-portrai
 
 [data-bs-theme="dark"] .butterfly { color: #d4b896; opacity: 1; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35)); }
 
-[data-bs-theme="light"] .butterfly { color: #9a7b4f; opacity: 1; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12)); }
+[data-bs-theme="light"] .butterfly { color: #b0803e; opacity: 1; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.12)); }
 
 .butterfly--companion { opacity: 1; }
 
@@ -3582,3 +3582,18 @@ textarea.form-control-lg { min-height: calc(1.7em + 1rem + calc($input-border-wi
 .project-page .project-body h2, .project-page .project-body .h2, .project-page .project-body h3, .project-page .project-body .h3, .project-page .project-body h4, .project-page .project-body .h4 { font-family: "Krona One", "Poppins", system-ui, sans-serif; margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: 700; }
 .project-page .project-body ul, .project-page .project-body ol { padding-left: 1.25rem; margin-bottom: 0.85rem; }
 .project-page .project-body li + li { margin-top: 0.25rem; }
+
+.challenge-page .challenge-kicker { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0; }
+.challenge-page .challenge-section-title { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.65rem; }
+.challenge-page .challenge-section-copy { font-size: 1.02rem; line-height: 1.65; color: var(--bs-body-color); }
+.challenge-page .challenge-goals { padding-left: 1.15rem; margin-bottom: 0; }
+.challenge-page .challenge-goals li { margin-bottom: 0.4rem; line-height: 1.5; }
+.challenge-page .challenge-goals li:last-child { margin-bottom: 0; }
+.challenge-page .challenge-day-media { overflow: hidden; background: var(--surface-elevated, var(--bs-secondary-bg)); border: 1px solid var(--bs-border-color); }
+.challenge-page .challenge-day-placeholder { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(0, 0, 0, 0.04), transparent 55%), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.03) 10px, rgba(0, 0, 0, 0.03) 11px); }
+[data-bs-theme="dark"] .challenge-page .challenge-day-placeholder { background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 55%), repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.04) 10px, rgba(255, 255, 255, 0.04) 11px); }
+.challenge-page .challenge-day-placeholder-label { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bs-secondary-color); }
+.challenge-page .challenge-day-meta { padding-top: 0.85rem; }
+.challenge-page .challenge-day-number { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bs-secondary-color); }
+.challenge-page .challenge-day-title { font-family: "Krona One", "Poppins", system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.35rem; }
+.challenge-page .challenge-day-desc { font-size: 0.92rem; line-height: 1.5; color: var(--bs-secondary-color); }
