@@ -6,20 +6,6 @@
   if (reduceMotion || coarsePointer || window.innerWidth < 768) return;
 
   var COUNT = document.body.classList.contains('home-page') ? 3 : 2;
-  var LAND_SELECTORS = [
-    '.home-portrait',
-    '.home-name',
-    '.home-cta',
-    '.project-card',
-    '.archive-row',
-    '.gallery-page-title',
-    '.project-title',
-    '.site-brand',
-    '.navbar-nav .nav-link',
-    'h1',
-    'h2',
-    'h3'
-  ].join(',');
 
   var mouse = { x: -9999, y: -9999, active: false };
   var butterflies = [];
@@ -29,10 +15,6 @@
 
   function rand(min, max) {
     return min + Math.random() * (max - min);
-  }
-
-  function pick(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
   }
 
   function clamp(v, min, max) {
@@ -72,28 +54,6 @@
     return { x: -60, y: rand(-80, h + 80) };
   }
 
-  function getLandTargets() {
-    var nodes = Array.prototype.slice.call(document.querySelectorAll(LAND_SELECTORS));
-    var targets = [];
-    var vw = window.innerWidth;
-    var vh = window.innerHeight;
-
-    nodes.forEach(function (el) {
-      var r = el.getBoundingClientRect();
-      if (r.width < 24 || r.height < 12) return;
-      if (r.bottom < 40 || r.top > vh - 40) return;
-      if (r.right < 40 || r.left > vw - 40) return;
-
-      targets.push({
-        el: el,
-        x: r.left + r.width * rand(0.2, 0.8),
-        y: r.top + Math.min(r.height * rand(0.15, 0.55), 28)
-      });
-    });
-
-    return targets;
-  }
-
   function createButterfly(i) {
     var el = document.createElement('div');
     el.className = 'butterfly';
@@ -122,7 +82,6 @@
       state: companion ? 'companion' : 'enter',
       timer: companion ? 9999 : rand(2, 6),
       target: null,
-      perchEl: null,
       scale: companion ? rand(0.9, 1.05) : rand(0.75, 1.15),
       fear: companion ? 36 : rand(70, 120),
       orbit: rand(70, 120),
@@ -156,27 +115,21 @@
     var dy = b.y - mouse.y;
     var dist = Math.hypot(dx, dy);
     var fear = b.fear;
-    // Companion only flinches if the cursor almost overlaps it
     if (b.companion) fear = 32;
     if (dist < fear && dist > 0.1) {
       var force = (1 - dist / fear) * (b.companion ? 0.55 : 0.9);
       b.vx += (dx / dist) * force;
       b.vy += (dy / dist) * force;
-      if (b.state === 'perched' && dist < fear * 0.55) {
-        takeOff(b);
-      }
     }
   }
 
   function companionOrbit(b) {
     if (!mouse.active) {
-      // Drift gently toward center-ish when mouse is gone
       steerToward(b, window.innerWidth * 0.55, window.innerHeight * 0.4, 0.03);
       return;
     }
 
     b.orbitAngle += 0.018 * b.orbitSpeed;
-    // Breathing orbit radius so it doesn't lock to a perfect circle
     var radius = b.orbit + Math.sin(b.phase * 0.35) * 28 + Math.cos(b.phase * 0.2) * 12;
     var tx = mouse.x + Math.cos(b.orbitAngle) * radius;
     var ty = mouse.y + Math.sin(b.orbitAngle) * radius * 0.72 - 12;
@@ -185,35 +138,8 @@
     var pull = dist > radius * 1.4 ? 0.22 : dist > 50 ? 0.12 : 0.06;
     steerToward(b, tx, ty, pull);
 
-    // Local flutter so it still feels alive while following
     b.vx += Math.cos(b.phase * 1.1) * 0.05 + rand(-0.04, 0.04);
     b.vy += Math.sin(b.phase * 0.9) * 0.05 + rand(-0.04, 0.04);
-  }
-
-  function takeOff(b) {
-    b.perchEl = null;
-    b.target = null;
-    if (b.companion) {
-      setState(b, 'companion', 9999);
-    } else {
-      setState(b, 'fly', rand(3, 8));
-    }
-    b.vx += rand(-1.2, 1.2);
-    b.vy += rand(-1.5, -0.3);
-  }
-
-  function chooseLanding(b) {
-    if (b.companion) {
-      setState(b, 'companion', 9999);
-      return;
-    }
-    var targets = getLandTargets();
-    if (!targets.length) {
-      setState(b, 'fly', rand(2, 5));
-      return;
-    }
-    b.target = pick(targets);
-    setState(b, 'approach', rand(4, 8));
   }
 
   function leaveScreen(b) {
@@ -224,10 +150,10 @@
     var w = window.innerWidth;
     var h = window.innerHeight;
     var edge = Math.floor(Math.random() * 4);
-    if (edge === 0) b.target = { x: rand(0, w), y: -100, el: null };
-    else if (edge === 1) b.target = { x: w + 100, y: rand(0, h), el: null };
-    else if (edge === 2) b.target = { x: rand(0, w), y: h + 100, el: null };
-    else b.target = { x: -100, y: rand(0, h), el: null };
+    if (edge === 0) b.target = { x: rand(0, w), y: -100 };
+    else if (edge === 1) b.target = { x: w + 100, y: rand(0, h) };
+    else if (edge === 2) b.target = { x: rand(0, w), y: h + 100 };
+    else b.target = { x: -100, y: rand(0, h) };
     setState(b, 'leave', 12);
   }
 
@@ -238,7 +164,6 @@
     b.vx = rand(-0.8, 0.8);
     b.vy = rand(-0.8, 0.8);
     b.target = null;
-    b.perchEl = null;
     setState(b, 'enter', rand(3, 6));
   }
 
@@ -246,8 +171,7 @@
     b.timer -= dt;
     b.phase += dt * b.flap * 10;
 
-    if (b.companion && b.state !== 'perched') {
-      // Keep companion in its follow mode unless briefly perched
+    if (b.companion) {
       if (b.state !== 'companion') setState(b, 'companion', 9999);
 
       companionOrbit(b);
@@ -272,97 +196,61 @@
       b.el.style.transform =
         'translate(' + b.x + 'px,' + b.y + 'px) rotate(' + (b.angle + Math.PI / 2) + 'rad) scale(var(--scale))';
       b.el.style.setProperty('--flap-amp', 1);
-      b.el.classList.toggle('is-perched', false);
       return;
     }
 
-    if (b.state === 'perched') {
-      if (b.perchEl) {
-        var r = b.perchEl.getBoundingClientRect();
-        if (r.width < 8 || r.bottom < 0 || r.top > window.innerHeight) {
-          takeOff(b);
-        } else if (b.target) {
-          b.x += (b.target.x - b.x) * 0.15;
-          b.y += (b.target.y - b.y) * 0.15;
-        }
+    b.vx += Math.cos(b.phase * 0.7) * 0.04 + rand(-0.03, 0.03);
+    b.vy += Math.sin(b.phase * 0.55) * 0.04 + rand(-0.03, 0.03);
+
+    if (b.state === 'leave' && b.target) {
+      steerToward(b, b.target.x, b.target.y, 0.22);
+      if (
+        b.x < -120 || b.x > window.innerWidth + 120 ||
+        b.y < -120 || b.y > window.innerHeight + 120
+      ) {
+        respawn(b);
       }
-      fleeCursor(b);
-      if (b.timer <= 0) {
-        if (!b.companion && Math.random() < 0.35) leaveScreen(b);
-        else takeOff(b);
-      }
+    } else if (b.state === 'enter') {
+      steerToward(b, window.innerWidth * 0.5, window.innerHeight * 0.45, 0.05);
+      if (b.timer <= 0) setState(b, 'fly', rand(3, 7));
     } else {
-      b.vx += Math.cos(b.phase * 0.7) * 0.04 + rand(-0.03, 0.03);
-      b.vy += Math.sin(b.phase * 0.55) * 0.04 + rand(-0.03, 0.03);
-
-      if (b.state === 'approach' && b.target) {
-        steerToward(b, b.target.x, b.target.y, 0.18);
-        var d = Math.hypot(b.target.x - b.x, b.target.y - b.y);
-        if (d < 14) {
-          b.x = b.target.x;
-          b.y = b.target.y;
-          b.vx *= 0.1;
-          b.vy *= 0.1;
-          b.perchEl = b.target.el;
-          setState(b, 'perched', rand(2.5, 7));
-        } else if (b.timer <= 0) {
-          setState(b, 'fly', rand(2, 4));
-          b.target = null;
-        }
-      } else if (b.state === 'leave' && b.target) {
-        steerToward(b, b.target.x, b.target.y, 0.22);
-        if (
-          b.x < -120 || b.x > window.innerWidth + 120 ||
-          b.y < -120 || b.y > window.innerHeight + 120
-        ) {
-          respawn(b);
-        }
-      } else if (b.state === 'enter') {
-        steerToward(b, window.innerWidth * 0.5, window.innerHeight * 0.45, 0.05);
-        if (b.timer <= 0) setState(b, 'fly', rand(3, 7));
-      } else {
-        if (b.timer <= 0) {
-          var roll = Math.random();
-          if (roll < 0.55) chooseLanding(b);
-          else if (roll < 0.75) leaveScreen(b);
-          else setState(b, 'fly', rand(2, 6));
-        }
-      }
-
-      fleeCursor(b);
-
-      if (mouse.active && b.state === 'fly' && Math.random() < 0.01) {
-        var md = Math.hypot(mouse.x - b.x, mouse.y - b.y);
-        if (md > 140 && md < 420) {
-          steerToward(b, mouse.x + rand(-40, 40), mouse.y + rand(-40, 40), 0.08);
-        }
-      }
-
-      var sp = Math.hypot(b.vx, b.vy) || 1;
-      var maxSp = b.state === 'leave' ? b.speed * 1.8 : b.speed;
-      if (sp > maxSp) {
-        b.vx = (b.vx / sp) * maxSp;
-        b.vy = (b.vy / sp) * maxSp;
-      }
-
-      b.x += b.vx * dt * 60;
-      b.y += b.vy * dt * 60;
-
-      if (b.state !== 'leave') {
-        b.x = clamp(b.x, -40, window.innerWidth + 40);
-        b.y = clamp(b.y, -40, window.innerHeight + 40);
-      }
-
-      if (Math.abs(b.vx) + Math.abs(b.vy) > 0.05) {
-        b.angle = Math.atan2(b.vy, b.vx);
+      if (b.timer <= 0) {
+        if (Math.random() < 0.35) leaveScreen(b);
+        else setState(b, 'fly', rand(2, 6));
       }
     }
 
-    var flapScale = b.state === 'perched' ? 0.15 : 1;
+    fleeCursor(b);
+
+    if (mouse.active && b.state === 'fly' && Math.random() < 0.01) {
+      var md = Math.hypot(mouse.x - b.x, mouse.y - b.y);
+      if (md > 140 && md < 420) {
+        steerToward(b, mouse.x + rand(-40, 40), mouse.y + rand(-40, 40), 0.08);
+      }
+    }
+
+    var sp = Math.hypot(b.vx, b.vy) || 1;
+    var maxSp = b.state === 'leave' ? b.speed * 1.8 : b.speed;
+    if (sp > maxSp) {
+      b.vx = (b.vx / sp) * maxSp;
+      b.vy = (b.vy / sp) * maxSp;
+    }
+
+    b.x += b.vx * dt * 60;
+    b.y += b.vy * dt * 60;
+
+    if (b.state !== 'leave') {
+      b.x = clamp(b.x, -40, window.innerWidth + 40);
+      b.y = clamp(b.y, -40, window.innerHeight + 40);
+    }
+
+    if (Math.abs(b.vx) + Math.abs(b.vy) > 0.05) {
+      b.angle = Math.atan2(b.vy, b.vx);
+    }
+
     b.el.style.transform =
       'translate(' + b.x + 'px,' + b.y + 'px) rotate(' + (b.angle + Math.PI / 2) + 'rad) scale(var(--scale))';
-    b.el.style.setProperty('--flap-amp', flapScale);
-    b.el.classList.toggle('is-perched', b.state === 'perched');
+    b.el.style.setProperty('--flap-amp', 1);
   }
 
   function tick(ts) {
@@ -392,12 +280,6 @@
       if (!e.relatedTarget && !e.toElement) onLeave();
     });
     raf = requestAnimationFrame(tick);
-
-    window.addEventListener('resize', function () {
-      butterflies.forEach(function (b) {
-        if (b.state === 'perched') takeOff(b);
-      });
-    });
   }
 
   if (document.readyState === 'loading') {
