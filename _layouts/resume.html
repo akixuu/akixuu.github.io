@@ -1,0 +1,76 @@
+---
+layout: wrapper
+---
+{% include header.html %}
+
+<main class="resume-page page-main py-4">
+  <article class="container">
+    <header class="gallery-page-header fade-in">
+      <div class="resume-header-row">
+        <div>
+          <h1 class="gallery-page-title">Resume</h1>
+          {% if site.data.resume.dek %}
+          <p class="gallery-page-dek">{{ site.data.resume.dek }}</p>
+          {% endif %}
+        </div>
+        <a class="btn rounded-pill btn-sm fw-bolder btn-primary resume-download" href="{{ site.data.resume.pdf | relative_url }}" download>
+          Download PDF
+        </a>
+      </div>
+
+      {% if site.data.resume.contacts %}
+      <p class="resume-contacts">
+        {% for contact in site.data.resume.contacts %}
+          {% unless forloop.first %}<span class="resume-contact-sep" aria-hidden="true">·</span>{% endunless %}
+          <a href="{{ contact.url }}">{{ contact.text }}</a>
+        {% endfor %}
+      </p>
+      {% endif %}
+    </header>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Education</h2>
+      {% for item in site.data.resume.education %}
+        {% include resume_entry.html %}
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Experience</h2>
+      {% for item in site.data.resume.experience %}
+        {% include resume_entry.html %}
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Activities</h2>
+      {% for item in site.data.resume.activities %}
+        {% include resume_entry.html %}
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <div class="resume-section-head">
+        <h2 class="resume-section-title">Projects</h2>
+        <a class="resume-more" href="/projects/">See all projects →</a>
+      </div>
+      {% for item in site.data.resume.projects %}
+        {% include resume_entry.html %}
+      {% endfor %}
+    </section>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Skills</h2>
+      <dl class="resume-skills">
+        {% for skill in site.data.resume.skills %}
+        <div class="resume-skill-row">
+          <dt>{{ skill.label }}</dt>
+          <dd>{{ skill.items }}</dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </section>
+  </article>
+</main>
+
+{% include footer.html %}
