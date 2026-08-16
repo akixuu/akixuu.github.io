@@ -73,7 +73,7 @@
   items:
     - title: "Tech To Go by Tonari Gumi"
       thumbnail: "ttg.png"
-      description: "Workshops and services across Metro Vancouver to support technology fluency."
+      description: "Services across Metro Vancouver to support technology fluency."
       links:
         - text: "Writeup"
           url: "/projects/tech-to-go"
