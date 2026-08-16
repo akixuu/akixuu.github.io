@@ -225,8 +225,13 @@ html, body,
 // ---------- Chrome ----------
 .site-header {
   background-color: var(--surface);
-  border-bottom: 1px solid var(--bs-border-color);
-  backdrop-filter: blur(8px);
+  border-bottom: 1px solid color-mix(in srgb, var(--bs-border-color) 70%, transparent);
+
+  @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    background-color: color-mix(in srgb, var(--surface) 72%, transparent);
+    backdrop-filter: blur(16px) saturate(1.2);
+    -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  }
 }
 
 .site-footer {
