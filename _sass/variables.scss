@@ -12,24 +12,25 @@ $spacer: 2rem;
 $font-size-base: 1.125rem;
 $line-height-base: 1.7;
 
-// Light theme (warm off-white)
-$primary: #1b1b1b;
-$secondary: #6c6c6c;
-$body-bg: #f0eee9;
-$body-color: #1b1b1b;
-$dark: #1b1b1b;
-$light: #f0eee9;
-$border-color: #ddd8ce;
+// Light theme (pastel lavender)
+$primary: #3d3270;
+$secondary: #7a7094;
+$body-bg: #efe8f6;
+$body-color: #2a2340;
+$body-secondary-bg: #e6dcf0;
+$dark: #2a2340;
+$light: #efe8f6;
+$border-color: #d8cee8;
 
-// Dark theme
-$body-bg-dark: #161616;
-$body-color-dark: #f0eee9;
-$body-secondary-bg-dark: #222222;
-$headings-color-dark: #ffffff;
-$link-color-dark: #d8d8d8;
+// Dark theme (deep purple)
+$body-bg-dark: #171225;
+$body-color-dark: #ece6f5;
+$body-secondary-bg-dark: #241c38;
+$headings-color-dark: #f6f1fc;
+$link-color-dark: #d4c8ec;
 $link-hover-color-dark: #ffffff;
-$primary-text-dark: #d8d8d8;
-$border-color-dark: #333333;
+$primary-text-dark: #d4c8ec;
+$border-color-dark: #3c3454;
 
 $container-max-widths: (
   sm: 540px,

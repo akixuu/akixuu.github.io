@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -20,10 +20,10 @@
     (function () {
       try {
         var stored = localStorage.getItem('theme');
-        var theme = stored || 'light';
+        var theme = stored || 'dark';
         document.documentElement.setAttribute('data-bs-theme', theme);
       } catch (e) {
-        document.documentElement.setAttribute('data-bs-theme', 'light');
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
       }
     })();
   </script>
@@ -56,7 +56,7 @@
       if (!toggle) return;
 
       function currentTheme() {
-        return document.documentElement.getAttribute('data-bs-theme') || 'light';
+        return document.documentElement.getAttribute('data-bs-theme') || 'dark';
       }
 
       function setTheme(theme) {
