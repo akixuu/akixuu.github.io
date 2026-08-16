@@ -120,3 +120,5 @@ skills:
     items: React, Flask, p5.js, MediaPipe, NumPy, Pandas, scikit-learn
   - label: Tools
     items: Git, Docker, Linux, Cloudflare, REST APIs, Figma
+  - label: Spoken Languages
+    items: English (Fluent), Japanese (Professional), French (Basic)
