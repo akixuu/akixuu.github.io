@@ -15,15 +15,15 @@ days:
     title: Sushi
     description: >-
       I didn't start with the donut! Crazy. Had help from [this Polygon Runway tutorial](https://polygonrunway.com/p/become-a-3d-illustrator-in-one-hour).
-    image: day-01.png
+    image: day-01.webp
 
   - day: 2
     title: Well well well...
     description: >-
       Had help from [this YouTube tutorial by Gabbitt](https://www.youtube.com/watch?v=QPh8h0hWkg0&list=PLn3ukorJv4vvMwZPLzlajVII2zJd-_BM-).
-    image: day-02.png
+    image: day-02.webp
 
   - day: 3
     title: XXX
     description: XXX
-    # image: day-03.png
+    # image: day-03.webp

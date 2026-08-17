@@ -2,7 +2,7 @@
   description: "Quick builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
   items:
     - title: "LitReading"
-      thumbnail: "litreading.png"
+      thumbnail: "litreading.webp"
       description: "App to improve literacy through ranked reading for schools."
       stack: "Android · Java · Figma"
       links:
@@ -12,7 +12,7 @@
           url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
 
     - title: "Resumer"
-      thumbnail: "resumer.png"
+      thumbnail: "resumer.webp"
       description: "Job finding app portal for new immigrants."
       stack: "Android · Java · Figma"
       links:
@@ -22,7 +22,7 @@
           url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
 
     - title: "uRelief"
-      thumbnail: "urelief.png"
+      thumbnail: "urelief.webp"
       description: "Resource finder app for the homeless."
       stack: "Android · Java · Figma"
       links:
@@ -34,7 +34,7 @@
           url: "https://github.com/akixuu/goa_s06"
 
     - title: "Poses for Dummies"
-      thumbnail: "poses.png"
+      thumbnail: "poses.webp"
       description: "Real-time pose tracking party game."
       stack: "React · TypeScript · MediaPipe · p5.js"
       links:
@@ -42,7 +42,7 @@
           url: "https://2026.quackhacks.org/projects/poses-for-dummies"
       
     - title: "NoNotes"
-      thumbnail: "nonotes.png"
+      thumbnail: "nonotes.webp"
       description: "Your AI note-taking companion."
       stack: "Python · Flask · JavaScript · BERT"
       links:
@@ -53,7 +53,7 @@
   description: ""
   items:
     - title: "30 Days of Blender"
-      thumbnail: "blender.png"
+      thumbnail: "blender.webp"
       description: "Daily Blender render challenge!"
       stack: "Blender"
       links:
@@ -61,7 +61,7 @@
           url: "/projects/30-days-of-blender"
 
     - title: "Spectral Analysis of Memory-N-Back Test"
-      thumbnail: "nm.png"
+      thumbnail: "nm.webp"
       description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."
       stack: "Python · NumPy · Pandas · scikit-learn"
       links:
@@ -72,14 +72,14 @@
   description: "Collaborative work focused on social impact and community."
   items:
     - title: "Tech To Go by Tonari Gumi"
-      thumbnail: "ttg.png"
+      thumbnail: "ttg.webp"
       description: "Services across Metro Vancouver to support technology fluency."
       links:
         - text: "Writeup"
           url: "/projects/tech-to-go"
 
     - title: "Bucket Robotics"
-      thumbnail: "br.png"
+      thumbnail: "br.webp"
       description: "High school robotics club."
       stack: "VEX"
       links:
@@ -87,7 +87,7 @@
           url: "/projects/bucket-robotics"
 
     - title: "EcoConnect"
-      thumbnail: "ecoconnect.png"
+      thumbnail: "ecoconnect.webp"
       description: "Inspiring youth in sustainability through eco-conscious environments."
       links:
         - text: "Writeup"

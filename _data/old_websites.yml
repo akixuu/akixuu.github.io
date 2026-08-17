@@ -2,24 +2,24 @@
 - title: Websites for Businesses
   description:
   items:
-    - thumbnail: wabeauty.png
+    - thumbnail: wabeauty.webp
       title: Wa Beauty Co.
       stack: "HTML · CSS · JavaScript"
 
-    - thumbnail: alleviate.png
+    - thumbnail: alleviate.webp
       title: Alleviate by ActiveReleaf
       description: Media 1248 Internship
       stack: "HTML · CSS · JavaScript"
 
-    - thumbnail: mkwt.png
+    - thumbnail: mkwt.webp
       title: Magokoro Wellness
       stack: "HTML · CSS · JavaScript"
 
-    - thumbnail: koibyj.png
+    - thumbnail: koibyj.webp
       title: Koi by J
       stack: "HTML · CSS · JavaScript"
 
-    - thumbnail: bijinspa.png
+    - thumbnail: bijinspa.webp
       title: Beauty Salon Bijin Spa
       stack: "HTML · CSS · JavaScript"
     
@@ -27,14 +27,14 @@
 - title: Websites for Organizations
   description:
   items:
-    - thumbnail: tedx.png
+    - thumbnail: tedx.webp
       title: TEDxYouth Minoru Park
       stack: "HTML · CSS · JavaScript"
       links:
         - text: View
           url: https://akixuu.github.io/tedxminorupark-site/
 
-    - thumbnail: cluborate.png
+    - thumbnail: cluborate.webp
       title: Cluborate Community
       stack: "HTML · CSS · JavaScript"
       links:

@@ -2,35 +2,35 @@
   description: "Early coding experiments, class projects, and playful prototypes."
   items:
     - title: "Algorithm Visualizer"
-      thumbnail: "algo.png"
+      thumbnail: "algo.webp"
       description: "Visual walkthroughs of classic sorting and search algorithms."
       links:
         - text: "Coming Soon"
           url: "#"
 
     - title: "Fractal Explorer"
-      thumbnail: "fractal.png"
+      thumbnail: "fractal.webp"
       description: "Zoomable fractal renderings and generative patterns."
       links:
         - text: "Coming Soon"
           url: "#"
 
     - title: "Particle Simulations"
-      thumbnail: "particles.png"
+      thumbnail: "particles.webp"
       description: "Simple particle systems and physics experiments."
       links:
         - text: "Coming Soon"
           url: "#"
 
     - title: "Programming 12 Showcase"
-      thumbnail: "programming12.png"
+      thumbnail: "programming12.webp"
       description: "Coursework and demos from high school Programming 12."
       links:
         - text: "Coming Soon"
           url: "#"
 
     - title: "StudyMania"
-      thumbnail: "studymania.png"
+      thumbnail: "studymania.webp"
       description: "A study helper prototype built for school."
       links:
         - text: "Coming Soon"
@@ -40,21 +40,21 @@
   description: "Sound, rhythm, and interactive sketches."
   items:
     - title: "Pocket Orchestra"
-      thumbnail: "pocketorchestra.png"
+      thumbnail: "pocketorchestra.webp"
       description: "Tiny musical playground experiments."
       links:
         - text: "Coming Soon"
           url: "#"
 
     - title: "Polyrhythm"
-      thumbnail: "polyrithm.png"
+      thumbnail: "polyrithm.webp"
       description: "Playing with layered rhythmic patterns."
       links:
         - text: "Coming Soon"
           url: "#"
 
     - title: "Ringo"
-      thumbnail: "ringo.png"
+      thumbnail: "ringo.webp"
       description: "An early interactive web experiment."
       links:
         - text: "Coming Soon"
