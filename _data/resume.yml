@@ -45,7 +45,7 @@ experience:
     org_url: https://www.activereleaf.ca/
     dates: May 2023 – Oct 2023
     bullets:
-      - Engineered an automated inventory synchronization system using **Google Apps Script**, eliminating manual reconciliation between internal systems and e-commerce platform data
+      - Engineered an automated inventory synchronization system using **Google Apps Script**, eliminating manual reconciliation between internal systems and e-commerce platform data for over **+200** products
       - Developed and maintained production WooCommerce/WordPress systems using **JavaScript, PHP, HTML/CSS**, improving site reliability and reducing bot/spam traffic
       - Built a responsive e-commerce portal and landing page supporting product launch and external sales workflows
 
