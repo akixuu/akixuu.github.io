@@ -31,6 +31,7 @@ experience:
 
   - title: Electrical Assembly Student
     org: Arrow Speed Controls
+    org_url: https://www.arrowspeed.com/
     program: MEC Program
     program_url: https://careerprograms.sd38.bc.ca/students/qa-zoom-sessions/manufacturing-engineering-co-op-mec
     dates: Mar 2024
@@ -40,7 +41,8 @@ experience:
       - Performed quality assurance testing to verify electrical assemblies met required standards
 
   - title: Junior Developer Intern
-    org: Media 1248 (ActiveReleaf.ca)
+    org: Media 1248, ActiveReleaf
+    org_url: https://www.arrowspeed.com/
     dates: May 2023 – Oct 2023
     bullets:
       - Engineered an automated inventory synchronization system using **Google Apps Script**, eliminating manual reconciliation between internal systems and e-commerce platform data
