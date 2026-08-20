@@ -41,8 +41,8 @@ experience:
       - Performed quality assurance testing to verify electrical assemblies met required standards
 
   - title: Junior Developer Intern
-    org: Media 1248, ActiveReleaf
-    org_url: https://www.arrowspeed.com/
+    org: ActiveReleaf, Media 1248
+    org_url: https://www.activereleaf.ca/
     dates: May 2023 – Oct 2023
     bullets:
       - Engineered an automated inventory synchronization system using **Google Apps Script**, eliminating manual reconciliation between internal systems and e-commerce platform data
