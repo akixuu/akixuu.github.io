@@ -68,6 +68,9 @@ layout: wrapper
       <div class="col-12">
         <div class="project-body border-top pt-4">
           {{ content }}
+          {% if page.gallery_dir %}
+            {% include gallery.html dir=page.gallery_dir title=page.gallery_title %}
+          {% endif %}
         </div>
       </div>
     </div>

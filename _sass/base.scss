@@ -773,6 +773,18 @@ html, body,
   .project-slides + h3 {
     margin-top: map-get($spacers, 3);
   }
+
+  .project-videos {
+    .project-slides.ratio {
+      margin-block: 0;
+    }
+  }
+
+  .project-video-caption {
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+    color: var(--bs-secondary-color);
+  }
 }
 
 // ---------- Challenge log (e.g. 30 Days of Blender) ----------
@@ -1188,6 +1200,172 @@ html, body,
 
   .resume-page .resume-section {
     break-inside: avoid;
+  }
+}
+
+// ---------- Photo gallery ----------
+.photo-gallery {
+  margin-top: map-get($spacers, 4);
+
+  .photo-gallery-title {
+    margin-top: 0;
+  }
+}
+
+.photo-gallery-header {
+  margin-bottom: 1rem;
+}
+
+.photo-gallery-title {
+  font-family: $font-family-display;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.photo-gallery-dek {
+  color: var(--bs-secondary-color);
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+.photo-gallery-grid {
+  column-count: 1;
+  column-gap: 0.75rem;
+
+  @media (min-width: 576px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 768px) {
+    column-count: 3;
+  }
+}
+
+.photo-gallery-item {
+  display: block;
+  width: 100%;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  border: 1px solid var(--bs-border-color);
+  background: var(--surface-elevated, var(--bs-secondary-bg));
+  overflow: hidden;
+  cursor: pointer;
+  break-inside: avoid;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.35s ease;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--bs-body-color);
+    outline-offset: 2px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .photo-gallery-item:hover img {
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-gallery-item img {
+    transition: none;
+  }
+
+  .photo-gallery-item:hover img {
+    transform: none;
+  }
+}
+
+.photo-gallery-lightbox {
+  .modal-dialog {
+    max-width: min(1100px, calc(100vw - 2rem));
+  }
+}
+
+.photo-gallery-lightbox-content {
+  position: relative;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.photo-gallery-lightbox-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.photo-gallery-lightbox-image {
+  display: block;
+  max-width: 100%;
+  max-height: min(82vh, 900px);
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  background: var(--surface-elevated, #111);
+}
+
+.photo-gallery-lightbox-caption {
+  margin-top: 0.75rem;
+  color: #ece6f5;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.photo-gallery-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid rgba(236, 230, 245, 0.35);
+  border-radius: 999px;
+  background: rgba(23, 18, 37, 0.72);
+  color: #ece6f5;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  svg {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(23, 18, 37, 0.92);
+    color: #fff;
+    outline: 0;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.photo-gallery-lightbox-prev {
+  left: 0.35rem;
+}
+
+.photo-gallery-lightbox-next {
+  right: 0.35rem;
+}
+
+@media (min-width: 768px) {
+  .photo-gallery-lightbox-prev {
+    left: -3rem;
+  }
+
+  .photo-gallery-lightbox-next {
+    right: -3rem;
   }
 }
 

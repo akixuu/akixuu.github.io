@@ -1,0 +1,79 @@
+{% comment %}
+  Reusable image gallery. Pass a folder and it picks up jpg/jpeg/png/webp/gif.
+
+  {% include gallery.html dir="assets/imgs/project/galleries/ttg" %}
+  {% include gallery.html dir="ttg" %}
+
+  Optional: title, id, alt
+{% endcomment %}
+{%- assign gallery_dir = include.dir | default: "" | strip | replace: "\\", "/" -%}
+{%- if gallery_dir != "" -%}
+  {%- assign gallery_dir_last = gallery_dir | slice: -1, 1 -%}
+  {%- if gallery_dir_last == "/" -%}
+    {%- assign gallery_dir_len = gallery_dir | size | minus: 1 -%}
+    {%- assign gallery_dir = gallery_dir | slice: 0, gallery_dir_len -%}
+  {%- endif -%}
+  {%- assign gallery_dir_first = gallery_dir | slice: 0, 1 -%}
+  {%- if gallery_dir_first == "/" -%}
+    {%- assign gallery_dir_len = gallery_dir | size | minus: 1 -%}
+    {%- assign gallery_dir = gallery_dir | slice: 1, gallery_dir_len -%}
+  {%- endif -%}
+  {%- unless gallery_dir contains "assets/" -%}
+    {%- assign gallery_dir = "assets/imgs/project/galleries/" | append: gallery_dir -%}
+  {%- endunless -%}
+  {%- assign gallery_prefix = "/" | append: gallery_dir | append: "/" -%}
+  {%- if include.id -%}
+    {%- assign gallery_id = include.id -%}
+  {%- else -%}
+    {%- assign gallery_id = gallery_dir | split: "/" | last | slugify -%}
+  {%- endif -%}
+  {%- assign gallery_title = include.title | default: "Gallery" -%}
+  {%- assign gallery_alt = include.alt | default: page.title | default: "Gallery image" -%}
+  {%- assign gallery_exts = ".jpg,.jpeg,.png,.webp,.gif" | split: "," -%}
+  {%- assign gallery_files = site.static_files | where_exp: "file", "file.path contains gallery_prefix" -%}
+  {%- assign gallery_count = 0 -%}
+  {%- for file in gallery_files -%}
+    {%- assign file_dir = file.path | replace: "\\", "/" | replace: file.name, "" -%}
+    {%- assign file_ext = file.extname | downcase -%}
+    {%- if file_dir == gallery_prefix -%}
+      {%- if gallery_exts contains file_ext -%}
+        {%- assign gallery_count = gallery_count | plus: 1 -%}
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if gallery_count > 0 -%}
+    <section class="photo-gallery" data-gallery id="{{ gallery_id }}" aria-label="{{ gallery_title | escape }}">
+      {%- unless include.title == "false" -%}
+        <header class="photo-gallery-header">
+          <h2 class="photo-gallery-title">{{ gallery_title }}</h2>
+          <p class="photo-gallery-dek">Click to enlarge</p>
+        </header>
+      {%- endunless -%}
+      <div class="photo-gallery-grid">
+        {%- for n in (0..199) -%}
+          {%- assign n_name = n | append: "" -%}
+          {%- for file in gallery_files -%}
+            {%- assign file_dir = file.path | replace: "\\", "/" | replace: file.name, "" -%}
+            {%- assign file_ext = file.extname | downcase -%}
+            {%- if file_dir == gallery_prefix and file.basename == n_name -%}
+              {%- if gallery_exts contains file_ext -%}
+                {%- include gallery_thumb.html file=file alt=gallery_alt -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+        {%- assign leftover_files = gallery_files | sort: "name" -%}
+        {%- for file in leftover_files -%}
+          {%- assign file_dir = file.path | replace: "\\", "/" | replace: file.name, "" -%}
+          {%- assign file_ext = file.extname | downcase -%}
+          {%- assign stem_num = file.basename | plus: 0 | append: "" -%}
+          {%- if file_dir == gallery_prefix and stem_num != file.basename -%}
+            {%- if gallery_exts contains file_ext -%}
+              {%- include gallery_thumb.html file=file alt=gallery_alt -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </section>
+  {%- endif -%}
+{%- endif -%}
