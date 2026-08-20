@@ -23,11 +23,11 @@
           url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
         - text: "Repo"
           url: "https://github.com/akixuu/goa_s06"
-          
+
     - title: "LitReading"
       thumbnail: "litreading.webp"
       description: "App to improve literacy through ranked reading for schools."
-      stack: "Android · Java · Figma"
+      stack: "Figma"
       links:
         - text: "Showcase"
           url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
