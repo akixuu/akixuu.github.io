@@ -61,6 +61,9 @@ activities:
     org: Neuromatch Academy
     org_url: https://neuromatch.io/
     dates: Jul 2025
+    links:
+      - text: Certificate
+        url: https://portal.neuromatchacademy.org/certificate/8958269b-632a-4b3b-b3ef-6775eae75170
     bullets:
       - Analyzed electrocorticography (ECoG) neural data using **Python, NumPy, Pandas, and scikit-learn**
       - Implemented preprocessing pipelines, feature extraction, and exploratory analysis for working-memory datasets
