@@ -1,6 +1,6 @@
 ---
 title: Game of Apps
-thumbnail: comingsoon.png
+thumbnail: goa.webp
 description: >-
   A multi-year app development program where student teams design, build, and
   pitch real products — including award-winning projects I worked on.

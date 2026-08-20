@@ -1,6 +1,6 @@
 ---
 title: Tech To Go
-thumbnail: ttg.png
+thumbnail: ttg.webp
 description: >-
   Workshops and tech support across Metro Vancouver, helping community members
   build confidence with everyday technology.
@@ -8,6 +8,7 @@ supplemental_links:
   - text: Tonari Gumi
     link: https://www.tonarigumi.ca/
     primary: true
+gallery_dir: ttg
 ---
 
 Placeholder writeup — more details coming soon.

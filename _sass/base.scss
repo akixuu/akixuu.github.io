@@ -717,24 +717,61 @@ html, body,
     }
 
     p {
-      margin-bottom: 0.85rem;
+      margin-bottom: map-get($spacers, 2);
     }
 
     h2, h3, h4 {
       font-family: $font-family-display;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
       font-weight: 700;
+      margin-top: map-get($spacers, 4);
+      margin-bottom: map-get($spacers, 1);
+    }
+
+    h4 {
+      margin-top: map-get($spacers, 3);
+      font-size: 1.15rem;
+    }
+
+    ul + h4,
+    ol + h4 {
+      margin-top: map-get($spacers, 4);
     }
 
     ul, ol {
       padding-left: 1.25rem;
-      margin-bottom: 0.85rem;
+      margin-bottom: map-get($spacers, 2);
     }
 
     li + li {
-      margin-top: 0.25rem;
+      margin-top: map-get($spacers, 1);
     }
+
+    ul + p:has(> strong:only-child),
+    ol + p:has(> strong:only-child) {
+      margin-top: map-get($spacers, 4);
+      margin-bottom: map-get($spacers, 1);
+    }
+  }
+
+  .project-slides {
+    iframe {
+      border: 0;
+    }
+
+    &.ratio {
+      margin-block: map-get($spacers, 4);
+    }
+
+    &.ratio,
+    .ratio {
+      overflow: hidden;
+      background: var(--surface-elevated);
+    }
+  }
+
+  .project-slides + h2,
+  .project-slides + h3 {
+    margin-top: map-get($spacers, 3);
   }
 }
 

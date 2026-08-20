@@ -59,16 +59,16 @@
     #   links:
     #     - text: "Log"
     #       url: "/projects/30-days-of-blender"
-    #
+
     - title: "Spectral Analysis of Memory-N-Back Test"
       thumbnail: "nm.webp"
       description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."
       stack: "Python · NumPy · Pandas · scikit-learn"
       links:
-        - text: "Presentation Slides"
-          url: "https://docs.google.com/presentation/d/1_EHGt-UPcvcErtjuemU1fLT-UjMlWKPM9LwDEN1otqU/edit?usp=sharing"
+        - text: "Writeup"
+          url: "/projects/nm-2025/"
 
-- title: "Meaningful Experiences"
+- title: "Leadership / Community Impact"
   description: "Collaborative work focused on social impact and community."
   items:
     - title: "Tech To Go by Tonari Gumi"
