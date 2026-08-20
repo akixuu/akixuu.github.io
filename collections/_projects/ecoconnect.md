@@ -18,5 +18,5 @@ In our team of 5, I contributed heavily on the ideation, planning, writing, and 
 
 ### Highlights
 - Budgeted and allocated project funding (~$2,000)
-- Delivered gardening kits and eco-activities to +7 schools in Vancouver and Richmond
+- Delivered gardening kits and eco-activities to **+7** schools in Vancouver and Richmond
 - Focused on youth engagement and sustainability literacy
