@@ -1,15 +1,6 @@
 - title: "Competitions & Hackathons"
   description: "Quick builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
   items:
-    - title: "LitReading"
-      thumbnail: "litreading.webp"
-      description: "App to improve literacy through ranked reading for schools."
-      stack: "Android · Java · Figma"
-      links:
-        - text: "Showcase"
-          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
-        - icon: "award"
-          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
 
     - title: "Resumer"
       thumbnail: "resumer.webp"
@@ -32,6 +23,16 @@
           url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
         - text: "Repo"
           url: "https://github.com/akixuu/goa_s06"
+          
+    - title: "LitReading"
+      thumbnail: "litreading.webp"
+      description: "App to improve literacy through ranked reading for schools."
+      stack: "Android · Java · Figma"
+      links:
+        - text: "Showcase"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
+        - icon: "award"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
 
     - title: "Poses for Dummies"
       thumbnail: "poses.webp"
