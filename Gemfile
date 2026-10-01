@@ -1,4 +1,5 @@
 # After updating, run 'bundle install' or 'bundle exec jekyll serve'
+gem "logger", "~> 1.4"
 
 source "https://rubygems.org"
 
