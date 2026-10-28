@@ -4,11 +4,11 @@ layout: wrapper
 
 {% include header.html %}
 
-<main class="project-page py-3">
+<main class="project-page pb-3">
   <article class="container">
     <div class="row g-4">
       <div class="col-12">
-        <a class="project-back text-body-secondary text-decoration-none small" href="/projects/">← Projects</a>
+        <a class="project-back text-body-secondary text-decoration-none" href="/projects/">← Projects</a>
       </div>
 
       {% if page.thumbnail or page.video %}
@@ -31,18 +31,18 @@ layout: wrapper
       {% endif %}
 
       <div class="{% if page.thumbnail or page.video %}col-lg-7{% else %}col-12{% endif %} d-flex flex-column justify-content-center">
-        <h1 class="project-title display-5 fw-bold mb-2">{{ page.title }}</h1>
+        <h1 class="project-title">{{ page.title }}</h1>
 
         {% if page.description %}
         <p class="project-dek text-body-secondary {% if page.stack %}mb-1{% else %}mb-3{% endif %}">{{ page.description }}</p>
         {% endif %}
 
         {% if page.stack %}
-        <p class="project-stack text-body-secondary small mb-3">{{ page.stack }}</p>
+        <p class="project-stack text-body-secondary mb-4">{{ page.stack }}</p>
         {% endif %}
 
         {% if page.supplemental_links %}
-        <div class="project-links d-flex flex-wrap gap-2">
+        <div class="project-links d-flex flex-wrap">
           {% for button in page.supplemental_links %}
             {% assign is_back = false %}
             {% if button.link == "/projects/" or button.link == "/projects" %}
@@ -54,7 +54,7 @@ layout: wrapper
                 {% assign is_external = true %}
               {% endif %}
               <a data-cursor-stick
-                class="btn rounded-pill btn-sm fw-bolder {% if button.primary %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+                class="lp-btn lp-btn--sm lp-btn--plain"
                 href="{{ button.link }}"
                 {% if button.icon %}aria-label="{{ button.text | default: 'Link' }}"{% endif %}
                 {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
@@ -71,7 +71,7 @@ layout: wrapper
       </div>
 
       <div class="col-12">
-        <div class="project-body border-top pt-4">
+        <div class="project-body pt-4" data-reveal>
           {{ content }}
           {% if page.gallery_dir %}
             {% include gallery.html dir=page.gallery_dir title=page.gallery_title %}

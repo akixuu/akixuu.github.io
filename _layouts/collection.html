@@ -7,8 +7,8 @@ layout: page
   {% assign is_archive_page = true %}
 {% endif %}
 
-<header class="gallery-page-header fade-in{% unless page.description %} gallery-page-header--solo{% endunless %}">
-  <h1 class="gallery-page-title pb-3">{{ page.title }}</h1>
+<header class="gallery-page-header fade-in">
+  <h1 class="gallery-page-title">{{ page.title }}</h1>
   {% if page.description %}
   <p class="gallery-page-dek">{{ page.description }}</p>
   {% endif %}
@@ -23,7 +23,7 @@ layout: page
   {% assign is_archives_section = true %}
 {% endif %}
 
-<section class="gallery-section">
+<section class="gallery-section" data-reveal>
   <header class="gallery-section-header">
     <div>
       <h2 class="gallery-section-title">{{ project_collection.title }}</h2>
@@ -51,7 +51,7 @@ layout: page
               {% assign is_external = true %}
             {% endif %}
             <a data-cursor-stick
-              class="btn rounded-pill btn-sm fw-bolder btn-outline-secondary archive-row-link"
+              class="lp-btn lp-btn--sm lp-btn--plain archive-row-link"
               href="{{ link.url }}"
               {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
               {% if link.icon %}
@@ -107,7 +107,7 @@ layout: page
                     {% assign is_external = true %}
                   {% endif %}
                   <a data-cursor-stick
-                    class="btn rounded-pill btn-sm fw-bolder {% if forloop.first %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+                    class="lp-btn lp-btn--sm lp-btn--plain"
                     href="{{ link.url }}"
                     {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                     {% if link.icon %}
@@ -152,7 +152,7 @@ layout: page
                 {% assign is_external = true %}
               {% endif %}
               <a data-cursor-stick
-                class="btn rounded-pill btn-sm fw-bolder {% if forloop.first %}btn-primary{% else %}btn-outline-secondary{% endif %}"
+                class="lp-btn lp-btn--sm lp-btn--plain"
                 href="{{ link.url }}"
                 {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                 {% if link.icon %}

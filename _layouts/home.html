@@ -8,3 +8,27 @@ layout: wrapper
 </main>
 
 {% include footer.html %}
+
+<script>
+  (function () {
+    var copy = document.querySelector("[data-copy-email]");
+    if (copy) {
+      copy.addEventListener("click", function () {
+        var email = copy.getAttribute("data-copy-email");
+        var label = copy.textContent;
+        function done(text) {
+          copy.textContent = text;
+          window.setTimeout(function () { copy.textContent = label; }, 1600);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function () { done("Copied"); }, function () {
+            window.location.href = "mailto:" + email;
+          });
+        } else {
+          window.location.href = "mailto:" + email;
+        }
+      });
+    }
+  })();
+</script>
+<script src="{{ '/assets/js/blob.js' | relative_url }}" defer></script>

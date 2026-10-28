@@ -2,18 +2,164 @@
 title: Home
 layout: home
 ---
+{% assign resume = site.data.resume %}
 
-<section class="home-hero container">
-  <div class="home-hero-copy">
-    <p class="home-kicker">Computer Science · UBC</p>
-    <h1 class="home-name">AKI XU</h1>
-    <p class="home-meta">Seeking 2027 SWE internships</p>
-    <p class="home-blurb">
-      I like software you can trust with timing and with data. Lately that means computer systems and databases, and the kind of projects where a late packet or a wrong row is the whole bug.
-    </p>
-    <div class="home-actions">
-      <a class="home-cta" href="/projects/">Selected work</a>
-      <a class="home-cta" href="/resume/">Resume</a>
+<section class="lp-hero container">
+  <div class="lp-hero-grid">
+    <div class="lp-hero-copy">
+      <h1 class="lp-name">Aki <span class="lp-name-outline">Xu</span></h1>
+      {% comment %}<p class="lp-tag">Ships on deadline. <span class="lp-tag-hi">Wins the room.</span></p>{% endcomment %}
+      <p class="lp-lede">
+        Computer Science at UBC. I kept a $1M-a-year storefront in sync with its inventory, cut that job's API calls by 90%, and have brought home five hackathon awards so far.
+      </p>
+      <div class="lp-actions">
+        <a class="lp-btn lp-btn--solid" href="{{ resume.pdf }}" target="_blank" rel="noopener noreferrer">Resume PDF</a>
+        <button class="lp-btn" type="button" data-copy-email="{{ resume.email }}">Copy email</button>
+      </div>
     </div>
+
+    <aside class="lp-spec" aria-label="Quick specs">
+      <div class="lp-spec-paper">
+        <p class="lp-spec-head">
+          <span>Spec sheet</span>
+          <span>Model AX</span>
+        </p>
+        <dl class="lp-spec-rows">
+          <div><dt>School</dt><dd>University of British Columbia</dd></div>
+          <div><dt>Studying</dt><dd>Computer Science</dd></div>
+          <div><dt>Location</dt><dd>Vancouver, BC, Canada</dd></div>
+          <div><dt>Graduates</dt><dd>Dec 2028</dd></div>
+          <div><dt>Hackathon wins</dt><dd>×5</dd></div>
+          <div><dt>Citizenship</dt><dd>Canadian</dd></div>
+          <div><dt>Relocation</dt><dd>Open</dd></div>
+        </dl>
+        <p class="lp-spec-total"><span>Open for</span><span>SWE · Full-stack · Data</span></p>
+        <div class="lp-barcode" aria-hidden="true"></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="lp-marquee" aria-label="Awards" hidden>
+  <div class="lp-marquee-track">
+    {% for pass in (1..2) %}
+    <ul class="lp-marquee-list"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+      <li>1st place · Happy Hacks II</li>
+      <li>3rd place · QuackHacks</li>
+      <li>Best Overall · Game of Apps 2023</li>
+      <li>Best Overall · Game of Apps 2025</li>
+      <li>People's Choice · Game of Apps 2022</li>
+      <li>Outstanding Developer · 2023</li>
+      <li>Scotiabank Scholarship</li>
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+
+<section class="lp-section container" id="proof" data-reveal>
+  <header class="lp-head">
+    <h2 class="lp-title">Proof of work.</h2>
+  </header>
+
+  <ol class="lp-proof">
+    <li>
+      <a class="lp-proof-item" href="/projects/poses-for-dummies/">
+        <span class="lp-proof-num">01</span>
+        <span class="lp-proof-name">Poses for Dummies</span>
+        <span class="lp-proof-what">Real-time pose tracking multiplayer game. MediaPipe reads the body on the client, and web sockets carry the pose to the other player.</span>
+        <span class="lp-proof-result">3rd in the game development track, among 220+ hackers.</span>
+        <span class="lp-proof-stack">TypeScript · React · MediaPipe · Socket.io · Cloudflare</span>
+      </a>
+    </li>
+    <li>
+      <a class="lp-proof-item" href="/projects/nonotes/">
+        <span class="lp-proof-num">02</span>
+        <span class="lp-proof-name">NoNotes</span>
+        <span class="lp-proof-what">Record a class, get notes back. An audio pipeline from speech recognition to a BERT summary, served through a Flask API.</span>
+        <span class="lp-proof-result">1st place, among 80+ hackers.</span>
+        <span class="lp-proof-stack">Python · Flask · BERT · SQLite · JavaScript</span>
+      </a>
+    </li>
+    <li>
+      <a class="lp-proof-item" href="/resume/">
+        <span class="lp-proof-num">03</span>
+        <span class="lp-proof-name">Media 1248 · ActiveReleaf</span>
+        <span class="lp-proof-what">Automated inventory sync for 75+ products on a production storefront doing $1M in sales a year.</span>
+        <span class="lp-proof-result">Saved a lot of time.</span>
+        <span class="lp-proof-stack">Google Apps Script · JavaScript · PHP · HTML/CSS</span>
+      </a>
+    </li>
+    <li>
+      <a class="lp-proof-item" href="/projects/game-of-apps/">
+        <span class="lp-proof-num">04</span>
+        <span class="lp-proof-name">Game of Apps</span>
+        <span class="lp-proof-what">From 2020 to 2025, designed and built Android apps in Java and pitched them to panels of industry judges.</span>
+        <span class="lp-proof-result">Best Overall in 2023 and 2025.</span>
+        <span class="lp-proof-stack">Android · Java · SQL · Figma</span>
+      </a>
+    </li>
+  </ol>
+
+  <p class="lp-more"><a class="lp-link" href="/projects/">Every project</a></p>
+</section>
+
+<section class="lp-section container" id="toolbox" data-reveal>
+  <header class="lp-head">
+    <h2 class="lp-title">What I bring.</h2>
+  </header>
+
+  <div class="lp-tools">
+    {% for skill in resume.skills %}
+    {% unless skill.label contains "Spoken" %}
+    <div class="lp-tool-group">
+      <p class="lp-tool-label">{{ skill.label }}</p>
+      <ul class="lp-chips">
+        {% assign items = skill.items | split: ", " %}
+        {% for item in items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endunless %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="lp-section lp-meet container" id="hello" data-reveal>
+  <div class="lp-meet-copy">
+    <h2 class="lp-meet-title">Since you're already here,<br>why not say hello?</h2>
+    <a class="lp-mail" href="mailto:{{ resume.email }}">{{ resume.email }}</a>
+    <ul class="lp-meet-links">
+      <li><a href="https://github.com/akixuu" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/akixuu" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      <li><a href="{{ resume.pdf }}" target="_blank" rel="noopener noreferrer">Resume PDF</a></li>
+    </ul>
+  </div>
+
+  <div class="walk-stage" aria-hidden="true"></div>
+
+  <div class="blob-layer" data-blob-layer aria-hidden="true">
+    <svg class="blob-arm" data-blob-arm>
+      <path class="blob-arm-line"></path>
+      <path class="blob-arm-line"></path>
+      <circle class="blob-hand" r="5.5"></circle>
+      <circle class="blob-hand" r="5.5"></circle>
+    </svg>
+    <svg class="blob-fx" data-blob-fx></svg>
+    <svg class="blob" data-blob viewBox="-60 -110 120 120">
+      <g class="blob-spin">
+        <path class="blob-leg"></path>
+        <path class="blob-leg"></path>
+        <path class="blob-stub"></path>
+        <path class="blob-stub"></path>
+        <path class="blob-body"></path>
+        <ellipse class="blob-eye"></ellipse>
+        <ellipse class="blob-eye"></ellipse>
+        <path class="blob-lid"></path>
+        <path class="blob-lid"></path>
+        <path class="blob-happy"></path>
+        <path class="blob-happy"></path>
+      </g>
+    </svg>
   </div>
 </section>
