@@ -10,16 +10,14 @@ supplemental_links:
     primary: true
 ---
 
-Placeholder writeup — more details coming soon.
-
 **Game of Apps** is a youth app development competition and learning program.
 Over multiple seasons, I collaborated with teammates to ship apps under tight
 timelines — from ideation and design through demos and award showcases.
 
 ### Related projects
-- [uRelief](https://youtu.be/4Teg18s4amQ) — resource finder for people experiencing homelessness
-- [LitReading](https://www.youtube.com/live/exuFlWFGCwI?t=2627s) — literacy through ranked reading
-- [Resumer](https://www.youtube.com/live/exuFlWFGCwI?t=2627s) — job portal for new immigrants
+- [uRelief](/projects/urelief/) — resource finder for people experiencing homelessness
+- [LitReading](/projects/litreading/) — literacy through ranked reading
+- [Resumer](/projects/resumer/) — job portal for new immigrants
 
 ### Status
 A fuller retrospective (timeline, team roles, and lessons learned) will land

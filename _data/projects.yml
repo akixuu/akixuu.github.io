@@ -7,30 +7,30 @@
       description: "Job finding app portal for new immigrants."
       stack: "Android · Java · Figma"
       links:
-        - text: "Showcase"
+        - text: "Writeup"
+          url: "/projects/resumer/"
+        - text: "Pitch"
           url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
-        - icon: "award"
-          url: "https://www.youtube.com/live/exuFlWFGCwI?si=XXJq5HW_FZ-tDBxF&t=11619"
 
     - title: "uRelief"
       thumbnail: "urelief.webp"
       description: "Resource finder app for the homeless."
       stack: "Android · Java · Figma"
       links:
-        - text: "Showcase"
-          url: "https://youtu.be/4Teg18s4amQ?si=92pNfLNAPLKlqZZS"
-        - icon: "award"
-          url: "https://youtu.be/TcMAkcMivhw?si=XFpACW8LMbvdL4Z_"
-        - text: "Repo"
-          url: "https://github.com/akixuu/goa_s06"
+        - text: "Writeup"
+          url: "/projects/urelief/"
+        - text: "Pitch"
+          url: "https://youtu.be/4Teg18s4amQ"
 
     - title: "LitReading"
       thumbnail: "litreading.webp"
       description: "App to improve literacy through ranked reading for schools."
       stack: "Figma"
       links:
-        - text: "Showcase"
-          url: "https://youtu.be/S_UZbX2EByI?si=RQjjS7X-UwBCyV_v"
+        - text: "Writeup"
+          url: "/projects/litreading/"
+        - text: "Pitch"
+          url: "https://youtu.be/S_UZbX2EByI"
 
     - title: "Poses for Dummies"
       thumbnail: "poses.webp"
@@ -38,15 +38,19 @@
       stack: "React · TypeScript · MediaPipe · p5.js"
       links:
         - text: "Writeup"
-          url: "https://2026.quackhacks.org/projects/poses-for-dummies"
-      
+          url: "/projects/poses-for-dummies/"
+        - text: "Repo"
+          url: "https://github.com/mileshs/quackhacks3"
+
     - title: "NoNotes"
       thumbnail: "nonotes.webp"
       description: "Your AI note-taking companion."
       stack: "Python · Flask · JavaScript · BERT"
       links:
-        - text: "Devpost"
-          url: "https://devpost.com/software/noname-pht40q"
+        - text: "Writeup"
+          url: "/projects/nonotes/"
+        - text: "Repo"
+          url: "https://github.com/Alex-Jando/HappyHack-Oct2023"
 
 - title: "Miscellaneous"
   description: ""

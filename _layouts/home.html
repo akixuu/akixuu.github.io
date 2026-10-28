@@ -1,10 +1,12 @@
 ---
 layout: wrapper
 ---
+<script>document.documentElement.classList.add("js");</script>
 {% include header.html %}
 
-<main class="home-main align-items-start align-items-lg-center py-4">
+<main class="home-main">
   {{ content }}
 </main>
+<script src="{{ '/assets/js/home.js' | relative_url }}" defer></script>
 
 {% include footer.html %}

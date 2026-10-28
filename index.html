@@ -5,20 +5,111 @@ layout: home
 
 <section class="home-hero container">
   <div class="row align-items-center g-4 g-lg-5">
-    <div class="col-lg-6 home-hero-copy slide-in-from-left">
-      <!-- <p class="home-kicker">DEVELOPER • DESIGNER • ENGINEER</p> -->
+    <div class="col-lg-6 home-hero-copy">
+      <p class="home-kicker">Computer Science · UBC</p>
       <h1 class="home-name">AKI XU</h1>
-      <p class="home-meta">Studying Computer Science @ UBC</p>
+      <p class="home-meta">Seeking 2027 SWE internships</p>
       <p class="home-blurb">
-        I love to read and learn. I am currently dabbling with game development and emergent systems. Seeking 2027 SWE Internship Opportunities!
+        I like software you can trust with timing and with data. Lately that means computer systems and databases, and the kind of projects where a late packet or a wrong row is the whole bug.
       </p>
-      <a class="home-cta" href="/projects/">View my projects →</a>
+      <div class="home-actions">
+        <a class="home-cta" href="#work">Selected work</a>
+        <a class="home-cta" href="/resume/">Resume</a>
+      </div>
     </div>
 
-    <div class="col-lg-6 home-hero-visual slide-in-from-right">
-      <div class="home-portrait">
-        <img src="{{ '/assets/imgs/treeobliterator.webp' | relative_url }}" alt="Portrait of Aki Xu" width="800" height="800">
+    <div class="col-lg-6 home-hero-visual">
+      <div class="home-field" data-home-field>
+        <canvas id="home-field" aria-hidden="true"></canvas>
+        <p class="home-field-label"><span>trace</span><span>local mesh</span></p>
       </div>
     </div>
   </div>
+</section>
+
+<section class="home-band container" id="work" data-reveal>
+  <header class="home-band-head home-rise">
+    <p class="home-kicker">01 — Selected work</p>
+    <h2 class="home-band-title">Three builds I'd start a conversation with.</h2>
+    <p class="home-band-lede">
+      A game that had to feel instant, notes that had to find the point, and a dataset that had to become something you could point at.
+    </p>
+  </header>
+
+  <div class="home-projects">
+    <article class="home-project home-rise" style="--d: 40ms">
+      <p class="home-project-index">01</p>
+      <h3 class="home-project-title">Poses for Dummies</h3>
+      <p class="home-project-award">3rd place · University of Oregon</p>
+      <p class="home-project-desc">A multiplayer party game that reads the room. Each device tracks the player's pose, and the server only receives the motion it needs, so a group can play in the same moment.</p>
+      <p class="home-project-stack">TypeScript · React · MediaPipe · Socket.io</p>
+      <a class="home-project-link" href="/projects/poses-for-dummies/">Writeup</a>
+    </article>
+
+    <article class="home-project home-rise" style="--d: 80ms">
+      <p class="home-project-index">02</p>
+      <h3 class="home-project-title">NoNotes</h3>
+      <p class="home-project-award">1st place · Happy Hacks II</p>
+      <p class="home-project-desc">An editor that listens. Speech recognition takes the recording, BERT keeps the lines worth reading, and the notes show up already trimmed.</p>
+      <p class="home-project-stack">Python · Flask · BERT · SQLite</p>
+      <a class="home-project-link" href="/projects/nonotes/">Writeup</a>
+    </article>
+
+    <article class="home-project home-rise" style="--d: 120ms">
+      <p class="home-project-index">03</p>
+      <h3 class="home-project-title">Neural Data Analysis</h3>
+      <p class="home-project-award">Neuromatch Academy · 2025</p>
+      <p class="home-project-desc">Working-memory recordings from epilepsy patients, filtered and drawn in 3D. The picture holds the electrode and the signal as one fact.</p>
+      <p class="home-project-stack">Python · NumPy · Pandas · scikit-learn</p>
+      <a class="home-project-link" href="/projects/nm-2025/">Writeup</a>
+    </article>
+  </div>
+
+  <p class="home-band-more home-rise" style="--d: 140ms">
+    <a class="home-cta" href="/projects/">All projects</a>
+  </p>
+</section>
+
+<section class="home-band container" id="practice" data-reveal>
+  <header class="home-band-head home-rise">
+    <p class="home-kicker">02 — Practice</p>
+    <h2 class="home-band-title">Tools I will actually ship with.</h2>
+  </header>
+
+  <div class="home-practice-copy home-rise" style="--d: 40ms">
+    <p>The list is short on purpose. I would rather know a tool well enough to put it in front of someone else.</p>
+    <p>At Media 1248 I kept a production storefront, about a million dollars a year in sales, in sync with its inventory, and cut that job's API calls by 90%. From 2020 to 2025 I designed and built Android apps with Game of Apps and pitched them to industry judges. With Tonari Gumi I led volunteers teaching 250 seniors to use the services that had moved online.</p>
+  </div>
+
+  <dl class="home-skills">
+    {% for skill in site.data.resume.skills %}
+    <div class="home-skill-row home-rise" style="--d: {{ forloop.index0 | times: 40 }}ms">
+      <dt>{{ skill.label }}</dt>
+      <dd>{{ skill.items }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="home-meet container" id="hello" data-reveal>
+  <p class="home-kicker home-rise">03 — Hello</p>
+  <h2 class="home-meet-title home-rise" style="--d: 40ms">All this scrolling, and we still haven't met?</h2>
+  <p class="home-meet-lede home-rise" style="--d: 80ms">
+    I'm Aki, a computer science student at UBC and webmaster for the Computer Science Student Society. I'm looking for a 2027 software engineering internship.
+  </p>
+
+  <div class="home-meet-links home-rise" style="--d: 110ms">
+    <a class="home-meet-link" href="https://github.com/akixuu" target="_blank" rel="noopener noreferrer">
+      <span class="home-meet-name">GitHub</span>
+      <span class="home-meet-url">github.com/akixuu</span>
+    </a>
+    <a class="home-meet-link" href="https://www.linkedin.com/in/akixuu" target="_blank" rel="noopener noreferrer">
+      <span class="home-meet-name">LinkedIn</span>
+      <span class="home-meet-url">linkedin.com/in/akixuu</span>
+    </a>
+  </div>
+
+  <p class="home-meet-mail home-rise" style="--d: 150ms">
+    <a href="mailto:akixuu@student.ubc.ca">akixuu@student.ubc.ca</a>
+  </p>
 </section>

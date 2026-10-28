@@ -56,8 +56,13 @@ layout: wrapper
               <a data-cursor-stick
                 class="btn rounded-pill btn-sm fw-bolder {% if button.primary %}btn-primary{% else %}btn-outline-secondary{% endif %}"
                 href="{{ button.link }}"
+                {% if button.icon %}aria-label="{{ button.text | default: 'Link' }}"{% endif %}
                 {% if is_external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-                {{ button.text }}
+                {% if button.icon %}
+                  <i class="fa-solid fa-{{ button.icon }}" aria-hidden="true"></i>
+                {% else %}
+                  {{ button.text }}
+                {% endif %}
               </a>
             {% endunless %}
           {% endfor %}

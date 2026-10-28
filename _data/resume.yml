@@ -1,6 +1,6 @@
 email: akixuu@student.ubc.ca
 pdf: /resume.pdf
-dek: Studying Computer Science @ UBC
+dek: B.Sc. Computer Science · University of British Columbia
 
 contacts:
   - text: LinkedIn
@@ -13,116 +13,98 @@ contacts:
 education:
   - title: B.Sc. in Computer Science
     org: University of British Columbia
-    dates: 2026–2029
+    dates: Sep. 2025 – Dec. 2028
     bullets:
-      - "Relevant coursework: Data Structures & Algorithms, Object-Oriented Programming, Statistics, Multivariable Calculus, Discrete Mathematics"
+      - "Activities: Computer Science Student Society (Internal Officer + Webmaster), Game Dev Club, ACM (ICPC) Club"
+      - "Awards: Scotiabank Scholarship, Dean's Excellence Scholarship (Langara)"
 
 experience:
-  - title: Assistant Program Coordinator
-    org: Tonari Gumi Volunteers Association
-    org_url: /projects/tech-to-go/
-    dates: Mar 2024 – Mar 2025
+  - title: Software Developer (Part-time)
+    org: Media 1248 (ActiveReleaf)
+    org_url: https://www.activereleaf.ca/
+    dates: Apr. 2023 – Sep. 2023
     bullets:
-      - Led a team of **+20** volunteers to run a digital literacy program supporting **250+** seniors across Metro Vancouver
-      - Created and delivered **+30** workshops and **+70** 1:1 support sessions on cybersecurity, devices, and online services
-      - Managed **$20K** of government funding to coordinate community partnerships and expand service reach
-      - Maintained program website using **HTML/CSS/JS**, ensuring intuitive UI for seniors of all abilities
+      - "Automated an inventory synchronization system for **+75** products using **Google Apps Script**, eliminating manual reconciliation between internal systems and web platform data and reducing API calls by **90%**"
+      - "Maintained production e-commerce systems (**$1M** sales/yr) using **JavaScript, PHP, and HTML/CSS**"
+      - "Built a responsive, SEO-optimized landing page to support a product launch (grade A on GTmetrix)"
+
+activities:
+  - title: Developer and Designer
+    org: Game of Apps
+    org_url: /projects/game-of-apps/
+    dates: Sep. 2020 – Apr. 2025
+    bullets:
+      - "Achievements: **Best Overall App** (2023, 2025), **People's Choice** (2022), **Outstanding Developer** (2023)"
+      - "Co-developed **+4** community-focused **Android** applications in **Java**, pitched to a panel of industry judges"
+      - "Optimized app performance by designing database models with **SQL** and implementing caching, reducing load times and battery use"
+      - "Conducted **+15** user interviews and turned the findings into features and **UX/UI** improvements"
+
+  - title: Assistant Program Coordinator
+    org: Tonari Gumi Japanese Volunteers Association
+    org_url: /projects/tech-to-go/
+    dates: Mar. 2024 – Mar. 2025
+    bullets:
+      - "Led a team of **+20** volunteers to run a digital literacy program supporting **250+** seniors across Metro Vancouver"
+      - "Created and delivered **+30** workshops and **+70** 1:1 support sessions on cybersecurity, devices, and online services"
 
   - title: Electrical Assembly Student
     org: Arrow Speed Controls
     org_url: https://www.arrowspeed.com/
-    program: MEC Program
-    program_url: https://careerprograms.sd38.bc.ca/students/qa-zoom-sessions/manufacturing-engineering-co-op-mec
-    dates: Mar 2024
+    dates: Mar. 2024
     bullets:
-      - Constructed and wired electrical control panels according to engineering schematics and specifications
-      - Assisted with Ethernet cabling for Variable Frequency Drives (VFDs)
-      - Performed quality assurance testing to verify electrical assemblies met required standards
-
-  - title: Junior Developer Intern
-    org: ActiveReleaf, Media 1248
-    org_url: https://www.activereleaf.ca/
-    dates: May 2023 – Oct 2023
-    bullets:
-      - Engineered an automated inventory synchronization system using **Google Apps Script**, eliminating manual reconciliation between internal systems and e-commerce platform data for over **+200** products
-      - Developed and maintained production WooCommerce/WordPress systems using **JavaScript, PHP, HTML/CSS**, improving site reliability and reducing bot/spam traffic
-      - Built a responsive e-commerce portal and landing page supporting product launch and external sales workflows
-
-activities:
-  - title: App Design and Development Competitor
-    org: Game of Apps, Institute of Applied Design & Technology Education Society
-    org_url: /projects/game-of-apps/
-    dates: Sep 2020 – Apr 2025
-    bullets:
-      - Designed and developed **Android** applications using **Java** and **Figma** in cross-functional teams
-      - Conducted **user interviews** and translated research findings into product features and **UX/UI** improvements
-      - Presented completed applications to industry professionals and technology judges
-
-  - title: Computational Neuroscience Student
-    org: Neuromatch Academy
-    org_url: https://neuromatch.io/
-    dates: Jul 2025
-    links:
-      - text: Certificate
-        url: https://portal.neuromatchacademy.org/certificate/8958269b-632a-4b3b-b3ef-6775eae75170
-    bullets:
-      - Analyzed electrocorticography (ECoG) neural data using **Python, NumPy, Pandas, and scikit-learn**
-      - Implemented preprocessing pipelines, feature extraction, and exploratory analysis for working-memory datasets
-      - Applied machine learning models including logistic regression and SVMs to analyze neural activity patterns
+      - "Assembled and wired industrial electrical control panels from engineering schematics"
+      - "Performed quality and safety testing on **+10** electrical assemblies to confirm proper wiring"
 
 projects:
   - title: Poses For Dummies
     dates: 2026
-    stack: WebSockets, React, p5.js, MediaPipe, Cloudflare
+    stack: TypeScript, React, MediaPipe, Socket.io, Cloudflare
     links:
       - text: Writeup
+        url: /projects/poses-for-dummies/
+      - text: QuackHacks
         url: https://2026.quackhacks.org/projects/poses-for-dummies
       - text: Repo
         url: https://github.com/mileshs/quackhacks3
     bullets:
-      - Built a real-time multiplayer game integrating machine learning pose estimation and synchronized gameplay
-      - Awarded **3rd Place** at Quack Hacks 3 (Pipeworks Game Development Track)
+      - "Co-developed a multiplayer body-tracking party game using computer vision (**MediaPipe**) and web sockets"
+      - "Wrote pose-tracking logic that maps joint movement on the client and sends player data to the server"
+      - "Tuned streaming and computer-vision settings for a lag-free session (**>50ms** latency)"
+      - "Awarded **3rd Place** at a University of Oregon hackathon (Game Development Track), among **220+** hackers"
 
   - title: NoNotes
     dates: 2023
-    stack: Python, Flask, SQLite, JavaScript, BERT, PyDub, SpeechRecognition
+    stack: Python, Flask, BERT, SQLite, JavaScript
     links:
       - text: Writeup
+        url: /projects/nonotes/
+      - text: Devpost
         url: https://devpost.com/software/noname-pht40q
       - text: Repo
-        url: https://github.com/Alex-Jando/NoNotes
+        url: https://github.com/Alex-Jando/HappyHack-Oct2023
     bullets:
-      - Built an AI web app that converts browser audio into transcripts and BERT-based extractive notes
-      - Awarded **1st Place** at HappyHacks 2
+      - "Co-developed a note-taking app that transcribes audio and summarizes key points with **BERT**"
+      - "Built an audio processing pipeline from Google Speech Recognition through summary generation"
+      - "Built a responsive web interface and **Flask** API on **SQLite**, with URL-safe identifiers"
+      - "Awarded **1st Place** at Happy Hacks II, among **80+** hackers"
 
-  - title: uRelief
-    dates: 2023
-    stack: Java, Android, Figma
+  - title: Neural Data Analysis
+    dates: 2025
+    stack: Python, NumPy, Pandas, scikit-learn, MNE
     links:
-      - text: Pitch
-        url: https://youtu.be/4Teg18s4amQ
-      - text: Repo
-        url: https://github.com/akixuu/goa_s06
+      - text: Writeup
+        url: /projects/nm-2025/
     bullets:
-      - Developed a Java resource app that connects users with local shelters and essential resources
-      - Awarded **Best Overall App** at Game of Apps Season 6
-
-  - title: Resumer
-    dates: 2022
-    stack: Java, Android, Figma
-    links:
-      - text: Pitch
-        url: https://www.youtube.com/live/exuFlWFGCwI?t=2627s
-    bullets:
-      - Built a resume prep tool for new Canadian immigrants
-      - Awarded **People's Choice App** at Game of Apps Season 6
+      - "Analyzed **ECoG** brain-activity datasets from epilepsy patients performing working-memory tasks"
+      - "Filtered multi-channel signals and built **3D** models of **+15** electrode placements"
+      - "Delivered a research report and presentation mapping neural activity to cognitive memory load"
 
 skills:
   - label: Languages
-    items: Python, Java, C++, JavaScript, PHP, SQL, HTML/CSS, Swift
+    items: C++, Python, Java, TypeScript, JavaScript, SQL, NoSQL, PHP, Swift
   - label: Frameworks & Libraries
-    items: React, Flask, p5.js, MediaPipe, NumPy, Pandas, scikit-learn
+    items: React, Node.js, Flask, Socket.io
   - label: Tools
-    items: Git, Docker, Linux, Cloudflare, REST APIs, Figma
+    items: Git, Linux, Cloudflare, Android Studio, MongoDB, DigitalOcean, Figma, Postman, REST APIs, Unit Testing
   - label: Spoken Languages
-    items: English (Fluent), Japanese (Professional), French (Basic)
+    items: English (Native), Japanese (Professional), French (Elementary)
