@@ -12,25 +12,35 @@ $spacer: 2rem;
 $font-size-base: 1.125rem;
 $line-height-base: 1.7;
 
-// Light theme (pastel lavender)
-$primary: #3d3270;
-$secondary: #7a7094;
-$body-bg: #efe8f6;
-$body-color: #2a2340;
-$body-secondary-bg: #e6dcf0;
-$dark: #2a2340;
-$light: #efe8f6;
-$border-color: #d8cee8;
+// Light theme
+$primary: #000000;
+$secondary: #000000;
+$body-bg: #ffffff;
+$body-color: #000000;
+$body-secondary-bg: #ffffff;
+$body-tertiary-bg: #ffffff;
+$body-emphasis-color: #000000;
+$dark: #000000;
+$light: #ffffff;
+$border-color: #000000;
+$code-color: #000000;
+$primary-bg-subtle: #ffffff;
+$primary-border-subtle: #000000;
 
-// Dark theme (deep purple)
-$body-bg-dark: #171225;
-$body-color-dark: #ece6f5;
-$body-secondary-bg-dark: #241c38;
-$headings-color-dark: #f6f1fc;
-$link-color-dark: #d4c8ec;
+// Dark theme
+$body-bg-dark: #000000;
+$body-color-dark: #ffffff;
+$body-secondary-bg-dark: #000000;
+$body-tertiary-bg-dark: #000000;
+$body-emphasis-color-dark: #ffffff;
+$headings-color-dark: #ffffff;
+$link-color-dark: #ffffff;
 $link-hover-color-dark: #ffffff;
-$primary-text-dark: #d4c8ec;
-$border-color-dark: #3c3454;
+$primary-text-dark: #ffffff;
+$border-color-dark: #ffffff;
+$code-color-dark: #ffffff;
+$primary-bg-subtle-dark: #000000;
+$primary-border-subtle-dark: #ffffff;
 
 $container-max-widths: (
   sm: 540px,
