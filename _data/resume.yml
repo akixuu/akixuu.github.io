@@ -1,6 +1,5 @@
 email: akixuu@student.ubc.ca
 pdf: /resume.pdf
-dek: B.Sc. Computer Science · University of British Columbia
 
 contacts:
   - text: LinkedIn
@@ -72,7 +71,7 @@ projects:
       - "Tuned streaming and computer-vision settings for a lag-free session (**>50ms** latency)"
       - "Awarded **3rd Place** at a University of Oregon hackathon (Game Development Track), among **220+** hackers"
 
-  - title: NoNotes
+  - title: NoNotes AI
     dates: 2023
     stack: Python, Flask, BERT, SQLite, JavaScript
     links:

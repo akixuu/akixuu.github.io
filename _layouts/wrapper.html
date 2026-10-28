@@ -41,7 +41,8 @@
   <link rel="icon" type="image/x-icon" href="{{ '/' | relative_url }}" />
 </head>
 
-<body{% if page.layout == "home" %} class="home-page"{% endif %}>
+<body class="{% if page.layout == 'home' %}home-page{% else %}inner-page{% endif %}">
+  <script>document.documentElement.classList.add("js");</script>
   {{ content }}
 
   <!-- Bootstrap 5 JS -->
@@ -116,6 +117,26 @@
 
       document.addEventListener('show.bs.modal', function () { lenis.stop(); });
       document.addEventListener('hidden.bs.modal', function () { lenis.start(); });
+    })();
+  </script>
+
+  <!-- Scroll reveal -->
+  <script>
+    (function () {
+      var reveals = document.querySelectorAll("[data-reveal]");
+      if (!reveals.length) return;
+      if (!window.IntersectionObserver || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        reveals.forEach(function (el) { el.classList.add("is-in"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.01 });
+      reveals.forEach(function (el) { io.observe(el); });
     })();
   </script>
 

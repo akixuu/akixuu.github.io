@@ -13,7 +13,7 @@ layout: wrapper
           <p class="gallery-page-dek">{{ site.data.resume.dek }}</p>
           {% endif %}
         </div>
-        <a class="btn rounded-pill btn-sm fw-bolder btn-primary resume-download" href="{{ site.data.resume.pdf | relative_url }}" download>
+        <a class="lp-btn lp-btn--solid resume-download" href="{{ site.data.resume.pdf | relative_url }}" download>
           Download PDF
         </a>
       </div>
@@ -28,28 +28,28 @@ layout: wrapper
       {% endif %}
     </header>
 
-    <section class="resume-section">
+    <section class="resume-section" data-reveal>
       <h2 class="resume-section-title">Education</h2>
       {% for item in site.data.resume.education %}
         {% include resume_entry.html %}
       {% endfor %}
     </section>
 
-    <section class="resume-section">
+    <section class="resume-section" data-reveal>
       <h2 class="resume-section-title">Experience</h2>
       {% for item in site.data.resume.experience %}
         {% include resume_entry.html %}
       {% endfor %}
     </section>
 
-    <section class="resume-section">
+    <section class="resume-section" data-reveal>
       <h2 class="resume-section-title">Activities</h2>
       {% for item in site.data.resume.activities %}
         {% include resume_entry.html %}
       {% endfor %}
     </section>
 
-    <section class="resume-section">
+    <section class="resume-section" data-reveal>
       <div class="resume-section-head">
         <h2 class="resume-section-title">Projects</h2>
         <a class="resume-more" href="/projects/">See all projects →</a>
@@ -59,13 +59,18 @@ layout: wrapper
       {% endfor %}
     </section>
 
-    <section class="resume-section">
+    <section class="resume-section" data-reveal>
       <h2 class="resume-section-title">Skills</h2>
       <dl class="resume-skills">
         {% for skill in site.data.resume.skills %}
         <div class="resume-skill-row">
           <dt>{{ skill.label }}</dt>
-          <dd>{{ skill.items }}</dd>
+          <dd>
+            <ul class="lp-chips">
+              {% assign skill_items = skill.items | split: ", " %}
+              {% for skill_item in skill_items %}<li>{{ skill_item }}</li>{% endfor %}
+            </ul>
+          </dd>
         </div>
         {% endfor %}
       </dl>

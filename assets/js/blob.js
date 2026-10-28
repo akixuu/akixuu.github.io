@@ -56,6 +56,7 @@
   var stubLen = [12, 12];
   var look = { x: 0, y: 0 };
   var blink = { until: 0, next: 2000 };
+  var smile = { until: 0, next: 2400 };
   var mood = { name: "neutral", until: 0, next: null };
   var timers = { drop: 0, spark: 0, hop: 0 };
 
@@ -97,8 +98,10 @@
 
   function moody() { return mood.name === "sad" || mood.name === "tired"; }
 
+  function offeringLink() { return grab && grab.kind === "link"; }
+
   function updateMood(now) {
-    if (hovering && !drag && mood.name !== "happy") setMood("excited", 250, now);
+    if (hovering && !drag && !offeringLink() && mood.name !== "happy") setMood("excited", 250, now);
     if (mood.name === "neutral" || now <= mood.until) return;
     if (mood.next) setMood(mood.next[0], mood.next[1], now);
     else mood.name = "neutral";
@@ -288,7 +291,12 @@
     b.vx = 0;
     b.mode = "pull";
     squash.d += 3.2;
-    setMood("excited", 600, now);
+    if (g.kind === "link") {
+      setMood("neutral", 0, now);
+      smile.next = Math.min(smile.next, now + rand(450, 1000));
+    } else {
+      setMood("excited", 600, now);
+    }
     if (g.kind === "cursor") {
       var hd = g.hands[0];
       hd.from = gripPoint(g, hd.side);
@@ -714,7 +722,17 @@
     look.x = damp(look.x, tx, 10, dt);
     look.y = damp(look.y, ty, 10, dt);
 
-    if (now > blink.next) {
+    if (mood.name !== "neutral") {
+      if (now < smile.until || smile.next < now) smile.next = now + rand(5200, 9800);
+      smile.until = 0;
+    } else if (now >= blink.until && now > smile.next) {
+      smile.until = now + rand(520, 780);
+      smile.next = smile.until + (offeringLink() ? rand(1600, 2800) : rand(5200, 9800));
+    }
+
+    if (now < smile.until) {
+      if (blink.next < smile.until) blink.next = smile.until + rand(400, 1400);
+    } else if (now > blink.next) {
       var sleepy = mood.name === "tired";
       blink.until = now + (sleepy ? 420 : 120);
       blink.next = now + (sleepy ? rand(700, 1300) : rand(1800, 4800));
@@ -789,9 +807,8 @@
     var cy = -LEG * (1 - b.round) - bottom + b.bob;
     var dangling = b.mode === "air" || b.mode === "drag" || b.mode === "hang";
     var m = mood.name;
-    var holding = grab && grab.phase === "hold";
-    var carrying = holding && grab.kind === "link";
-    var jitter = m === "excited" || carrying ? Math.sin(now * 0.07) * 0.7 : 0;
+    var smiling = m === "happy" || now < smile.until;
+    var jitter = m === "excited" ? Math.sin(now * 0.07) * 0.7 : 0;
     b.cy = cy;
     b.hw = R * lerp(1.16, 1, b.round) * sx;
 
@@ -842,7 +859,7 @@
       stubEls[k].style.opacity = hidden || (grab && grab.phase !== "windup" && usesHand(side)) ? 0 : 1;
     }
 
-    svg.classList.toggle("is-happy", m === "happy");
+    svg.classList.toggle("is-happy", smiling);
 
     var ex = b.face * 7 * (1 - b.round) + look.x * 3.5 - cy * lean * 0.5;
     var ey = cy - 6 + look.y * 3;
@@ -853,7 +870,6 @@
     else if (m === "sad") { erx = 3.8; ery = 6; ey += 1.5; }
     else if (m === "tired") { ey += 1.5; }
     else if (m === "dizzy") { erx = 3.3; ery = 3.3; }
-    var strain = carrying ? clamp((now - grab.t0) / 4500, 0, 1) : 0;
 
     for (var e = 0; e < 2; e++) {
       var eside = e === 0 ? -1 : 1;
@@ -874,11 +890,7 @@
       var outer = top - 4;
       if (m === "sad") { inner = top - 1.5; outer = eyy - ery * 0.45; }
       else if (m === "tired") { inner = outer = eyy - ery * 0.05; }
-      else if (carrying) {
-        inner = lerp(eyy - ery * 0.25, eyy - ery * 0.05, strain);
-        outer = lerp(eyy - ery * 0.85, eyy - ery * 0.2, strain);
-      }
-      if (inner < top - 3 && outer < top - 3) {
+      if (smiling || (inner < top - 3 && outer < top - 3)) {
         lidEls[e].style.display = "none";
       } else {
         var l = exx - erx - 2;
@@ -888,8 +900,8 @@
         lidEls[e].setAttribute("d", "M" + f(l) + " " + f(t) + " L" + f(r) + " " + f(t) + " L" + f(r) + " " + f(eside < 0 ? inner : outer) + " L" + f(l) + " " + f(eside < 0 ? outer : inner) + "Z");
       }
 
-      if (m === "happy") {
-        happyEls[e].setAttribute("d", "M" + f(exx - 4.5) + " " + f(eyy + 2) + " Q" + f(exx) + " " + f(eyy - 5) + " " + f(exx + 4.5) + " " + f(eyy + 2));
+      if (smiling) {
+        happyEls[e].setAttribute("d", "M" + f(exx - 5) + " " + f(eyy + 2.2) + " L" + f(exx) + " " + f(eyy - 4) + " L" + f(exx + 5) + " " + f(eyy + 2.2));
       }
 
       if (m === "sad" && e === (b.dir > 0 ? 1 : 0) && now > timers.drop && b.round < 0.2) {
@@ -898,9 +910,9 @@
       }
     }
 
-    if ((m === "tired" || strain > 0.35) && now > timers.drop) {
+    if (m === "tired" && now > timers.drop) {
       spawn("drop", b.x - b.dir * R * 0.95, b.y + cy - R * 0.55, -b.dir * 25, -50, 0.9, 500);
-      timers.drop = now + (m === "tired" ? rand(500, 900) : rand(700, 1100));
+      timers.drop = now + rand(500, 900);
     }
 
     if (m === "happy" && now > timers.spark) {

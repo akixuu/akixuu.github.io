@@ -4,7 +4,7 @@ thumbnail: urelief.webp
 description: >-
   An Android app that connects people with nearby shelters, food, and other
   local resources.
-stack: "Android · Java · Figma"
+stack: "Android · Java · SQL · Figma"
 supplemental_links:
   - text: Repo
     link: https://github.com/akixuu/goa_s06
