@@ -597,12 +597,13 @@ html, body,
 .lp-spec-paper {
   position: relative;
   padding: 1.5rem 1.4rem 1.3rem;
-  background-color: var(--bs-body-color);
-  color: var(--bs-body-bg);
+  background-color: #fff;
+  color: #000;
+  border: 1.5px solid #000;
   font-family: $lp-mono;
   font-size: 0.76rem;
   letter-spacing: 0.04em;
-  box-shadow: 10px 12px 0 -1px var(--bs-body-bg), 10px 12px 0 0 var(--bs-body-color);
+  box-shadow: 10px 12px 0 -1.5px #000, 10px 12px 0 0 var(--bs-body-color);
   animation: lp-rise 0.5s $lp-ease 0.15s both;
 }
 
