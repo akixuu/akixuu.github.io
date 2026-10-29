@@ -64,9 +64,12 @@
   var drag = null;
   var grab = null;
   var hovering = null;
+  var hoverSince = Infinity;
   var cooldownUntil = 0;
   var hops = 0;
-  var lastLink = null;
+  var linkTurn = 0;
+  var hangNext = false;
+  var offered = false;
   var parts = [];
 
   var links = Array.prototype.slice.call(section.querySelectorAll(".lp-mail, .lp-meet-links a")).map(function (el) {
@@ -268,18 +271,31 @@
     return false;
   }
 
-  function startGrab(now, px, py) {
+  // Links are offered in page order (email first).
+  function nextLink() {
+    for (var i = 0; i < links.length; i++) {
+      var idx = (linkTurn + i) % links.length;
+      var s = links[idx];
+      if (s !== hovering && Math.abs(s.ox) + Math.abs(s.oy) < 2) {
+        linkTurn = (idx + 1) % links.length;
+        return s;
+      }
+    }
+    return null;
+  }
+
+  // Without a forced link, offers alternate with hanging from the cursor.
+  // Hanging needs the cursor high enough to dangle from, so a low cursor gets a link and the hang waits.
+  function startGrab(now, px, py, forced) {
     var g;
-    if (py < H - 110 && Math.random() < 0.5) {
+    if (!forced && hangNext && py < H - 110) {
+      hangNext = false;
       b.dir = px < b.x ? -1 : 1;
       g = { kind: "cursor", hands: [{ side: linksX < px ? 1 : -1, delay: 0 }] };
     } else {
-      var pool = links.filter(function (s) {
-        return s !== lastLink && Math.abs(s.ox) + Math.abs(s.oy) < 2 && s !== hovering;
-      });
-      if (!pool.length) return;
-      var s = pool[Math.floor(Math.random() * pool.length)];
-      lastLink = s;
+      var s = forced || nextLink();
+      if (!s) return;
+      hangNext = true;
       b.dir = homeOf(s).cx < b.x ? -1 : 1;
       g = { kind: "link", s: s, hands: [{ side: b.dir, delay: 0 }, { side: -b.dir, delay: 80 }] };
     }
@@ -288,6 +304,7 @@
     g.t0 = now;
     g.hx = g.hy = 0;
     grab = g;
+    offered = true;
     b.vx = 0;
     b.mode = "pull";
     squash.d += 3.2;
@@ -645,7 +662,7 @@
         var cdx = px - b.x;
         if (Math.abs(cdx) > 30) b.dir = cdx > 0 ? 1 : -1;
       }
-      if (b.mode === "rest" && !b.hopTrip && !b.crashes && !hops && now > b.until && !grab && mood.name !== "dizzy") {
+      if (b.mode === "rest" && !b.hopTrip && !b.crashes && !hops && now > b.until && !grab && mood.name !== "dizzy" && offered && !hovering) {
         pickBehaviour();
       }
     } else if (m === "pull") {
@@ -663,7 +680,7 @@
         if (b.x >= walkMin && b.x <= walkMax && Math.random() < 0.3) b.dir = -b.dir;
         var flip = Math.random() < 0.35;
         hop(now, flip ? -480 : -rand(330, 420), b.dir * rand(100, 150), flip, 80);
-      } else if (mood.name === "excited" && now > timers.hop) {
+      } else if (mood.name === "excited" && !hovering && now > timers.hop) {
         timers.hop = now + rand(260, 380);
         hop(now, -rand(200, 260), 0, false);
       }
@@ -942,9 +959,14 @@
 
     updateMood(now);
 
-    if (!grab && finePointer && pointerIn && !hovering && !drag && !hops && !b.hopTrip && !b.crashes &&
-      (b.mode === "walk" || b.mode === "rest") && mood.name === "neutral" && now > cooldownUntil && now - pointer.moved < 5000) {
-      startGrab(now, px, py);
+    var grounded = b.mode === "walk" || b.mode === "rest";
+    var free = !grab && finePointer && pointerIn && !drag && mood.name !== "dizzy" && grounded;
+    if (free && hovering && now - hoverSince > 700 && mood.name !== "happy") {
+      hops = b.hopTrip = b.crashes = 0;
+      hoverSince = Infinity;
+      startGrab(now, px, py, hovering);
+    } else if (free && !hovering && !hops && !b.hopTrip && !b.crashes && mood.name === "neutral" && (now > cooldownUntil || !offered)) {
+      startGrab(now, px, py, offered ? null : links[0]);
     }
 
     step(now, dt, px, py, pointerIn);
@@ -1014,9 +1036,10 @@
   links.forEach(function (s) {
     s.el.addEventListener("mouseenter", function () {
       hovering = s;
+      hoverSince = s.held ? Infinity : performance.now();
     });
     s.el.addEventListener("mouseleave", function () {
-      if (hovering === s) hovering = null;
+      if (hovering === s) { hovering = null; hoverSince = Infinity; }
     });
     s.el.addEventListener("click", function () {
       if (calm) return;
@@ -1036,7 +1059,7 @@
   measure();
   b.x = lerp(walkMin, walkMax, 0.6);
   b.y = H;
-  b.until = performance.now() + 1200;
+  b.until = performance.now() + 250;
   render(performance.now(), 0.016);
 
   if (calm) return;
@@ -1045,7 +1068,7 @@
     new IntersectionObserver(function (entries) {
       visible = entries[0].isIntersecting;
       if (!visible) return;
-      cooldownUntil = Math.max(cooldownUntil, performance.now() + 2500);
+      cooldownUntil = Math.max(cooldownUntil, performance.now() + (offered ? 2500 : 0));
       start();
     }).observe(section);
   } else {
