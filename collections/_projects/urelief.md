@@ -16,7 +16,7 @@ supplemental_links:
 
 **uRelief** is a resource finder for people looking for nearby help: shelters, food, washrooms, and organizations that can take a new listing. The home screen asks two questions, whether you need a place or whether you are registering one, and the rest of the app is a map and a directory.
 
-I designed it in Figma and built it in Java for Android with a Game of Apps team. We pitched it at the Season 6 championships.
+I designed it in Figma and built it in Java for Android with a Game of Apps team. At the Season 6 championships it took **Best Overall App**.
 
 ### Pitch
 <div class="project-slides py-4">

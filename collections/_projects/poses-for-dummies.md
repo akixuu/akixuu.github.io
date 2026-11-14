@@ -17,7 +17,7 @@ supplemental_links:
 
 **Poses for Dummies** is a two-player game. One player, the athlete, stands in front of a webcam and fits their body through pose-shaped holes, Hole-in-the-Wall style. The other player, the saboteur, draws those poses by dragging a ragdoll, or rolls a random one. After a track of about thirty walls, they swap devices and roles. The higher score wins.
 
-We built it at QuackHacks, where we placed **3rd** in the game development track, among **220+** hackers.
+We built it at QuackHacks, where we placed **3rd** in the Pipeworks game development track, among **220+** hackers.
 
 ### How it works
 MediaPipe reads the athlete's skeleton. The game throws away raw pixel distances and keeps the angles between joints, so every body is drawn as the same dummy, with no calibration step. The score is how closely those angles match the hole.

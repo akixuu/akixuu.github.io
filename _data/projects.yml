@@ -4,7 +4,7 @@
 
     - title: "Poses for Dummies"
       thumbnail: "poses.webp"
-      description: "Real-time pose tracking multiplayer game."
+      description: "Real-time multiplayer pose tracking game."
       stack: "React · TypeScript · MediaPipe · p5.js"
       links:
         - text: "Writeup"
@@ -14,7 +14,7 @@
 
     - title: "uRelief"
       thumbnail: "urelief.webp"
-      description: "Resource finder app for the homeless."
+      description: "A resource finder for those experiencing homelessness."
       stack: "Android · Java · SQL · Figma"
       links:
         - text: "Writeup"
@@ -24,7 +24,7 @@
 
     - title: "LitReading"
       thumbnail: "litreading.webp"
-      description: "App to improve literacy through ranked reading for schools."
+      description: "Improving literacy through competitive and collaborative reading."
       stack: "Figma"
       links:
         - text: "Writeup"
@@ -34,7 +34,7 @@
 
     - title: "Resumer"
       thumbnail: "resumer.webp"
-      description: "Job finding app portal for new immigrants."
+      description: "Job portal bridging the immigrant skills gap."
       stack: "Android · Java · Figma"
       links:
         - text: "Writeup"
@@ -71,7 +71,25 @@
         - text: "Writeup"
           url: "/projects/nm-2025/"
 
-- title: "Leadership / Community Impact"
+    - title: "Portfolio Site"
+      thumbnail: "personal-website.webp"
+      description: "Built using a static site generator, hosted on GitHub Pages."
+      stack: "Jekyll · Bootstrap · Sass"
+      links:
+        - text: "Repo"
+          url: "https://github.com/akixuu/akixuu.github.io"
+
+    - title: "StudyMania"
+      thumbnail: "studymania.webp"
+      description: "Discord study bot — timers, trivia, and friendly competition."
+      stack: "Node.js · Discord.js · MongoDB · JavaScript"
+      links:
+        - text: "Writeup"
+          url: "/projects/studymania/"
+        - text: "Repo"
+          url: "https://github.com/akixuu/VSHacks/"
+
+- title: "Leadership / Community"
   description: "Collaborative work focused on social impact and community."
   items:
     - title: "Tech To Go by Tonari Gumi"

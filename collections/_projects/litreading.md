@@ -8,7 +8,7 @@ stack: "Figma"
 
 **LitReading** is a reading product for schools. A class shares a library, takes chapter quizzes, and works toward a milestone, a field trip or a party, by reading together. Points and gems sit on top of that so the habit is visible.
 
-I designed the screens in Figma. We pitched it at Game of Apps Season 8.
+I designed the screens in Figma. At Game of Apps Season 8 it took **Best Overall App**.
 
 ### Pitch
 <div class="project-slides py-4">

@@ -8,7 +8,7 @@ stack: "Android · Java · Figma"
 
 **Resumer** is a job portal for people newly arrived in Canada. The idea was a single place to get a resume into shape and then find work, instead of sending someone across a pile of unrelated sites.
 
-I designed it in Figma and built the Android app in Java with a Game of Apps team. This is the pitch from the Season 5 championships.
+I designed it in Figma and built the Android app in Java with a Game of Apps team. At the Season 5 championships it won **People's Choice**.
 
 ### Pitch
 <div class="project-slides py-4">
