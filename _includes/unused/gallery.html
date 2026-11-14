@@ -1,0 +1,15 @@
+<!-- Gallery -->
+<section class="my-4 d-none">
+    <h3>Gallery</h3>
+    <div class="row row-cols-2 row-cols-md-4 g-2 pt-1">
+        {% for image in site.data.gallery limit:4 %}
+        <figure class="figure">
+            <div class="ratio ratio-1x1">
+                <img src="" class="figure-img img-fluid rounded w-100 h-100 placeholder object-fit-cover"
+                    alt="{{image.caption}}">
+            </div>
+            <figcaption class="figure-caption text-center">{{image.caption}}</figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+</section>

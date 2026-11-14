@@ -1,0 +1,10 @@
+<button type="button"
+  class="photo-gallery-item"
+  data-gallery-src="{{ include.file.path | relative_url }}"
+  data-gallery-alt="{{ include.alt | escape }}"
+  aria-label="View larger: {{ include.alt | escape }}">
+  <img src="{{ include.file.path | relative_url }}"
+    alt="{{ include.alt | escape }}"
+    loading="lazy"
+    decoding="async">
+</button>

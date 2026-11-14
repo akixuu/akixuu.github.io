@@ -1,26 +1,20 @@
-.slide-in-from-right {
-  animation: slide-in-right 1s ease 200ms backwards;
+.fade-in {
+  animation: fade-in 0.9s ease 80ms both;
 }
 
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .slide-in-from-left {
-  animation: slide-in-left 1s ease 200ms backwards;
+  animation: slide-in-left 0.9s cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
 }
 
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-1.25rem);
   }
   to {
     opacity: 1;
@@ -28,30 +22,41 @@
   }
 }
 
-.fade-in {
-  animation: fade-in 1s ease 200ms backwards;
+.slide-in-from-right {
+  animation: slide-in-right 0.9s cubic-bezier(0.22, 1, 0.36, 1) 200ms both;
 }
 
-@keyframes fade-in {
+@keyframes slide-in-right {
   from {
     opacity: 0;
+    transform: translateX(1.25rem);
   }
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
 .slide-down {
-  animation: slide-down 1s ease 200ms backwards;
+  animation: slide-down 0.8s cubic-bezier(0.22, 1, 0.36, 1) 60ms both;
 }
 
 @keyframes slide-down {
   from {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-0.75rem);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .slide-in-from-left,
+  .slide-in-from-right,
+  .slide-down {
+    animation: none;
   }
 }

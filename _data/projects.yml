@@ -1,0 +1,130 @@
+- title: "Competitions & Hackathons"
+  description: "Quick builds and award-winning solutions from various events, most notably from <a href='/projects/game-of-apps'>Game of Apps</a>."
+  items:
+
+    - title: "Poses for Dummies"
+      thumbnail: "poses.webp"
+      description: "Real-time multiplayer pose tracking game."
+      stack: "React · TypeScript · MediaPipe · p5.js"
+      links:
+        - text: "Writeup"
+          url: "/projects/poses-for-dummies/"
+        - text: "Repo"
+          url: "https://github.com/mileshs/quackhacks3"
+
+    - title: "uRelief"
+      thumbnail: "urelief.webp"
+      description: "A resource finder for those experiencing homelessness."
+      stack: "Android · Java · SQL · Figma"
+      links:
+        - text: "Writeup"
+          url: "/projects/urelief/"
+        - text: "Pitch"
+          url: "https://youtu.be/4Teg18s4amQ"
+
+    - title: "LitReading"
+      thumbnail: "litreading.webp"
+      description: "Improving literacy through competitive and collaborative reading."
+      stack: "Figma"
+      links:
+        - text: "Writeup"
+          url: "/projects/litreading/"
+        - text: "Pitch"
+          url: "https://youtu.be/S_UZbX2EByI"
+
+    - title: "Resumer"
+      thumbnail: "resumer.webp"
+      description: "Job portal bridging the immigrant skills gap."
+      stack: "Android · Java · Figma"
+      links:
+        - text: "Writeup"
+          url: "/projects/resumer/"
+        - text: "Pitch"
+          url: "https://www.youtube.com/live/exuFlWFGCwI?t=2627s"
+
+    - title: "NoNotes AI"
+      thumbnail: "nonotes.webp"
+      description: "Your AI note-taking companion."
+      stack: "Python · Flask · JavaScript · BERT"
+      links:
+        - text: "Writeup"
+          url: "/projects/nonotes/"
+        - text: "Repo"
+          url: "https://github.com/Alex-Jando/HappyHack-Oct2023"
+
+- title: "Miscellaneous"
+  description: ""
+  items:
+    # - title: "30 Days of Blender"
+    #   thumbnail: "blender.webp"
+    #   description: "Daily Blender render challenge!"
+    #   stack: "Blender"
+    #   links:
+    #     - text: "Log"
+    #       url: "/projects/30-days-of-blender"
+
+    - title: "Spectral Analysis of Memory-N-Back Test"
+      thumbnail: "nm.webp"
+      description: "Analysis of the Kai-Miller dataset for the Neuromatch 2025 CN Program."
+      stack: "Python · NumPy · Pandas · scikit-learn"
+      links:
+        - text: "Writeup"
+          url: "/projects/nm-2025/"
+
+    - title: "Portfolio Site"
+      thumbnail: "personal-website.webp"
+      description: "Built using a static site generator, hosted on GitHub Pages."
+      stack: "Jekyll · Bootstrap · Sass"
+      links:
+        - text: "Repo"
+          url: "https://github.com/akixuu/akixuu.github.io"
+
+    - title: "StudyMania"
+      thumbnail: "studymania.webp"
+      description: "Discord study bot — timers, trivia, and friendly competition."
+      stack: "Node.js · Discord.js · MongoDB · JavaScript"
+      links:
+        - text: "Writeup"
+          url: "/projects/studymania/"
+        - text: "Repo"
+          url: "https://github.com/akixuu/VSHacks/"
+
+- title: "Leadership / Community"
+  description: "Collaborative work focused on social impact and community."
+  items:
+    - title: "Tech To Go by Tonari Gumi"
+      thumbnail: "ttg.webp"
+      description: "Services across Metro Vancouver to support technology fluency."
+      links:
+        - text: "Writeup"
+          url: "/projects/tech-to-go"
+
+    - title: "Bucket Robotics"
+      thumbnail: "br.webp"
+      description: "High school robotics club."
+      stack: "VEX"
+      links:
+        - text: "Writeup"
+          url: "/projects/bucket-robotics"
+
+    - title: "EcoConnect"
+      thumbnail: "ecoconnect.webp"
+      description: "Inspiring youth in sustainability through eco-conscious environments."
+      links:
+        - text: "Writeup"
+          url: "/projects/ecoconnect"
+
+- title: "Archives"
+  description: "Older work from high school."
+  items:
+    - title: "Projects"
+      description: "Some old things I worked on."
+      links:
+        - text: "Gallery"
+          url: "/old_projects/"
+
+    - title: "Websites"
+      description: "Older websites that are no longer live."
+      links:
+        - text: "Gallery"
+          url: "/old_websites/"

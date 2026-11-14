@@ -1,0 +1,27 @@
+<!-- Projects -->
+<section class="my-4">
+    <!-- Section Header -->
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <h3 class="fw-bold">Projects</h3S>
+        </div>
+        <div class="col-auto">
+            <a href="/projects" class="text-decoration-none">More <i class="fa-solid fa-angles-right"></i></a>
+        </div>
+    </div>
+
+    <!-- List -->
+    <div class="row row-cols-2 row-cols-md-3 g-1">
+        {% for project in site.projects limit:3 %}
+        <div class="col">
+            <a href="{{project.url}}" class="text-decoration-none">
+                <div class="ratio ratio-16x9">
+                    <img src="/assets/imgs/projects/thumbnails/{{ project.thumbnail }}"
+                        class="object-fit-cover h-100 w-100" alt="thumbnail">
+                </div>
+                <h6 class="pt-2">{{ project.title }}</h6>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

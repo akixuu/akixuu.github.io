@@ -1,0 +1,51 @@
+<article class="resume-entry">
+  <header class="resume-entry-head">
+    <div class="resume-entry-copy">
+      <h3 class="resume-entry-title">
+        {{ item.title }}{% for link in item.links %}{% assign is_external = false %}{% if link.url contains "://" %}{% assign is_external = true %}{% endif %}<span class="resume-entry-sep"> | </span><a class="resume-entry-link" href="{{ link.url }}"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.text }}</a>{% endfor %}
+      </h3>
+      {% if item.org or item.description %}
+      <p class="resume-entry-meta">
+        {% if item.org %}
+          {% if item.org_url %}
+            {% assign is_external = false %}
+            {% if item.org_url contains "://" %}
+              {% assign is_external = true %}
+            {% endif %}
+            <a href="{{ item.org_url }}"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.org }}</a>
+          {% else %}
+            {{ item.org }}
+          {% endif %}
+        {% endif %}
+        {% if item.program %}
+          {% if item.program_url %}
+            {% assign is_external = false %}
+            {% if item.program_url contains "://" %}
+              {% assign is_external = true %}
+            {% endif %}
+            — <a href="{{ item.program_url }}"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.program }}</a>
+          {% else %}
+            — {{ item.program }}
+          {% endif %}
+        {% endif %}
+        {% if item.description %}{{ item.description }}{% endif %}
+      </p>
+      {% endif %}
+    </div>
+    {% if item.dates %}
+    <p class="resume-entry-dates">{{ item.dates }}</p>
+    {% endif %}
+  </header>
+
+  {% if item.stack %}
+  <p class="resume-entry-stack">{{ item.stack }}</p>
+  {% endif %}
+
+  {% if item.bullets %}
+  <ul class="resume-bullets">
+    {% for bullet in item.bullets %}
+    <li>{{ bullet | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
