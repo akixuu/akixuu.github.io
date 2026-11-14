@@ -85,8 +85,13 @@ layout: page
       {% if item.links %}
         {% assign link_count = item.links.size %}
       {% endif %}
+      {% comment %}
+        Stretched single-link cards skip the hover overlay. Prefer overlay
+        whenever a thumbnail is present so one-button cards (e.g. Repo) still
+        get the same hover treatment as multi-link cards.
+      {% endcomment %}
       {% assign single_link = false %}
-      {% if link_count == 1 %}
+      {% if link_count == 1 and item.thumbnail == blank %}
         {% assign single_link = true %}
       {% endif %}
 
@@ -98,7 +103,6 @@ layout: page
             class="object-fit-cover" alt="{{ item.title }} thumbnail" loading="lazy">
 
           {% if item.links and link_count > 0 %}
-            {% unless single_link %}
             <div class="project-card-overlay">
               <div class="project-card-links">
                 {% for link in item.links %}
@@ -119,7 +123,6 @@ layout: page
                 {% endfor %}
               </div>
             </div>
-            {% endunless %}
           {% endif %}
         </div>
         {% endif %}
